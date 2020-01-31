@@ -1,0 +1,11 @@
+framework module JzBleHelper_os {
+  umbrella header "JzBleHelper_os.h"
+
+  export *
+  module * { export * }
+}
+
+module JzBleHelper_os.Swift {
+    header "JzBleHelper_os-Swift.h"
+    requires objc
+}

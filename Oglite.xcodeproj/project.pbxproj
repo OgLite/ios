@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA24320D23E2BD67007A3EDC /* Page_SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA24320C23E2BD67007A3EDC /* Page_SignIn.swift */; };
+		CA24321C23E2C9E4007A3EDC /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA24321B23E2C9E4007A3EDC /* Cloud.swift */; };
+		CA24321F23E2CDBA007A3EDC /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA24321E23E2CDBA007A3EDC /* NetworkExtension.framework */; };
+		CA58A31623E2D3DB004C7CCB /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58A31423E2D3DB004C7CCB /* Progress.swift */; };
+		CA58A31723E2D3DB004C7CCB /* Progress.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA58A31523E2D3DB004C7CCB /* Progress.xib */; };
+		CA58A34823E3EC1A004C7CCB /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA58A34623E3EC0F004C7CCB /* Lottie.framework */; };
+		CA58A34923E3EC1A004C7CCB /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA58A34623E3EC0F004C7CCB /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA58A34A23E3EC1E004C7CCB /* JzIos_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA58A34423E3EBD0004C7CCB /* JzIos_Framework.framework */; };
+		CA58A34B23E3EC1E004C7CCB /* JzIos_Framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA58A34423E3EBD0004C7CCB /* JzIos_Framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA58A34D23E3ECDC004C7CCB /* simple-loader2.json in Resources */ = {isa = PBXBuildFile; fileRef = CA58A34C23E3ECDC004C7CCB /* simple-loader2.json */; };
+		CA58A35023E3F016004C7CCB /* Page_Enroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA58A34E23E3F016004C7CCB /* Page_Enroll.swift */; };
+		CA58A35123E3F016004C7CCB /* Page_Enroll.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA58A34F23E3F016004C7CCB /* Page_Enroll.xib */; };
+		CA9162AE23E2622200D8A360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9162AD23E2622200D8A360 /* AppDelegate.swift */; };
+		CA9162B023E2622200D8A360 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9162AF23E2622200D8A360 /* SceneDelegate.swift */; };
+		CA9162B223E2622200D8A360 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9162B123E2622200D8A360 /* ViewController.swift */; };
+		CA9162B523E2622200D8A360 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9162B323E2622200D8A360 /* Main.storyboard */; };
+		CA9162B723E2622300D8A360 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA9162B623E2622300D8A360 /* Assets.xcassets */; };
+		CA9162BA23E2622300D8A360 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9162B823E2622300D8A360 /* LaunchScreen.storyboard */; };
+		CA9162CC23E2692800D8A360 /* Page_Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9162CB23E2692800D8A360 /* Page_Area.swift */; };
+		CA9162CD23E269EC00D8A360 /* JzBleHelper_os.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9162C823E262CE00D8A360 /* JzBleHelper_os.framework */; };
+		CA9162CE23E269EC00D8A360 /* JzBleHelper_os.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA9162C823E262CE00D8A360 /* JzBleHelper_os.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA91632623E28DAB00D8A360 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91632523E28DAB00D8A360 /* extension.swift */; };
+		CA91636A23E2B20E00D8A360 /* ChineseSi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91636323E2B20E00D8A360 /* ChineseSi.swift */; };
+		CA91636B23E2B20E00D8A360 /* It.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91636423E2B20E00D8A360 /* It.swift */; };
+		CA91636C23E2B20E00D8A360 /* SetLan.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91636523E2B20E00D8A360 /* SetLan.swift */; };
+		CA91636D23E2B20E00D8A360 /* English.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91636623E2B20E00D8A360 /* English.swift */; };
+		CA91636E23E2B20E00D8A360 /* ChineseTr.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91636723E2B20E00D8A360 /* ChineseTr.swift */; };
+		CA91636F23E2B20E00D8A360 /* De.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91636823E2B20E00D8A360 /* De.swift */; };
+		CA91637023E2B20E00D8A360 /* Da.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91636923E2B20E00D8A360 /* Da.swift */; };
+		CA91637623E2B80C00D8A360 /* Page_Policy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91637523E2B80C00D8A360 /* Page_Policy.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CA9162C723E262B800D8A360 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CA58A34B23E3EC1E004C7CCB /* JzIos_Framework.framework in Embed Frameworks */,
+				CA9162CE23E269EC00D8A360 /* JzBleHelper_os.framework in Embed Frameworks */,
+				CA58A34923E3EC1A004C7CCB /* Lottie.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		495C130F05AB588D42E91877 /* Pods-Oglite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Oglite.release.xcconfig"; path = "Target Support Files/Pods-Oglite/Pods-Oglite.release.xcconfig"; sourceTree = "<group>"; };
+		CA24320C23E2BD67007A3EDC /* Page_SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page_SignIn.swift; sourceTree = "<group>"; };
+		CA24321B23E2C9E4007A3EDC /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
+		CA24321D23E2CDBA007A3EDC /* Oglite.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Oglite.entitlements; sourceTree = "<group>"; };
+		CA24321E23E2CDBA007A3EDC /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		CA58A31423E2D3DB004C7CCB /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
+		CA58A31523E2D3DB004C7CCB /* Progress.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Progress.xib; sourceTree = "<group>"; };
+		CA58A34423E3EBD0004C7CCB /* JzIos_Framework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JzIos_Framework.framework; sourceTree = "<group>"; };
+		CA58A34623E3EC0F004C7CCB /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Lottie.framework; sourceTree = "<group>"; };
+		CA58A34C23E3ECDC004C7CCB /* simple-loader2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "simple-loader2.json"; sourceTree = "<group>"; };
+		CA58A34E23E3F016004C7CCB /* Page_Enroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page_Enroll.swift; sourceTree = "<group>"; };
+		CA58A34F23E3F016004C7CCB /* Page_Enroll.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Page_Enroll.xib; sourceTree = "<group>"; };
+		CA9162AA23E2622200D8A360 /* Oglite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oglite.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA9162AD23E2622200D8A360 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CA9162AF23E2622200D8A360 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CA9162B123E2622200D8A360 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA9162B423E2622200D8A360 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CA9162B623E2622300D8A360 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA9162B923E2622300D8A360 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CA9162BB23E2622300D8A360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA9162C823E262CE00D8A360 /* JzBleHelper_os.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JzBleHelper_os.framework; sourceTree = "<group>"; };
+		CA9162CB23E2692800D8A360 /* Page_Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page_Area.swift; sourceTree = "<group>"; };
+		CA91632523E28DAB00D8A360 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		CA91636323E2B20E00D8A360 /* ChineseSi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChineseSi.swift; sourceTree = "<group>"; };
+		CA91636423E2B20E00D8A360 /* It.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = It.swift; sourceTree = "<group>"; };
+		CA91636523E2B20E00D8A360 /* SetLan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetLan.swift; sourceTree = "<group>"; };
+		CA91636623E2B20E00D8A360 /* English.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = English.swift; sourceTree = "<group>"; };
+		CA91636723E2B20E00D8A360 /* ChineseTr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChineseTr.swift; sourceTree = "<group>"; };
+		CA91636823E2B20E00D8A360 /* De.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = De.swift; sourceTree = "<group>"; };
+		CA91636923E2B20E00D8A360 /* Da.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Da.swift; sourceTree = "<group>"; };
+		CA91637523E2B80C00D8A360 /* Page_Policy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page_Policy.swift; sourceTree = "<group>"; };
+		F6225524A7FE22BD5AEF1666 /* Pods-Oglite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Oglite.debug.xcconfig"; path = "Target Support Files/Pods-Oglite/Pods-Oglite.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA9162A723E2622200D8A360 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA58A34823E3EC1A004C7CCB /* Lottie.framework in Frameworks */,
+				CA58A34A23E3EC1E004C7CCB /* JzIos_Framework.framework in Frameworks */,
+				CA24321F23E2CDBA007A3EDC /* NetworkExtension.framework in Frameworks */,
+				CA9162CD23E269EC00D8A360 /* JzBleHelper_os.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		73EE159FCD08B12248BAD6D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA24321E23E2CDBA007A3EDC /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5D96E9B0DD4766A6C29F907 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6225524A7FE22BD5AEF1666 /* Pods-Oglite.debug.xcconfig */,
+				495C130F05AB588D42E91877 /* Pods-Oglite.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CA0AA47F23E2D2E50025BDE2 /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				CA58A31423E2D3DB004C7CCB /* Progress.swift */,
+				CA58A31523E2D3DB004C7CCB /* Progress.xib */,
+			);
+			path = Dialog;
+			sourceTree = "<group>";
+		};
+		CA9162A123E2622200D8A360 = {
+			isa = PBXGroup;
+			children = (
+				CA9162AC23E2622200D8A360 /* Oglite */,
+				CA9162AB23E2622200D8A360 /* Products */,
+				C5D96E9B0DD4766A6C29F907 /* Pods */,
+				73EE159FCD08B12248BAD6D8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CA9162AB23E2622200D8A360 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA9162AA23E2622200D8A360 /* Oglite.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA9162AC23E2622200D8A360 /* Oglite */ = {
+			isa = PBXGroup;
+			children = (
+				CA58A34C23E3ECDC004C7CCB /* simple-loader2.json */,
+				CA58A34623E3EC0F004C7CCB /* Lottie.framework */,
+				CA58A34423E3EBD0004C7CCB /* JzIos_Framework.framework */,
+				CA0AA47F23E2D2E50025BDE2 /* Dialog */,
+				CA24321D23E2CDBA007A3EDC /* Oglite.entitlements */,
+				CA91636223E2B20E00D8A360 /* Language */,
+				CA91632423E28AC700D8A360 /* tool */,
+				CA9162CA23E2690E00D8A360 /* Page */,
+				CA9162C823E262CE00D8A360 /* JzBleHelper_os.framework */,
+				CA9162AD23E2622200D8A360 /* AppDelegate.swift */,
+				CA9162AF23E2622200D8A360 /* SceneDelegate.swift */,
+				CA9162B123E2622200D8A360 /* ViewController.swift */,
+				CA9162B323E2622200D8A360 /* Main.storyboard */,
+				CA9162B623E2622300D8A360 /* Assets.xcassets */,
+				CA9162B823E2622300D8A360 /* LaunchScreen.storyboard */,
+				CA9162BB23E2622300D8A360 /* Info.plist */,
+				CA91632523E28DAB00D8A360 /* extension.swift */,
+			);
+			path = Oglite;
+			sourceTree = "<group>";
+		};
+		CA9162CA23E2690E00D8A360 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				CA9162CB23E2692800D8A360 /* Page_Area.swift */,
+				CA91637523E2B80C00D8A360 /* Page_Policy.swift */,
+				CA24320C23E2BD67007A3EDC /* Page_SignIn.swift */,
+				CA58A34E23E3F016004C7CCB /* Page_Enroll.swift */,
+				CA58A34F23E3F016004C7CCB /* Page_Enroll.xib */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
+		CA91632423E28AC700D8A360 /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				CA24321B23E2C9E4007A3EDC /* Cloud.swift */,
+			);
+			path = tool;
+			sourceTree = "<group>";
+		};
+		CA91636223E2B20E00D8A360 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				CA91636323E2B20E00D8A360 /* ChineseSi.swift */,
+				CA91636423E2B20E00D8A360 /* It.swift */,
+				CA91636523E2B20E00D8A360 /* SetLan.swift */,
+				CA91636623E2B20E00D8A360 /* English.swift */,
+				CA91636723E2B20E00D8A360 /* ChineseTr.swift */,
+				CA91636823E2B20E00D8A360 /* De.swift */,
+				CA91636923E2B20E00D8A360 /* Da.swift */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA9162A923E2622200D8A360 /* Oglite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA9162BE23E2622300D8A360 /* Build configuration list for PBXNativeTarget "Oglite" */;
+			buildPhases = (
+				E714A0E7145CDB20D91A409B /* [CP] Check Pods Manifest.lock */,
+				CA9162A623E2622200D8A360 /* Sources */,
+				CA9162A723E2622200D8A360 /* Frameworks */,
+				CA9162A823E2622200D8A360 /* Resources */,
+				CA9162C723E262B800D8A360 /* Embed Frameworks */,
+				7E0CF034C8F3AF1C84D579D0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Oglite;
+			productName = Oglite;
+			productReference = CA9162AA23E2622200D8A360 /* Oglite.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA9162A223E2622200D8A360 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Jianzhi.wang;
+				TargetAttributes = {
+					CA9162A923E2622200D8A360 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = CA9162A523E2622200D8A360 /* Build configuration list for PBXProject "Oglite" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA9162A123E2622200D8A360;
+			productRefGroup = CA9162AB23E2622200D8A360 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA9162A923E2622200D8A360 /* Oglite */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA9162A823E2622200D8A360 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA58A34D23E3ECDC004C7CCB /* simple-loader2.json in Resources */,
+				CA9162BA23E2622300D8A360 /* LaunchScreen.storyboard in Resources */,
+				CA58A35123E3F016004C7CCB /* Page_Enroll.xib in Resources */,
+				CA9162B723E2622300D8A360 /* Assets.xcassets in Resources */,
+				CA58A31723E2D3DB004C7CCB /* Progress.xib in Resources */,
+				CA9162B523E2622200D8A360 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7E0CF034C8F3AF1C84D579D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Oglite/Pods-Oglite-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Oglite/Pods-Oglite-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Oglite/Pods-Oglite-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E714A0E7145CDB20D91A409B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Oglite-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA9162A623E2622200D8A360 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA9162B223E2622200D8A360 /* ViewController.swift in Sources */,
+				CA9162AE23E2622200D8A360 /* AppDelegate.swift in Sources */,
+				CA24320D23E2BD67007A3EDC /* Page_SignIn.swift in Sources */,
+				CA91637623E2B80C00D8A360 /* Page_Policy.swift in Sources */,
+				CA58A35023E3F016004C7CCB /* Page_Enroll.swift in Sources */,
+				CA91636B23E2B20E00D8A360 /* It.swift in Sources */,
+				CA9162B023E2622200D8A360 /* SceneDelegate.swift in Sources */,
+				CA91632623E28DAB00D8A360 /* extension.swift in Sources */,
+				CA91636F23E2B20E00D8A360 /* De.swift in Sources */,
+				CA91636E23E2B20E00D8A360 /* ChineseTr.swift in Sources */,
+				CA9162CC23E2692800D8A360 /* Page_Area.swift in Sources */,
+				CA24321C23E2C9E4007A3EDC /* Cloud.swift in Sources */,
+				CA91637023E2B20E00D8A360 /* Da.swift in Sources */,
+				CA91636C23E2B20E00D8A360 /* SetLan.swift in Sources */,
+				CA91636D23E2B20E00D8A360 /* English.swift in Sources */,
+				CA58A31623E2D3DB004C7CCB /* Progress.swift in Sources */,
+				CA91636A23E2B20E00D8A360 /* ChineseSi.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CA9162B323E2622200D8A360 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA9162B423E2622200D8A360 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CA9162B823E2622300D8A360 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA9162B923E2622300D8A360 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA9162BC23E2622300D8A360 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CA9162BD23E2622300D8A360 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA9162BF23E2622300D8A360 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6225524A7FE22BD5AEF1666 /* Pods-Oglite.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Oglite/Oglite.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UMT5SK6MNZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Oglite",
+					"$(PROJECT_DIR)/Oglite/Page",
+				);
+				INFOPLIST_FILE = Oglite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jianzhi.wang.Oglite;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA9162C023E2622300D8A360 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 495C130F05AB588D42E91877 /* Pods-Oglite.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Oglite/Oglite.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UMT5SK6MNZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Oglite",
+					"$(PROJECT_DIR)/Oglite/Page",
+				);
+				INFOPLIST_FILE = Oglite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Jianzhi.wang.Oglite;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA9162A523E2622200D8A360 /* Build configuration list for PBXProject "Oglite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA9162BC23E2622300D8A360 /* Debug */,
+				CA9162BD23E2622300D8A360 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA9162BE23E2622300D8A360 /* Build configuration list for PBXNativeTarget "Oglite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA9162BF23E2622300D8A360 /* Debug */,
+				CA9162C023E2622300D8A360 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA9162A223E2622200D8A360 /* Project object */;
+}

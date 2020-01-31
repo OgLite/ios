@@ -1,0 +1,6 @@
+framework module Pods_Oglite {
+  umbrella header "Pods-Oglite-umbrella.h"
+
+  export *
+  module * { export * }
+}
