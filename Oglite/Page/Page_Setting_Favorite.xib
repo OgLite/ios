@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Page_Setting_Favorite" customModule="Oglite" customModuleProvider="target">
+            <connections>
+                <outlet property="tb" destination="5DO-xt-PjU" id="LnX-ip-Xi3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iwf-cV-tYf">
+                    <rect key="frame" x="0.0" y="806" width="414" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="xgn-Ex-uUb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <state key="normal" title="Add  vehicles" backgroundImage="btn_rectangle">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="addvehicle:" destination="-1" eventType="touchUpInside" id="CZK-Om-LjO"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5DO-xt-PjU">
+                    <rect key="frame" x="0.0" y="44" width="414" height="762"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5DO-xt-PjU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JhW-wz-183"/>
+                <constraint firstItem="Iwf-cV-tYf" firstAttribute="top" secondItem="5DO-xt-PjU" secondAttribute="bottom" id="Nff-7o-E0o"/>
+                <constraint firstItem="5DO-xt-PjU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="S2B-AB-9LC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Iwf-cV-tYf" secondAttribute="trailing" id="Zdc-pu-SLY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Iwf-cV-tYf" secondAttribute="bottom" id="bNm-Hf-EUD"/>
+                <constraint firstItem="Iwf-cV-tYf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="i69-ZZ-iif"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5DO-xt-PjU" secondAttribute="trailing" id="ocH-9i-8G5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="135" y="147"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_rectangle" width="1233" height="192"/>
+    </resources>
+</document>

@@ -1,0 +1,11 @@
+framework module JzAdapter {
+  umbrella header "JzAdapter.h"
+
+  export *
+  module * { export * }
+}
+
+module JzAdapter.Swift {
+    header "JzAdapter-Swift.h"
+    requires objc
+}

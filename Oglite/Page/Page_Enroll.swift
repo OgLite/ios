@@ -135,16 +135,9 @@ class Page_Enroll: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource 
         let ct=city.text!
         let state=country.titleLabel!.text!
         let zpcod=zpcode.text!
-        if(email.count==0){return}
-        if(sn.count==0){return}
-        if(fname.count==0){return}
-        if(lname.count==0){return}
-        if(com.count==0){return}
-        if(ph.count==0){return}
-        if(str.count==0){return}
-        if(ct.count==0){return}
-        if(state.count==0){return}
-        if(zpcod.count==0){return}
+        if(email.count==0||sn.count==0||fname.count==0||lname.count==0||com.count==0||ph.count==0||str.count==0||ct.count==0||state.count==0||zpcod.count==0){JzActivity.getControlInstance.openDiaLog(Register_error(),false,"Register_error")
+            return
+        }
         if(pass.count<8){
             view.showToast(text: ("Password".Mt())+("At_least_8_characters").Mt())
             return
@@ -156,11 +149,49 @@ class Page_Enroll: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource 
         run=true
         let a=Progress()
         a.label=a.資料載入
-        JzActivity.getControlInstance.openDrawer()
+        JzActivity.getControlInstance.openDiaLog(a,true,"Progress")
         if(Distribut.titleLabel!.text==("Distributor")){
-            //                Function.Register(email,pass,sn,"Distributor",com,fname,lname,ph,state,ct,str,zpcod, self)
+            Cloud.Register(email,pass,sn,"Distributor",com,fname,lname,ph,state,ct,str,zpcod, {
+                a in
+                self.run=false
+                switch(a){
+                case 0:
+                    JzActivity.getControlInstance.setPro("admin", email)
+                    JzActivity.getControlInstance.setPro("password", pass)
+                    JzActivity.getControlInstance.setHome(Page_Home(), "Page_Home")
+                    break
+                case 1:
+                JzActivity.getControlInstance.toast("be_register".Mt())
+                    break
+                case -1:
+                    JzActivity.getControlInstance.toast("nointer".Mt())
+                    break
+                default:
+                    break
+                }
+                JzActivity.getControlInstance.closeDialLog()
+            })
         }else{
-            //                Function.Register(email,pass,sn,"Retailer",com,fname,lname,ph,state,ct,str,zpcod, self)
+            Cloud.Register(email,pass,sn,"Retailer",com,fname,lname,ph,state,ct,str,zpcod, {
+                a in
+                self.run=false
+                  switch(a){
+                             case 0:
+                                 JzActivity.getControlInstance.setPro("admin", email)
+                                 JzActivity.getControlInstance.setPro("password", pass)
+                             JzActivity.getControlInstance.setHome(Page_Home(), "Page_Home")
+                                 break
+                             case 1:
+                             JzActivity.getControlInstance.toast("be_register".Mt())
+                                 break
+                             case -1:
+                             JzActivity.getControlInstance.toast("nointer".Mt())
+                                 break
+                             default:
+                                 break
+                             }
+                JzActivity.getControlInstance.closeDialLog()
+            })
         }
         
     }

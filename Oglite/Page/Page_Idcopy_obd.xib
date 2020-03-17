@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Page_Idcopy_obd" customModule="Oglite" customModuleProvider="target">
+            <connections>
+                <outlet property="programbt" destination="5HT-Mk-98E" id="Zdw-R5-Ajd"/>
+                <outlet property="tb" destination="jt1-gJ-Utx" id="4dH-Tr-Yj8"/>
+                <outlet property="tit" destination="koj-en-OVM" id="JiT-LL-2ru"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvD-7e-Rjp">
+                    <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koj-en-OVM">
+                            <rect key="frame" x="183" y="13" width="48" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.074509803920000006" green="0.21176470589999999" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" red="0.074509803920000006" green="0.21176470589999999" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="6Vf-hm-wYv"/>
+                        <constraint firstItem="koj-en-OVM" firstAttribute="centerY" secondItem="dvD-7e-Rjp" secondAttribute="centerY" id="AYd-fO-v8X"/>
+                        <constraint firstItem="koj-en-OVM" firstAttribute="centerX" secondItem="dvD-7e-Rjp" secondAttribute="centerX" id="jz1-An-Xo0"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5HT-Mk-98E">
+                    <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="KWB-JK-7cC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="Read sensor" backgroundImage="btn_rectangle">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="readsensor:" destination="-1" eventType="touchUpInside" id="Uqy-7Y-qCo"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jt1-gJ-Utx">
+                    <rect key="frame" x="0.0" y="94" width="414" height="708"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5HT-Mk-98E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6qh-Sr-XUG"/>
+                <constraint firstItem="jt1-gJ-Utx" firstAttribute="top" secondItem="dvD-7e-Rjp" secondAttribute="bottom" id="F02-EV-8lQ"/>
+                <constraint firstItem="dvD-7e-Rjp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="JOu-p6-JcJ"/>
+                <constraint firstItem="5HT-Mk-98E" firstAttribute="top" secondItem="jt1-gJ-Utx" secondAttribute="bottom" constant="10" id="Qea-HH-JUf"/>
+                <constraint firstItem="jt1-gJ-Utx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="R8p-Ii-kGR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jt1-gJ-Utx" secondAttribute="trailing" id="Uav-oy-Gnp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5HT-Mk-98E" secondAttribute="bottom" id="WAV-Ns-QDE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5HT-Mk-98E" secondAttribute="trailing" id="c6N-WD-XOT"/>
+                <constraint firstItem="dvD-7e-Rjp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ftr-Kq-m2P"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dvD-7e-Rjp" secondAttribute="trailing" id="jsf-pd-OfP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="147"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_rectangle" width="1233" height="192"/>
+    </resources>
+</document>

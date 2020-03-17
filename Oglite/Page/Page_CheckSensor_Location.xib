@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Page_CheckSensor_Location" customModule="Oglite" customModuleProvider="target">
+            <connections>
+                <outlet property="tb" destination="VMp-AX-YC5" id="oGR-lH-lMe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSq-7S-neW">
+                    <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Methods of vehicle data selection " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNw-T0-nlI">
+                            <rect key="frame" x="52.5" y="17.5" width="309" height="25.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.074509803920000006" green="0.21176470589999999" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="WNw-T0-nlI" firstAttribute="centerX" secondItem="ZSq-7S-neW" secondAttribute="centerX" id="8bC-S6-u9g"/>
+                        <constraint firstAttribute="height" constant="60" id="EC6-E1-Flq"/>
+                        <constraint firstItem="WNw-T0-nlI" firstAttribute="centerY" secondItem="ZSq-7S-neW" secondAttribute="centerY" id="YGl-5W-Sbp"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13M-te-mZ9">
+                    <rect key="frame" x="0.0" y="806" width="414" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="Nbr-BZ-RmA"/>
+                    </constraints>
+                    <state key="normal" title="Menu" backgroundImage="btn_rectangle"/>
+                    <connections>
+                        <action selector="gomenu:" destination="-1" eventType="touchUpInside" id="Vz5-19-zgr"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VMp-AX-YC5">
+                    <rect key="frame" x="0.0" y="104" width="414" height="702"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VMp-AX-YC5" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="1QP-Qr-Quz"/>
+                <constraint firstItem="ZSq-7S-neW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="7Bf-tg-1GT"/>
+                <constraint firstItem="ZSq-7S-neW" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="BEZ-FA-Cb3"/>
+                <constraint firstItem="VMp-AX-YC5" firstAttribute="top" secondItem="ZSq-7S-neW" secondAttribute="bottom" id="FSI-iB-DNa"/>
+                <constraint firstItem="13M-te-mZ9" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="GrP-xT-Wor"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="13M-te-mZ9" secondAttribute="bottom" id="ZkP-6f-6nu"/>
+                <constraint firstItem="ZSq-7S-neW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dDS-MZ-pyb"/>
+                <constraint firstItem="13M-te-mZ9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="q07-ZG-hHM"/>
+                <constraint firstItem="13M-te-mZ9" firstAttribute="top" secondItem="VMp-AX-YC5" secondAttribute="bottom" id="tNs-9n-qaL"/>
+                <constraint firstItem="VMp-AX-YC5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tfn-IT-a8g"/>
+                <constraint firstItem="VMp-AX-YC5" firstAttribute="top" secondItem="ZSq-7S-neW" secondAttribute="bottom" id="ufh-kr-zbt"/>
+                <constraint firstItem="13M-te-mZ9" firstAttribute="top" secondItem="VMp-AX-YC5" secondAttribute="bottom" id="zIA-W7-vqD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="147"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_rectangle" width="1233" height="192"/>
+    </resources>
+</document>

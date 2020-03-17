@@ -64,23 +64,23 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ewV-xM-LDh">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="1450"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="J08-l4-6Fu">
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="J08-l4-6Fu">
                                             <rect key="frame" x="0.0" y="1394" width="414" height="56"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRF-WV-i9V">
-                                                    <rect key="frame" x="0.0" y="0.0" width="206.5" height="56"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="207" height="56"/>
                                                     <color key="backgroundColor" red="0.074509803920000006" green="0.21176470589999999" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" title="Cancel">
+                                                    <state key="normal" title="Cancel" backgroundImage="btn_rectangle">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="back:" destination="-1" eventType="touchUpInside" id="p2w-0J-1xu"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnR-eW-Y39">
-                                                    <rect key="frame" x="207.5" y="0.0" width="206.5" height="56"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnR-eW-Y39">
+                                                    <rect key="frame" x="207" y="0.0" width="207" height="56"/>
                                                     <color key="backgroundColor" red="0.074509803920000006" green="0.21176470589999999" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" title="Sign in">
+                                                    <state key="normal" title="Sign in" backgroundImage="btn_rectangle">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
@@ -356,4 +356,7 @@
             <point key="canvasLocation" x="135" y="147"/>
         </view>
     </objects>
+    <resources>
+        <image name="btn_rectangle" width="1233" height="192"/>
+    </resources>
 </document>

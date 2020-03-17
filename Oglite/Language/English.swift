@@ -66,7 +66,7 @@ class English{
         "Methods_of_vehicle_data_selection":"Methods of vehicle data selection",
         "Scan_Code":"Scan Code",
         "Vehicle_data_selection":"Vehicle data selection",
-        "Please_scan_the_QR_Code_on_the_catalog_or_poster":"Please scan on sensor or ID QR code on package",
+        "Please_scan_the_QR_Code_on_the_catalog_or_poster":"Please scan the QR Code on the catalog or poster.",
         "Select_CAR_Make":"Select CAR Make",
         "Select_CAR_Model":"Select CAR Model",
         "Select_Year":"Select Year",
@@ -90,7 +90,7 @@ class English{
         "Programming_do_not_move_sensors":"Programming, do not move sensors.",
         "Next":"Next",
         "error":"error",
-        "Programming_failed_where":"Program fail",
+        "Programming_failed_where":"Program fail,( Failed tire position )",
         "Get_location":"The location function must be turned on to start the Bluetooth service.",
         "Prog_Sensor":"Prog.Sensor",
         "Sound":"Sound",
@@ -134,6 +134,6 @@ class English{
         "step4_8":"Step 7.\n Please input the original sensor ID according to the order of the wheels. After inputting, please press the next step.",
         "step4_9":"Step 8.\n The USB TPMS will automatically read the sensors in the PAD in sequence.After reading is completed, please press PROGRAM SENSOR ",
         "step4_10":"Step 9.\n After the program is completed, if you need to  copy other sensor, please replace the sensor in USB PAD then press PROG.SENSOR",
-        "step4_11":"Step 10.\n Program fail , please press RE-PROGRAM button to re-execute program.","openble":"Please turn on Bluetooth to connect your device","Set_up":"Set up","Check for updates":"Check for updates","update":"update","Automatic update":"Automatic update","USB TPMS APP will automatically install updates.":"USB TPMS APP will automatically install updates.","paired with your device":"paired with your device","Select Device":"Select Device","For developer":"For developer information,please visit this website: www.orange-electronic.com","norelarm":"Under construction","Store_type":"Store type","Distributor":"Distributor","Retailer":"Retailer","nointer":"Internet connection timeout","be_register":"Device has been registered","errorpass":"account or password incorrect","newversion":"Have a new version, please go to the store to update","SayQusition":"Hello, please elaborate on the product issue","PleaseMessage":"Please enter the content of the letter","notempty":"Message cannot be empty","sendsuccess":"Successful transfer","sendfalse":"Transfer failed","minuteago":"1 minute ago","dayago":"1 day ago","secago":"just","Online_customer_service":"Online customer service","Customer_service_specialist":"Customer service specialist","hourago":"1 hour ago","monthago":"1 month ago","yeargo":"1 year ago","checkscan":"Please make sure sensor is on USB PAD, and then choose tire position to start scanning","Scan_Two":"Please scan the QR Code on the catalog or poster.","keyin":"key in","onlyfor":"Only for SP201 sensor"
+        "step4_11":"Step 10.\n Program fail , please press RE-PROGRAM button to re-execute program.","openble":"Please turn on Bluetooth to connect your device","Set_up":"Set up","Check for updates":"Check for updates","update":"update","Automatic update":"Automatic update","USB TPMS APP will automatically install updates.":"USB TPMS APP will automatically install updates.","paired with your device":"paired with your device","Select Device":"Select Device","For developer":"For developer information,please visit this website: www.orange-electronic.com","norelarm":"Under construction","Store_type":"Store type","Distributor":"Distributor","Retailer":"Retailer","nointer":"Internet connection timeout","be_register":"Device has been registered","errorpass":"account or password incorrect","OBDII relearn":"OBDII relearn","Programming":"Programming","My favorite":"My favorite","Three ways":"Three ways to vehicle data selection","app_sensor_info_read":"Sensor lesen","Read_ID_from_vehicle":"Read ID from vehicle","Write_data":"Write ID"
 ]
 }

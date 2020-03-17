@@ -12,6 +12,7 @@ class Page_Policy: UIViewController {
     @IBOutlet weak var agr: UIButton!
     @IBOutlet weak var dis: UIButton!
     @IBOutlet weak var policy: UITextView!
+    var Setting=false
     override func viewDidLoad() {
         super.viewDidLoad()
         policy.text="Welcome".Mt()
@@ -24,8 +25,13 @@ class Page_Policy: UIViewController {
     }
     
     @IBAction func agree(_ sender: Any) {
-        let a=JzActivity.getControlInstance.getNewController("Main", "Page_SignIn")
-        JzActivity.getControlInstance.changePage(a, "Page_SignIn", true)
-        
+        if(Setting){
+            JzActivity.getControlInstance.goMenu()
+        }else{
+            let a=JzActivity.getControlInstance.getNewController("Main", "Page_SignIn")
+                   JzActivity.getControlInstance.changePage(a, "Page_SignIn", true)
+                   
+        }
+       
     }
 }

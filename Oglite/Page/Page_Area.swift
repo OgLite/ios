@@ -11,12 +11,13 @@ import JzIos_Framework
 class Page_Area: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     @IBOutlet var info: UILabel!
     @IBOutlet var lan: UILabel!
-    @IBOutlet weak var togive: UILabel!
-    @IBOutlet weak var areabt: UIButton!
-    @IBOutlet weak var languagebt: UIButton!
-    @IBOutlet weak var area: UILabel!
-    @IBOutlet weak var setupbt: UIButton!
+    @IBOutlet  var togive: UILabel!
+    @IBOutlet  var areabt: UIButton!
+    @IBOutlet  var languagebt: UIButton!
+    @IBOutlet  var area: UILabel!
+    @IBOutlet  var setupbt: UIButton!
     var place=0
+    var Setting=false
     var item=["EU","North America","台灣","中國大陸"]
     var picker=UIPickerView()
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -36,6 +37,7 @@ class Page_Area: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
             areabt.setTitle(item[pickerView.selectedRow(inComponent: 0)], for: .normal)
             JzActivity.getControlInstance.setPro("Area",item[pickerView.selectedRow(inComponent: 0)])
             viewDidLoad()
+            if(Setting){DonloadFile.dataloading()}
         }else{
             languagebt.setTitle(item[pickerView.selectedRow(inComponent: 0)], for: .normal)
             JzActivity.getControlInstance.setPro("lan",item[pickerView.selectedRow(inComponent: 0)])
@@ -86,7 +88,12 @@ class Page_Area: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     }
     
     @IBAction func next(_ sender: Any) {
-       let a=JzActivity.getControlInstance.getNewController("Main", "Page_Policy")
-        JzActivity.getControlInstance.changePage(a, "Page_Policy", true)
+        if(Setting){
+            JzActivity.getControlInstance.goMenu()
+        }else{
+            let a=JzActivity.getControlInstance.getNewController("Main", "Page_Policy")
+            JzActivity.getControlInstance.changePage(a, "Page_Policy", true)
+        }
+       
     }
 }

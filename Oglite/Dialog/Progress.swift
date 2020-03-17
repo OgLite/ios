@@ -11,11 +11,13 @@ import Lottie
 class Progress: UIViewController {
     var 登入中="Sign_in".Mt()
     var 資料載入="Data_Loading".Mt()
+    var 連線BLE="paired with your device".Mt()
     var label=""
     @IBOutlet weak var tit: UILabel!
     let animationView = AnimationView(name: "simple-loader2")
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("label\(label)")
         tit.text=label
     }
     override func viewDidAppear(_ animated: Bool) {

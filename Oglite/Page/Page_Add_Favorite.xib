@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Page_Add_Favorite" customModule="Oglite" customModuleProvider="target">
+            <connections>
+                <outlet property="b1" destination="Vol-S9-cls" id="j2D-4b-mBn"/>
+                <outlet property="b2" destination="5Xj-m4-aAv" id="1kn-ey-Fon"/>
+                <outlet property="b3" destination="DF6-AA-4ho" id="wQC-1W-Ret"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Azp-5v-nbP">
+                    <rect key="frame" x="0.0" y="806" width="414" height="56"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfS-2E-NJl">
+                            <rect key="frame" x="0.0" y="0.0" width="207" height="56"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="cancel" backgroundImage="btn_rectangle">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="back:" destination="-1" eventType="touchUpInside" id="cL5-AM-rx5"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Qs-vj-WQ4">
+                            <rect key="frame" x="207" y="0.0" width="207" height="56"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="OK" backgroundImage="btn_rectangle">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="setup:" destination="-1" eventType="touchUpInside" id="GAS-nz-pa1"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="Mi5-SB-ZZD"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ei9-DH-xJC">
+                    <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle Selection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbp-ID-tH4">
+                            <rect key="frame" x="134" y="18.5" width="146" height="23"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.074509803920000006" green="0.21176470589999999" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Sbp-ID-tH4" firstAttribute="centerX" secondItem="ei9-DH-xJC" secondAttribute="centerX" id="Zuh-D6-VzJ"/>
+                        <constraint firstAttribute="height" constant="60" id="wDa-5x-rJ3"/>
+                        <constraint firstItem="Sbp-ID-tH4" firstAttribute="centerY" secondItem="ei9-DH-xJC" secondAttribute="centerY" id="ydX-JZ-hDd"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xj-m4-aAv">
+                    <rect key="frame" x="32" y="423" width="350" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="2E1-fC-RlJ"/>
+                    </constraints>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Bmw" backgroundImage="img_Marquee">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="selectmodel:" destination="-1" eventType="touchUpInside" id="X1s-I7-c04"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vol-S9-cls">
+                    <rect key="frame" x="32" y="306.5" width="350" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="c0h-8Q-4ZM"/>
+                    </constraints>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Bmw" backgroundImage="img_Marquee">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="selectmake:" destination="-1" eventType="touchUpInside" id="OOV-u6-3OV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DF6-AA-4ho">
+                    <rect key="frame" x="32" y="539.5" width="350" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Qk2-uk-aN8"/>
+                    </constraints>
+                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Bmw" backgroundImage="img_Marquee">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="selectyear:" destination="-1" eventType="touchUpInside" id="CuO-jo-wxc"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8Z-pi-VZB">
+                    <rect key="frame" x="32" y="386.5" width="124.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Car Manufacturer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34M-kX-T2q">
+                    <rect key="frame" x="32" y="260" width="230.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypg-gS-cXs">
+                    <rect key="frame" x="32" y="503" width="124.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ei9-DH-xJC" secondAttribute="trailing" id="0A7-yx-GAr"/>
+                <constraint firstItem="5Xj-m4-aAv" firstAttribute="top" secondItem="C8Z-pi-VZB" secondAttribute="bottom" constant="10" id="9ZN-oU-Soe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Azp-5v-nbP" secondAttribute="bottom" id="ADV-CM-64H"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Azp-5v-nbP" secondAttribute="trailing" id="GXd-Qn-dyA"/>
+                <constraint firstItem="ei9-DH-xJC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="L91-34-EfN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5Xj-m4-aAv" secondAttribute="trailing" constant="32" id="Luk-rN-UOL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Vol-S9-cls" secondAttribute="trailing" constant="32" id="Mo3-s5-cjl"/>
+                <constraint firstItem="Vol-S9-cls" firstAttribute="top" secondItem="34M-kX-T2q" secondAttribute="bottom" constant="20" id="O7Z-Cs-71U"/>
+                <constraint firstItem="C8Z-pi-VZB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="Rbj-CX-TTf"/>
+                <constraint firstItem="Azp-5v-nbP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="W7J-wb-g3P"/>
+                <constraint firstItem="DF6-AA-4ho" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="WzA-ZC-O9L"/>
+                <constraint firstItem="ypg-gS-cXs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="dAn-ZI-EAt"/>
+                <constraint firstItem="34M-kX-T2q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="fSa-LE-27c"/>
+                <constraint firstItem="DF6-AA-4ho" firstAttribute="top" secondItem="ypg-gS-cXs" secondAttribute="bottom" constant="10" id="hcl-fK-boy"/>
+                <constraint firstItem="C8Z-pi-VZB" firstAttribute="top" secondItem="Vol-S9-cls" secondAttribute="bottom" constant="30" id="ipM-da-u3L"/>
+                <constraint firstItem="5Xj-m4-aAv" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="o0O-SZ-1Hm"/>
+                <constraint firstItem="5Xj-m4-aAv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="pBr-iO-9wQ"/>
+                <constraint firstItem="ei9-DH-xJC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pq9-Ag-drs"/>
+                <constraint firstItem="Vol-S9-cls" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="tbX-3g-Hjd"/>
+                <constraint firstItem="ypg-gS-cXs" firstAttribute="top" secondItem="5Xj-m4-aAv" secondAttribute="bottom" constant="30" id="wIT-8n-scR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DF6-AA-4ho" secondAttribute="trailing" constant="32" id="zwt-Bf-aWa"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="147"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_rectangle" width="1233" height="192"/>
+        <image name="img_Marquee" width="1054" height="120"/>
+    </resources>
+</document>

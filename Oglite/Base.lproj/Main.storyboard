@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,12 +36,25 @@
                                             <action selector="goback:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fwc-8k-pMv"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOp-z2-ZiG">
+                                        <rect key="frame" x="364" y="0.0" width="50" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="3Wn-0x-RCX"/>
+                                        </constraints>
+                                        <state key="normal" image="icon_O-Genius Lite Link"/>
+                                        <connections>
+                                            <action selector="signOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ADA-OR-gsN"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.9137254901960784" green="0.30980392156862746" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="GUY-3y-mG7" firstAttribute="centerY" secondItem="uBd-za-Qvn" secondAttribute="centerY" id="03y-pz-18s"/>
+                                    <constraint firstItem="xOp-z2-ZiG" firstAttribute="top" secondItem="uBd-za-Qvn" secondAttribute="top" id="3jk-eT-21Y"/>
+                                    <constraint firstAttribute="bottom" secondItem="xOp-z2-ZiG" secondAttribute="bottom" id="7zp-CO-p5n"/>
                                     <constraint firstItem="GUY-3y-mG7" firstAttribute="leading" secondItem="uBd-za-Qvn" secondAttribute="leading" id="93y-IY-Rmy"/>
                                     <constraint firstAttribute="height" constant="56" id="Our-3h-2mL"/>
+                                    <constraint firstAttribute="trailing" secondItem="xOp-z2-ZiG" secondAttribute="trailing" id="aZf-GS-0Q3"/>
                                     <constraint firstItem="hbv-m2-QTu" firstAttribute="centerX" secondItem="uBd-za-Qvn" secondAttribute="centerX" id="nNJ-K9-RtO"/>
                                     <constraint firstItem="hbv-m2-QTu" firstAttribute="centerY" secondItem="uBd-za-Qvn" secondAttribute="centerY" id="t7T-Vm-zgW"/>
                                 </constraints>
@@ -66,6 +79,7 @@
                     <connections>
                         <outlet property="backbt" destination="GUY-3y-mG7" id="iVa-LD-NJg"/>
                         <outlet property="container" destination="rp9-Sv-vGy" id="iGx-Vn-KZw"/>
+                        <outlet property="topright" destination="xOp-z2-ZiG" id="hov-82-EU8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -327,7 +341,7 @@ you local content.</string>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JVa-Fh-APR">
                                                 <rect key="frame" x="56" y="5" width="258" height="46"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P9N-JA-GWn">
                                                 <rect key="frame" x="56" y="50" width="258" height="1"/>
@@ -369,6 +383,9 @@ you local content.</string>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUI-rc-pqI">
                                                 <rect key="frame" x="145.5" y="0.0" width="168.5" height="56"/>
+                                                <connections>
+                                                    <action selector="forget:" destination="ToV-eq-LZx" eventType="touchUpInside" id="BJn-u5-ev5"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -450,6 +467,7 @@ you local content.</string>
     <resources>
         <image name="btn_back" width="168" height="168"/>
         <image name="btn_rectangle" width="1233" height="192"/>
+        <image name="icon_O-Genius Lite Link" width="168" height="168"/>
         <image name="icon_Password" width="168" height="168"/>
         <image name="icon_forgot password" width="168" height="168"/>
         <image name="icon_user" width="168" height="168"/>

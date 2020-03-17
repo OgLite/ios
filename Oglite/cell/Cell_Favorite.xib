@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="Cell_Favorite" customModule="Oglite" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="466" height="78"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="466" height="78"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fab-3e-DVM">
+                        <rect key="frame" x="0.0" y="0.0" width="466" height="78"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 (F20,F21)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOs-br-VPG">
+                                <rect key="frame" x="20" y="24.5" width="118.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLo-Z4-aJZ">
+                                <rect key="frame" x="0.0" y="0.0" width="466" height="78"/>
+                                <connections>
+                                    <action selector="gopage:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Vmr-dC-gIs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hd1-Dq-xfX">
+                                <rect key="frame" x="388" y="0.0" width="78" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hd1-Dq-xfX" secondAttribute="height" multiplier="1:1" id="7Z0-dh-MOQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="68"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="delfavorite:" destination="gTV-IL-0wX" eventType="touchUpInside" id="dsa-qA-dYa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25098039220000001" green="0.37647058820000001" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fOs-br-VPG" firstAttribute="leading" secondItem="Fab-3e-DVM" secondAttribute="leading" constant="20" id="4KY-Nu-hp5"/>
+                            <constraint firstItem="rLo-Z4-aJZ" firstAttribute="leading" secondItem="Fab-3e-DVM" secondAttribute="leading" id="MAe-Mo-7DA"/>
+                            <constraint firstItem="hd1-Dq-xfX" firstAttribute="centerY" secondItem="Fab-3e-DVM" secondAttribute="centerY" id="RJV-Xk-N6a"/>
+                            <constraint firstItem="fOs-br-VPG" firstAttribute="centerY" secondItem="Fab-3e-DVM" secondAttribute="centerY" id="Ruc-vx-uSS"/>
+                            <constraint firstItem="hd1-Dq-xfX" firstAttribute="top" secondItem="Fab-3e-DVM" secondAttribute="top" id="WE7-oU-6uJ"/>
+                            <constraint firstAttribute="bottom" secondItem="hd1-Dq-xfX" secondAttribute="bottom" id="a9u-nl-bsh"/>
+                            <constraint firstAttribute="trailing" secondItem="rLo-Z4-aJZ" secondAttribute="trailing" id="oRb-tb-VDb"/>
+                            <constraint firstAttribute="bottom" secondItem="rLo-Z4-aJZ" secondAttribute="bottom" id="pbf-X4-KZC"/>
+                            <constraint firstAttribute="trailing" secondItem="hd1-Dq-xfX" secondAttribute="trailing" id="rPM-p6-2w9"/>
+                            <constraint firstItem="rLo-Z4-aJZ" firstAttribute="top" secondItem="Fab-3e-DVM" secondAttribute="top" id="rnq-Vh-jjb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Fab-3e-DVM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1cC-Jp-aux"/>
+                <constraint firstAttribute="bottom" secondItem="Fab-3e-DVM" secondAttribute="bottom" id="Krh-GQ-SlY"/>
+                <constraint firstAttribute="trailing" secondItem="Fab-3e-DVM" secondAttribute="trailing" id="PKX-q6-bhe"/>
+                <constraint firstItem="Fab-3e-DVM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Uaw-gj-d4l"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="466" height="78"/>
+            <connections>
+                <outlet property="delbt" destination="hd1-Dq-xfX" id="TwU-gV-OPc"/>
+                <outlet property="tit" destination="fOs-br-VPG" id="mxw-Mg-kZD"/>
+            </connections>
+            <point key="canvasLocation" x="436.23188405797106" y="156.02678571428569"/>
+        </collectionViewCell>
+    </objects>
+</document>

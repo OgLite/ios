@@ -6,5 +6,7 @@ target 'Oglite' do
   use_frameworks!
 
   # Pods for Oglite
+pod 'Firebase/Core'
+pod 'Firebase/Messaging'
 pod 'IQKeyboardManagerSwift'
 end

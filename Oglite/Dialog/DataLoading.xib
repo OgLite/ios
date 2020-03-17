@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DataLoading" customModule="Oglite" customModuleProvider="target">
+            <connections>
+                <outlet property="img" destination="A5F-Uc-dMF" id="IVc-bv-tjG"/>
+                <outlet property="tit" destination="KlH-wP-TT3" id="QqT-S4-gcq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YC8-Tb-XaA">
+                    <rect key="frame" x="122" y="348" width="170" height="200"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更新中..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlH-wP-TT3">
+                            <rect key="frame" x="5" y="98" width="160" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_email" translatesAutoresizingMaskIntoConstraints="NO" id="A5F-Uc-dMF">
+                            <rect key="frame" x="0.0" y="0.0" width="170" height="98"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.91372549020000005" green="0.30980392159999998" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="KlH-wP-TT3" firstAttribute="leading" secondItem="YC8-Tb-XaA" secondAttribute="leading" constant="5" id="50w-14-KD8"/>
+                        <constraint firstItem="KlH-wP-TT3" firstAttribute="top" secondItem="A5F-Uc-dMF" secondAttribute="bottom" id="611-FL-xuV"/>
+                        <constraint firstAttribute="width" constant="170" id="8Zq-aM-RnS"/>
+                        <constraint firstItem="KlH-wP-TT3" firstAttribute="centerX" secondItem="YC8-Tb-XaA" secondAttribute="centerX" id="GS9-Jv-B36"/>
+                        <constraint firstAttribute="trailing" secondItem="A5F-Uc-dMF" secondAttribute="trailing" id="Lwg-K5-jBb"/>
+                        <constraint firstAttribute="trailing" secondItem="KlH-wP-TT3" secondAttribute="trailing" constant="5" id="OuS-fL-F0V"/>
+                        <constraint firstItem="A5F-Uc-dMF" firstAttribute="top" secondItem="YC8-Tb-XaA" secondAttribute="top" id="i6I-pJ-BQA"/>
+                        <constraint firstAttribute="height" constant="200" id="jRX-QB-0HW"/>
+                        <constraint firstItem="A5F-Uc-dMF" firstAttribute="leading" secondItem="YC8-Tb-XaA" secondAttribute="leading" id="o6h-Em-wP8"/>
+                        <constraint firstItem="KlH-wP-TT3" firstAttribute="centerY" secondItem="YC8-Tb-XaA" secondAttribute="centerY" constant="10" id="qXr-Ae-MwF"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="YC8-Tb-XaA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GVB-8e-1Ia"/>
+                <constraint firstItem="YC8-Tb-XaA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="oNc-GV-Y3t"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="135" y="147"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_email" width="248" height="248"/>
+    </resources>
+</document>

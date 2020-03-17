@@ -25,7 +25,7 @@ class Page_SignIn: UIViewController {
     @IBAction func signin(_ sender: Any) {
         let a=Progress()
         a.label="\("Sign_in".Mt())..."
-        JzActivity.getControlInstance.openDiaLog(a)
+        JzActivity.getControlInstance.openDiaLog(a,true,"Progress")
         Cloud.Signin(admin.text!
             , password.text!, {
                 result in
@@ -33,7 +33,9 @@ class Page_SignIn: UIViewController {
                 JzActivity.getControlInstance.closeDialLog()
                 switch(result){
                 case 0:
-                    
+                    JzActivity.getControlInstance.setPro("admin", self.admin.text!)
+                    JzActivity.getControlInstance.setPro("password", self.password.text!)
+                    JzActivity.getControlInstance.setHome(Page_Home(), "Page_Home")
                     break
                 case 1:
                     JzActivity.getControlInstance.toast("errorpass".Mt())
@@ -46,6 +48,9 @@ class Page_SignIn: UIViewController {
                 }
                 
         })
+    }
+    @IBAction func forget(_ sender: Any) {
+        JzActivity.getControlInstance.changePage(Page_Forget_Password(), "Page_Forget_Password", true)
     }
     
     @IBAction func register(_ sender: Any) {

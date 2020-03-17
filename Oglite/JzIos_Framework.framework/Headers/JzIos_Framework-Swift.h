@@ -202,13 +202,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
-
-
 SWIFT_CLASS("_TtC15JzIos_Framework10DataStream")
 @interface DataStream : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC15JzIos_Framework10JzActivity")
@@ -228,6 +227,8 @@ SWIFT_CLASS("_TtC15JzIos_Framework9JzAdapter")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+
 
 
 

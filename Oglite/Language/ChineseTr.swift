@@ -66,7 +66,7 @@ class ChineseTr{
         "Methods_of_vehicle_data_selection":"選擇車輛數據方法",
         "Scan_Code":"掃描QR碼",
         "Vehicle_data_selection":"車輛數據選擇",
-        "Please_scan_the_QR_Code_on_the_catalog_or_poster":"請掃描發射器或包裝盒上的ID QR碼",
+        "Please_scan_the_QR_Code_on_the_catalog_or_poster":"請掃描目錄或海報上的二維碼",
         "Select_CAR_Make":"選擇車型",
         "Select_CAR_Model":"選擇車款",
         "Select_Year":"選擇年份",
@@ -90,7 +90,7 @@ class ChineseTr{
         "Programming_do_not_move_sensors":"燒錄中請勿移動發射器",
         "Next":"下一步",
         "error":"錯誤",
-        "Programming_failed_where":"燒錄失敗",
+        "Programming_failed_where":"燒錄失敗(失敗的輪位)",
         "Get_location":"必須開啟定位功能才能啟動藍芽服務.",
         "Prog_Sensor":"重新燒錄",
         "Please_Confirm_That_The_Sensor_Is_Connect":"請確認傳感器已經連接",
@@ -134,5 +134,5 @@ class ChineseTr{
         "step4_8":"步驟7.\n請依照輪位順序輸入原始Sensor ID, 輸入完後請按下一步",
         "step4_9":"步驟8.\nUSB TPMS 將自動依序讀取PAD中的sensor，讀取完成後請按下 PROGRAM SENSOR",
         "step4_10":"步驟9.\n燒錄完成後，如需複製其他的sensor，請更換USB PAD中的sensor，並按下PROG.SENSOR",
-        "step4_11":"步驟10.\n燒錄錯誤，請按下RE-PROGRAM按鍵，重新執行燒錄 ","openble":"請打開藍牙來連設備!","Set_up":"確認","Check for updates":"檢查更新","update":"更新","Automatic update":"自動更新","USB TPMS APP will automatically install updates.":"USB TPMS APP將自動動安裝更新","paired with your device":"配對中","Select Device":"選擇設備","For developer":"關於開發者資訊，請訪問網站：www.orange-electronic.com","norelarm":"學碼流程尚未完成，請耐心等待，我們會儘快更新","Store_type":"商店類型","Distributor":"經銷商","Retailer":"輪胎行","nointer":"網路連線逾時","be_register":"裝置已被註冊","errorpass":"帳號或密碼錯誤","newversion":"已有新版本請前往商店更新","SayQusition":"您好，請詳細說明產品問題","PleaseMessage":"請輸入信件內容","notempty":"訊息不得為空","sendsuccess":"傳送成功","sendfalse":"傳送失敗","minuteago":"1分鐘前","dayago":"1天前","secago":"剛剛","Online_customer_service":"線上客服","Customer_service_specialist":"客服專員","hourago":"1小時前","monthago":"1個月前","yeargo":"1年前","checkscan":"請確認要燒錄的發射器以放入USB PAD， 再點選輪位進行掃描","Scan_Two":"請掃描目錄或海報上的二維碼","keyin":"手動輸入","onlyfor":"僅用於SP201傳感器"]
+        "step4_11":"步驟10.\n燒錄錯誤，請按下RE-PROGRAM按鍵，重新執行燒錄 ","openble":"請打開藍牙來連設備!","Set_up":"確認","Check for updates":"檢查更新","update":"更新","Automatic update":"自動更新","USB TPMS APP will automatically install updates.":"USB TPMS APP將自動動安裝更新","paired with your device":"配對中","Select Device":"選擇設備","For developer":"關於開發者資訊，請訪問網站：www.orange-electronic.com","norelarm":"學碼流程尚未完成，請耐心等待，我們會儘快更新","Store_type":"商店類型","Distributor":"經銷商","Retailer":"輪胎行","nointer":"網路連線逾時","be_register":"裝置已被註冊","errorpass":"帳號或密碼錯誤","OBDII relearn":"OBDII 學碼","Programming":"燒錄中","My favorite":"我的最爱","Three ways":"三種方式選取車輛資訊","app_sensor_info_read":"讀取感測器","Read_ID_from_vehicle":"從車輛讀取ID","Write_data":"寫入ID"]
 }

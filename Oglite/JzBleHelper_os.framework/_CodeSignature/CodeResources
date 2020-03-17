@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/JzBleHelper_os.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		XoKeyPa7Ldb6YqTtUMCY9SAntHc=
+		iuBtHjy57toPVQcUegbqJdfpwOg=
 		</data>
 		<key>Modules/JzBleHelper_os.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/JzBleHelper_os.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		XoKeyPa7Ldb6YqTtUMCY9SAntHc=
+		iuBtHjy57toPVQcUegbqJdfpwOg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -76,11 +76,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XoKeyPa7Ldb6YqTtUMCY9SAntHc=
+			iuBtHjy57toPVQcUegbqJdfpwOg=
 			</data>
 			<key>hash2</key>
 			<data>
-			6pHl18RVpK06a2nuDUm6+y3FPXTZL6tsPqnbNefyysQ=
+			THmya4H3+L13F4BlUylD5aXBjze/imN2ScrqPjKI2yg=
 			</data>
 		</dict>
 		<key>Modules/JzBleHelper_os.swiftmodule/arm64.swiftdoc</key>
@@ -98,11 +98,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XoKeyPa7Ldb6YqTtUMCY9SAntHc=
+			iuBtHjy57toPVQcUegbqJdfpwOg=
 			</data>
 			<key>hash2</key>
 			<data>
-			6pHl18RVpK06a2nuDUm6+y3FPXTZL6tsPqnbNefyysQ=
+			THmya4H3+L13F4BlUylD5aXBjze/imN2ScrqPjKI2yg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -65,7 +65,7 @@ class ChineseSi{
         "Methods_of_vehicle_data_selection":"选择车辆数据方法",
         "Scan_Code":"扫描QR码",
         "Vehicle_data_selection":"车辆数据选择",
-"Please_scan_the_QR_Code_on_the_catalog_or_poster":"请扫描发射器或包装盒上的ID QR码",
+"Please_scan_the_QR_Code_on_the_catalog_or_poster":"请扫描目录或海报上的二维码",
         "Select_CAR_Make":"选择车型",
         "Select_CAR_Model":"选择车款",
         "Select_Year":"选择年份",
@@ -89,7 +89,7 @@ class ChineseSi{
         "Programming_do_not_move_sensors":"烧录中请勿移动传感器",
         "Next":"下一步",
         "error":"error",
-        "Programming_failed_where":"刻录失败",
+        "Programming_failed_where":"刻录失败(失败的轮位)",
         "Get_location":"必须开启定位功能才能启动蓝芽服务.",
         "Prog_Sensor":"Prog.Sensor",
         "Sound":"音效",
@@ -134,5 +134,5 @@ class ChineseSi{
         "step4_9":"步骤8.\nUSB TPMS 将自动依序读取PAD中的传感器，读取完成后请按下 PROGRAM SENSOR ",
         "step4_10":"步骤9.\n烧录完成后，如需复制其他的传感器，请更换USB PAD中的传感器，并按下PROG.SENSOR",
         "step4_11":"步骤10.\n烧录错误，请按下RE-PROGRAM按键，重新执行烧录 ",
-        "openble":"请打开蓝牙来连设备","Set_up":"确认","Check for updates":"检查更新","update":"更新","Automatic update":"自动更新","USB TPMS APP will automatically install updates.":"USB TPMS APP将自动安装更新","paired with your device":"配对中","ㄉㄧ Device":"选择设备","For developer":"关于开发者资讯，请访问网站：www.orange-electronic.com","norelarm":"学码流程尚未完成，请耐心等待，我们会尽快更新","Store_type":"商店类型","Distributor":"经销商","Retailer":"轮胎行","nointer":"网路连线逾时","be_register":"装置已被注册","errorpass":"帐号或密码错误","newversion":"已有新版本请前往商店更新","SayQusition":"您好，请详细说明产品问题","PleaseMessage":"请输入信件内容","notempty":"讯息不得为空","sendsuccess":"传送成功","sendfalse":"传送失败","minuteago":"1分钟前","dayago":"1天前","secago":"刚刚","Online_customer_service":"线上客服","Customer_service_specialist":"客服专员","hourago":"1小时前","monthago":"1个月前","yeargo":"1年前","checkscan":"请确认要烧录的发射器以加入USB PAD， 再点选轮位进行扫描","Scan_Two":"请扫描目录或海报上的二维码","keyin":"手动输入","onlyfor":"仅用于SP201传感器"]
+        "openble":"请打开蓝牙来连设备","Set_up":"确认","Check for updates":"检查更新","update":"更新","Automatic update":"自动更新","USB TPMS APP will automatically install updates.":"USB TPMS APP将自动安装更新","paired with your device":"配对中","Select Device":"选择设备","For developer":"关于开发者资讯，请访问网站：www.orange-electronic.com","norelarm":"学码流程尚未完成，请耐心等待，我们会尽快更新","Store_type":"商店类型","Distributor":"经销商","Retailer":"轮胎行","nointer":"网路连线逾时","be_register":"装置已被注册","errorpass":"帐号或密码错误","OBDII relearn":"OBDII 学码","Programming":"烧录中","My favorite":"我的最爱","Three ways":"三种方式选取车辆资讯","app_sensor_info_read":"读取感测器","Read_ID_from_vehicle":"从车辆读取ID","Write_data":"写入ID"]
 }

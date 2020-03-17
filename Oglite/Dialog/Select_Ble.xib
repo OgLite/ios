@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Select_Ble" customModule="Oglite" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelbt" destination="b2g-8h-7Nl" id="zsO-4R-gL8"/>
+                <outlet property="tb" destination="Un3-N5-YEK" id="7el-R3-AJT"/>
+                <outlet property="tit" destination="fdI-Fm-7vy" id="un4-cx-WPO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDX-Rb-caG">
+                    <rect key="frame" x="50" y="134" width="314" height="628"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Devices" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdI-Fm-7vy">
+                            <rect key="frame" x="0.0" y="10" width="314" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Un3-N5-YEK">
+                            <rect key="frame" x="0.0" y="44" width="314" height="524"/>
+                            <color key="backgroundColor" red="0.074509803920000006" green="0.21176470589999999" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2g-8h-7Nl">
+                            <rect key="frame" x="10" y="578" width="294" height="40"/>
+                            <color key="backgroundColor" name="ored"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="3dd-zJ-9D0"/>
+                            </constraints>
+                            <state key="normal" title="cancel">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="cancel:" destination="-1" eventType="touchUpInside" id="Nw0-vt-tF5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.074509803920000006" green="0.21176470589999999" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="fdI-Fm-7vy" firstAttribute="leading" secondItem="GDX-Rb-caG" secondAttribute="leading" id="3z3-F1-htd"/>
+                        <constraint firstItem="fdI-Fm-7vy" firstAttribute="top" secondItem="GDX-Rb-caG" secondAttribute="top" constant="10" id="6a5-3s-D0h"/>
+                        <constraint firstItem="Un3-N5-YEK" firstAttribute="top" secondItem="fdI-Fm-7vy" secondAttribute="bottom" constant="10" id="B02-uz-Rm6"/>
+                        <constraint firstAttribute="trailing" secondItem="Un3-N5-YEK" secondAttribute="trailing" id="Gav-5g-JEI"/>
+                        <constraint firstAttribute="trailing" secondItem="fdI-Fm-7vy" secondAttribute="trailing" id="OJH-fu-KAr"/>
+                        <constraint firstItem="b2g-8h-7Nl" firstAttribute="leading" secondItem="GDX-Rb-caG" secondAttribute="leading" constant="10" id="RdE-vr-m0W"/>
+                        <constraint firstAttribute="bottom" secondItem="b2g-8h-7Nl" secondAttribute="bottom" constant="10" id="VD4-0T-yzp"/>
+                        <constraint firstAttribute="trailing" secondItem="b2g-8h-7Nl" secondAttribute="trailing" constant="10" id="q64-71-G8o"/>
+                        <constraint firstAttribute="width" secondItem="GDX-Rb-caG" secondAttribute="height" multiplier="1:2" id="qOi-lX-3ov"/>
+                        <constraint firstItem="Un3-N5-YEK" firstAttribute="leading" secondItem="GDX-Rb-caG" secondAttribute="leading" id="vAz-g5-B6G"/>
+                        <constraint firstItem="b2g-8h-7Nl" firstAttribute="top" secondItem="Un3-N5-YEK" secondAttribute="bottom" constant="10" id="yQ8-Bn-Hvf"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="GDX-Rb-caG" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="4jp-FT-eYX"/>
+                <constraint firstItem="GDX-Rb-caG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="GXk-38-EgK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GDX-Rb-caG" secondAttribute="trailing" constant="50" id="ZKr-Ld-PPo"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="147"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="ored">
+            <color red="0.88627450980392153" green="0.19607843137254902" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
