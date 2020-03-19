@@ -131,4 +131,28 @@ public class PublicBeans{
         })
         return res
     }
+    public static func getLfPower()->String{
+        var res=""
+           let sql="select  `LF Power` from `Summary table` " +
+        "where Make='\(PublicBeans.Make)' and Model='\(PublicBeans.Model)' and year='\(PublicBeans.Year)'  and  `Direct Fit` not in('NA') limit 0,1"
+           PublicBeans.資料庫.query(sql, {
+               result in
+               res=result.getString(0)
+           },{
+               
+           })
+           return res
+       }
+    public static func getHEX()->String{
+           var res=""
+              let sql="select  `OBD Product No. (hex)` from `Summary table` " +
+           "where Make='\(PublicBeans.Make)' and Model='\(PublicBeans.Model)' and year='\(PublicBeans.Year)'  and  `Direct Fit` not in('NA') limit 0,1"
+              PublicBeans.資料庫.query(sql, {
+                  result in
+                  res=result.getString(0)
+              },{
+                  
+              })
+              return res
+          }
 }

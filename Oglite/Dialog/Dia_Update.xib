@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Dia_Update" customModule="Oglite" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Dia_Update" customModule="txusb" customModuleProvider="target">
             <connections>
                 <outlet property="content" destination="AaF-Fp-5dd" id="9g4-f5-gqs"/>
-                <outlet property="intext" destination="4TM-96-zEa" id="k8g-RD-hRJ"/>
+                <outlet property="intext" destination="Xeh-nr-V08" id="xC0-r2-U5S"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,10 +22,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3v-MX-YpB">
-                    <rect key="frame" x="30" y="290" width="354" height="316.5"/>
+                    <rect key="frame" x="30" y="301" width="354" height="294"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dfn-Cx-tTJ">
-                            <rect key="frame" x="0.0" y="0.0" width="354" height="316.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="354" height="294"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gGK-12-rIF">
                                     <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
@@ -55,27 +55,48 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4TM-96-zEa">
-                                    <rect key="frame" x="10" y="101.5" width="334" height="150"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZjK-ij-sYr">
+                                    <rect key="frame" x="0.0" y="101.5" width="354" height="127.5"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kUb-c3-ZuF">
+                                            <rect key="frame" x="10" y="10" width="334" height="107.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xeh-nr-V08">
+                                                    <rect key="frame" x="5" y="5" width="324" height="97.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstItem="Xeh-nr-V08" firstAttribute="top" secondItem="kUb-c3-ZuF" secondAttribute="top" constant="5" id="8d1-KH-36v"/>
+                                                <constraint firstAttribute="trailing" secondItem="Xeh-nr-V08" secondAttribute="trailing" constant="5" id="IhO-7A-3JT"/>
+                                                <constraint firstAttribute="bottom" secondItem="Xeh-nr-V08" secondAttribute="bottom" constant="5" id="egw-JU-rhY"/>
+                                                <constraint firstItem="Xeh-nr-V08" firstAttribute="leading" secondItem="kUb-c3-ZuF" secondAttribute="leading" constant="5" id="ejT-9i-R7m"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="150" id="vGg-QQ-yfF"/>
+                                        <constraint firstItem="kUb-c3-ZuF" firstAttribute="bottom" secondItem="x57-Zt-7nl" secondAttribute="bottom" constant="10" id="AK6-tM-XS0"/>
+                                        <constraint firstAttribute="height" secondItem="kUb-c3-ZuF" secondAttribute="height" constant="20" id="R1i-wu-G5x"/>
+                                        <constraint firstItem="x57-Zt-7nl" firstAttribute="trailing" secondItem="kUb-c3-ZuF" secondAttribute="trailing" constant="10" id="lww-LD-hMZ"/>
+                                        <constraint firstItem="kUb-c3-ZuF" firstAttribute="leading" secondItem="x57-Zt-7nl" secondAttribute="leading" constant="10" id="mrj-yy-BSc"/>
+                                        <constraint firstItem="kUb-c3-ZuF" firstAttribute="top" secondItem="x57-Zt-7nl" secondAttribute="top" constant="10" id="sjp-TY-8T1"/>
                                     </constraints>
-                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                            <real key="value" value="1"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </textView>
+                                    <viewLayoutGuide key="contentLayoutGuide" id="x57-Zt-7nl"/>
+                                    <viewLayoutGuide key="frameLayoutGuide" id="4Sf-TX-sv4"/>
+                                </scrollView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3t-bL-ClN">
-                                    <rect key="frame" x="0.0" y="266.5" width="354" height="50"/>
+                                    <rect key="frame" x="0.0" y="244" width="354" height="50"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SxV-gV-Nvo">
                                             <rect key="frame" x="0.0" y="0.0" width="354" height="1"/>
@@ -134,12 +155,13 @@
                                 </view>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="4TM-96-zEa" secondAttribute="trailing" constant="10" id="7sE-Vm-zTn"/>
                                 <constraint firstItem="AaF-Fp-5dd" firstAttribute="leading" secondItem="dfn-Cx-tTJ" secondAttribute="leading" constant="10" id="B7f-Wy-cGI"/>
                                 <constraint firstAttribute="trailing" secondItem="AaF-Fp-5dd" secondAttribute="trailing" constant="10" id="RRm-KX-rOw"/>
                                 <constraint firstAttribute="trailing" secondItem="b3t-bL-ClN" secondAttribute="trailing" id="Sdj-td-Cr9"/>
-                                <constraint firstItem="4TM-96-zEa" firstAttribute="leading" secondItem="dfn-Cx-tTJ" secondAttribute="leading" constant="10" id="oCa-Gj-nMs"/>
+                                <constraint firstItem="Xeh-nr-V08" firstAttribute="width" secondItem="dfn-Cx-tTJ" secondAttribute="width" constant="-30" id="Szn-Z1-FF6"/>
                                 <constraint firstItem="b3t-bL-ClN" firstAttribute="leading" secondItem="dfn-Cx-tTJ" secondAttribute="leading" id="ofI-Bt-Xpr"/>
+                                <constraint firstAttribute="trailing" secondItem="ZjK-ij-sYr" secondAttribute="trailing" id="uZ2-fq-Thu"/>
+                                <constraint firstItem="ZjK-ij-sYr" firstAttribute="leading" secondItem="dfn-Cx-tTJ" secondAttribute="leading" id="xyZ-GA-zBE"/>
                             </constraints>
                         </stackView>
                     </subviews>
@@ -152,7 +174,7 @@
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="20"/>
+                            <real key="value" value="10"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>

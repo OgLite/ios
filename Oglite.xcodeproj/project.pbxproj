@@ -40,10 +40,10 @@
 		CA2EBF122417BFD700860941 /* SignOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2EBF102417BFD700860941 /* SignOut.swift */; };
 		CA2EBF132417BFD700860941 /* SignOut.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2EBF112417BFD700860941 /* SignOut.xib */; };
 		CA2EBF192417E20000860941 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA2EBF182417E20000860941 /* GoogleService-Info.plist */; };
-		CA2EBF1C2418FAA400860941 /* Dia_Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2EBF1A2418FAA400860941 /* Dia_Update.swift */; };
-		CA2EBF1D2418FAA400860941 /* Dia_Update.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA2EBF1B2418FAA400860941 /* Dia_Update.xib */; };
 		CA2EBF612421452F00860941 /* JzIos_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2EBF5F2421452800860941 /* JzIos_Framework.framework */; };
 		CA2EBF622421452F00860941 /* JzIos_Framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA2EBF5F2421452800860941 /* JzIos_Framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA307065242227C600C1870A /* OgCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA307064242227C600C1870A /* OgCommand.swift */; };
+		CA30706724222F3200C1870A /* SensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA30706624222F3200C1870A /* SensorData.swift */; };
 		CA38FED523E8437700F85330 /* Page_Vehicle_Select.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA38FED323E8437700F85330 /* Page_Vehicle_Select.swift */; };
 		CA38FED623E8437700F85330 /* Page_Vehicle_Select.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA38FED423E8437700F85330 /* Page_Vehicle_Select.xib */; };
 		CA52A18123F3E50B000E8BD2 /* Select_Ble.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA52A17F23F3E50B000E8BD2 /* Select_Ble.swift */; };
@@ -114,6 +114,8 @@
 		CA64271723E9A09F00418B50 /* JzSimplePicker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA64271423E9A09700418B50 /* JzSimplePicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CA64271A23EAAB1800418B50 /* ErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA64271823EAAB1800418B50 /* ErrorCode.swift */; };
 		CA64271B23EAAB1800418B50 /* ErrorCode.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA64271923EAAB1800418B50 /* ErrorCode.xib */; };
+		CA683FB22422134B001C8A13 /* Dia_Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA683FB02422134B001C8A13 /* Dia_Update.swift */; };
+		CA683FB32422134B001C8A13 /* Dia_Update.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA683FB12422134B001C8A13 /* Dia_Update.xib */; };
 		CA9162AE23E2622200D8A360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9162AD23E2622200D8A360 /* AppDelegate.swift */; };
 		CA9162B023E2622200D8A360 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9162AF23E2622200D8A360 /* SceneDelegate.swift */; };
 		CA9162B223E2622200D8A360 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9162B123E2622200D8A360 /* ViewController.swift */; };
@@ -191,9 +193,9 @@
 		CA2EBF102417BFD700860941 /* SignOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOut.swift; sourceTree = "<group>"; };
 		CA2EBF112417BFD700860941 /* SignOut.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignOut.xib; sourceTree = "<group>"; };
 		CA2EBF182417E20000860941 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		CA2EBF1A2418FAA400860941 /* Dia_Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dia_Update.swift; sourceTree = "<group>"; };
-		CA2EBF1B2418FAA400860941 /* Dia_Update.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Dia_Update.xib; sourceTree = "<group>"; };
 		CA2EBF5F2421452800860941 /* JzIos_Framework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JzIos_Framework.framework; sourceTree = "<group>"; };
+		CA307064242227C600C1870A /* OgCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OgCommand.swift; sourceTree = "<group>"; };
+		CA30706624222F3200C1870A /* SensorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorData.swift; sourceTree = "<group>"; };
 		CA38FED323E8437700F85330 /* Page_Vehicle_Select.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page_Vehicle_Select.swift; sourceTree = "<group>"; };
 		CA38FED423E8437700F85330 /* Page_Vehicle_Select.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Page_Vehicle_Select.xib; sourceTree = "<group>"; };
 		CA52A17F23F3E50B000E8BD2 /* Select_Ble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Select_Ble.swift; sourceTree = "<group>"; };
@@ -260,6 +262,8 @@
 		CA64271423E9A09700418B50 /* JzSimplePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JzSimplePicker.framework; sourceTree = "<group>"; };
 		CA64271823EAAB1800418B50 /* ErrorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCode.swift; sourceTree = "<group>"; };
 		CA64271923EAAB1800418B50 /* ErrorCode.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorCode.xib; sourceTree = "<group>"; };
+		CA683FB02422134B001C8A13 /* Dia_Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dia_Update.swift; sourceTree = "<group>"; };
+		CA683FB12422134B001C8A13 /* Dia_Update.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Dia_Update.xib; sourceTree = "<group>"; };
 		CA9162AA23E2622200D8A360 /* Oglite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oglite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA9162AD23E2622200D8A360 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA9162AF23E2622200D8A360 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -325,6 +329,8 @@
 		CA0AA47F23E2D2E50025BDE2 /* Dialog */ = {
 			isa = PBXGroup;
 			children = (
+				CA683FB02422134B001C8A13 /* Dia_Update.swift */,
+				CA683FB12422134B001C8A13 /* Dia_Update.xib */,
 				CA58A31423E2D3DB004C7CCB /* Progress.swift */,
 				CA58A31523E2D3DB004C7CCB /* Progress.xib */,
 				CA58A35223E40597004C7CCB /* Register_error.swift */,
@@ -339,8 +345,6 @@
 				CA0D688B23F51181002A22AC /* Dia_Select_Way.xib */,
 				CA2EBF102417BFD700860941 /* SignOut.swift */,
 				CA2EBF112417BFD700860941 /* SignOut.xib */,
-				CA2EBF1A2418FAA400860941 /* Dia_Update.swift */,
-				CA2EBF1B2418FAA400860941 /* Dia_Update.xib */,
 			);
 			path = Dialog;
 			sourceTree = "<group>";
@@ -390,6 +394,7 @@
 				CA52A19B23F418BD000E8BD2 /* Md_Idcopy.swift */,
 				CA1BCA662403F35000A7D01F /* Md_Program.swift */,
 				CA561CBE241654DB00F56A5C /* ID_Beans.swift */,
+				CA30706624222F3200C1870A /* SensorData.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -443,6 +448,7 @@
 				CA91632523E28DAB00D8A360 /* extension.swift */,
 				CA52A19D23F41FE8000E8BD2 /* Command.swift */,
 				CA561CBC2416526600F56A5C /* ObdCommand.swift */,
+				CA307064242227C600C1870A /* OgCommand.swift */,
 			);
 			path = Oglite;
 			sourceTree = "<group>";
@@ -594,7 +600,7 @@
 				CA1BCA5F2403DC0F00A7D01F /* Page_Program_Detail.xib in Resources */,
 				CA2EBEFF2417652A00860941 /* Page_CheckSensor_Location.xib in Resources */,
 				CA58A37223E44FAD004C7CCB /* Page_Home.xib in Resources */,
-				CA2EBF1D2418FAA400860941 /* Dia_Update.xib in Resources */,
+				CA683FB32422134B001C8A13 /* Dia_Update.xib in Resources */,
 				CA2EBF132417BFD700860941 /* SignOut.xib in Resources */,
 				CA6426DD23E94CCE00418B50 /* Page_Relearn.xib in Resources */,
 				CA64271B23EAAB1800418B50 /* ErrorCode.xib in Resources */,
@@ -712,6 +718,7 @@
 				CA52A19E23F41FE8000E8BD2 /* Command.swift in Sources */,
 				CA2EBF122417BFD700860941 /* SignOut.swift in Sources */,
 				CA52A19C23F418BD000E8BD2 /* Md_Idcopy.swift in Sources */,
+				CA30706724222F3200C1870A /* SensorData.swift in Sources */,
 				CA9C0F9B23E844F70059E606 /* Cell_DataSelect.swift in Sources */,
 				CA6426D023E944E600418B50 /* Cell_Model.swift in Sources */,
 				CA2EBF06241778AB00860941 /* Page_Update.swift in Sources */,
@@ -721,6 +728,7 @@
 				CA6426BC23E93E4800418B50 /* Cell_Make.swift in Sources */,
 				CA6426EA23E972F100418B50 /* Cell_Favorite.swift in Sources */,
 				CA52A18123F3E50B000E8BD2 /* Select_Ble.swift in Sources */,
+				CA307065242227C600C1870A /* OgCommand.swift in Sources */,
 				CA24321C23E2C9E4007A3EDC /* Cloud.swift in Sources */,
 				CA6426F623E986BE00418B50 /* Page_Add_Favorite.swift in Sources */,
 				CA561CBF241654DB00F56A5C /* ID_Beans.swift in Sources */,
@@ -742,7 +750,7 @@
 				CA6426AF23E9319A00418B50 /* PublicBeans.swift in Sources */,
 				CA52A18523F3E62A000E8BD2 /* Cell_BleScan.swift in Sources */,
 				CA58A35423E40597004C7CCB /* Register_error.swift in Sources */,
-				CA2EBF1C2418FAA400860941 /* Dia_Update.swift in Sources */,
+				CA683FB22422134B001C8A13 /* Dia_Update.swift in Sources */,
 				CA1BCA642403E64F00A7D01F /* Cell_Program_Detail.swift in Sources */,
 				CA64271A23EAAB1800418B50 /* ErrorCode.swift in Sources */,
 				CA561CBD2416526600F56A5C /* ObdCommand.swift in Sources */,

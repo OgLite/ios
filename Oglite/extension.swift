@@ -160,12 +160,28 @@ extension String {
         return result
         
     }
+    var length: Int{
+        get{
+            return self.count
+        }
+    }
     func  sub(_ range: CountableRange<Int>) -> String {
         let idx1 = index(startIndex, offsetBy: max(0, range.lowerBound))
         let idx2 = index(startIndex, offsetBy: min(self.count, range.upperBound))
         return String(self[idx1..<idx2])
     }
-    
+    func substring(_ start:Int,_ end:Int) -> String{
+        let range=start..<end
+        let idx1 = index(startIndex, offsetBy: max(0, range.lowerBound))
+               let idx2 = index(startIndex, offsetBy: min(self.count, range.upperBound))
+               return String(self[idx1..<idx2])
+    }
+    func substring(_ end:Int) -> String{
+        let range=end..<self.count
+          let idx1 = index(startIndex, offsetBy: max(0, range.lowerBound))
+                 let idx2 = index(startIndex, offsetBy: min(self.count, range.upperBound))
+                 return String(self[idx1..<idx2])
+      }
     func replace(_ target: String, _ withString: String) -> String
     {
         return self.replacingOccurrences(of: target, with: withString, options: NSString.CompareOptions.literal, range: nil)
@@ -320,6 +336,7 @@ extension String{
            }
        }
 }
+
 //extension UIImageView{
 //    func rectimage(_ ur:String) {
 //        let url = URL(string:ur)
@@ -338,3 +355,22 @@ extension UITableView{
         self.register(UINib(nibName: nib, bundle: nil), forCellReuseIdentifier: id)
     }
 }
+extension Array{
+    
+    mutating func add(_ x:Element) {
+        self.append(x)
+     }
+    var size:Int{
+        get{
+            return self.count
+        }
+    }
+}
+extension Int{
+    func toHexString()-> String
+    {
+        let str = String(self, radix: 16)
+        return str
+    }
+}
+

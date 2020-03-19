@@ -23,7 +23,7 @@ class ViewController:JzActivity,BleCallBack{
     var scanback:(()->Void?)? = nil
     override func viewInit() {
         Messaging.messaging().subscribe(toTopic: "ogliteupdate") { error in
-          print("Subscribed to txusbupdate topic")
+          print("Subscribed to ogliteupdate topic")
         }
         IQKeyboardManager.shared.enable=true
         rootView=container
@@ -37,6 +37,7 @@ class ViewController:JzActivity,BleCallBack{
     }
     @IBAction func signOut(_ sender: Any) {
         JzActivity.getControlInstance.openDiaLog(SignOut(), false, "SignOut")
+   
     }
     
     override func changePageListener(_ controler: pagemenory) {

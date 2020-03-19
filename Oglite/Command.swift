@@ -12,7 +12,9 @@ import JzOsTool
 public class Command{
     static var rx=""
     static var demo=false
+    static var timer=JzOSTool.timer()
     public static func sendData(_ data:String){
+        Command.timer.zeroing()
         rx=""
         let act=JzActivity.getControlInstance.getActivity() as! ViewController
         let spi=350
@@ -68,7 +70,7 @@ public class Command{
             JzActivity.getControlInstance.openDiaLog(progress, false, "Progress")
             DispatchQueue.global().async {
                 if(ObdCommand.laodingBootloader()){
-                    var a=ObdCommand.GetId(model)
+                    let a=ObdCommand.GetId(model)
                     DispatchQueue.main.async {
                         JzActivity.getControlInstance.closeDialLog()
                         callback(a)

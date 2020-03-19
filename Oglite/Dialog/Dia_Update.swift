@@ -10,7 +10,7 @@ import UIKit
 import JzIos_Framework
 class Dia_Update: UIViewController {
 
-    @IBOutlet var intext: UITextView!
+    @IBOutlet var intext: UILabel!
     @IBOutlet var content: UILabel!
     
     override func viewDidLoad() {
@@ -24,7 +24,8 @@ class Dia_Update: UIViewController {
     
     @IBAction func ok(_ sender: Any) {
         JzActivity.getControlInstance.closeDialLog()
-        JzActivity.getControlInstance.changePage(Page_Update(), "Page_Update", true)
+      JzActivity.getControlInstance.setPro("dataloading", "false")
+               DonloadFile.dataloading()
     }
     
 }
