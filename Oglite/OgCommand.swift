@@ -40,6 +40,22 @@ class OgCommand {
         }
         return re
     }
+    
+    func getBit(_ by:[UInt8])->String{
+        var a=""
+        for i in 0..<by.count{
+            a.append(String((by[i]>>7)&0x1))
+            a.append(String((by[i]>>6)&0x1))
+            a.append(String((by[i]>>5)&0x1))
+            a.append(String((by[i]>>4)&0x1))
+            a.append(String((by[i]>>3)&0x1))
+            a.append(String((by[i]>>2)&0x1))
+            a.append(String((by[i]>>1)&0x1))
+            a.append(String((by[i]>>0)&0x1))
+        }
+        
+        return a
+    }
     func getBit(_ by:UInt8)->String{
         var a=""
         a.append(String((by>>7)&0x1))
@@ -50,8 +66,11 @@ class OgCommand {
         a.append(String((by>>2)&0x1))
         a.append(String((by>>1)&0x1))
         a.append(String((by>>0)&0x1))
+        
+        
         return a
     }
+    
     func ReOpen() {
         print("遇時")
         
@@ -237,59 +256,59 @@ class OgCommand {
         }
         return true
     }
-     var spilt: String=""
+    var spilt: String=""
     func ProgramFirst(Lf: String, Hex: String, count: String, data: String) -> Bool {
-           var Hex = Hex
-           var count = count
-
-               while (count.length < 2) {
-                   count = "0$count"
-               }
-               while (Hex.length < 2) {
-                   Hex = "0$Hex"
-               }
-               let B8 = data.substring(14, 16)
-               let B9 = data.substring(16, 18)
-               let B12 = data.substring(22, 24)
-               let B13 = data.substring(24, 26)
-               let Data =
-                   "0A 10 00 0E  02 CT  Lf Hex 8b 9b 12b 13b 00 00 00 00 ff f5".replace("CT", count)
-                       .replace("Lf", Lf).replace("Hex", Hex)
-                       .replace("8b", B8).replace("9b", B9).replace("12b", B12).replace("13b", B13)
-                       .replace(" ", "")
+        var Hex = Hex
+        var count = count
+        
+        while (count.length < 2) {
+            count = "0$count"
+        }
+        while (Hex.length < 2) {
+            Hex = "0$Hex"
+        }
+        let B8 = data.substring(14, 16)
+        let B9 = data.substring(16, 18)
+        let B12 = data.substring(22, 24)
+        let B13 = data.substring(24, 26)
+        let Data =
+            "0A 10 00 0E  02 CT  Lf Hex 8b 9b 12b 13b 00 00 00 00 ff f5".replace("CT", count)
+                .replace("Lf", Lf).replace("Hex", Hex)
+                .replace("8b", B8).replace("9b", B9).replace("12b", B12).replace("13b", B13)
+                .replace(" ", "")
         Command.sendData(Data)
         Command.timer.zeroing()
-               var fal = 1
-               while (true) {
-                   if (Rx == GetCrcString("F51C000301000A") || Rx == GetCrcString("F51C000302000A")) {
-                       if (fal == 3) {
-                           return false
-                       }
-                      Command.sendData(Data)
-                       Command.timer.zeroing()
-                       fal += 1
-                       JzActivity.getControlInstance.toast("第幾次\(fal)")
-                   }
-                if (Command.timer.stop() > 20 ) {
-                           ReOpen()
-                       return false
-                   }
-                   if (Rx.length >= 36) {
-                    ScanCount = Int(Rx.substring(9, 10))!
-                    if (Rx.substring(10, 12) == "04"){
-                        spilt=data.substring(
+        var fal = 1
+        while (true) {
+            if (Rx == GetCrcString("F51C000301000A") || Rx == GetCrcString("F51C000302000A")) {
+                if (fal == 3) {
+                    return false
+                }
+                Command.sendData(Data)
+                Command.timer.zeroing()
+                fal += 1
+                JzActivity.getControlInstance.toast("第幾次\(fal)")
+            }
+            if (Command.timer.stop() > 20 ) {
+                ReOpen()
+                return false
+            }
+            if (Rx.length >= 36) {
+                ScanCount = Int(Rx.substring(9, 10))!
+                if (Rx.substring(10, 12) == "04"){
+                    spilt=data.substring(
                         0,
                         2048 * 2)
-                    }else{
-                        spilt=data.substring(0, 6144 * 2)
-                    }
-                       
-                       return WriteFlash(spilt)
-                   }
-                   usleep(100*1000)
-               }
-
-       }
+                }else{
+                    spilt=data.substring(0, 6144 * 2)
+                }
+                
+                return WriteFlash(spilt)
+            }
+            usleep(100*1000)
+        }
+        
+    }
     
     func WriteFlash(_ data: String)-> Bool {
         var count=0
@@ -299,30 +318,30 @@ class OgCommand {
             count=data.length / 400 + 1
         }
         for i in 0..<count {
-                if (i == count - 1) {
-                    Program_Progress!(100)
-                    if (!CheckData(data.substring(400 * i), Int(i + 1))) {
-                        return false
-                    }
-                } else {
-                    Program_Progress!(i * 100 / count)
-                    if (!CheckData(
-                            data.substring(400 * i, 400 * i + 400),
-                            (i + 1).toHexString()
-                        )
+            if (i == count - 1) {
+                Program_Progress!(100)
+                if (!CheckData(data.substring(400 * i), (i + 1).toHexString())) {
+                    return false
+                }
+            } else {
+                Program_Progress!(i * 100 / count)
+                if (!CheckData(
+                    data.substring(400 * i, 400 * i + 400),
+                    (i + 1).toHexString()
+                    )
                     ) {
-                        return false
-                    }
+                    return false
                 }
             }
-            return true
-
+        }
+        return true
+        
     }
     func CheckData(_ data: String,_ place: String)-> Bool {
         var place = place
-            while (place.length < 2) {
-                place = "0$place"
-            }
+        while (place.length < 2) {
+            place = "0\(place)"
+        }
         var Long :String{
             get{
                 if (data.length == 400) {return "00CB"} else {
@@ -330,51 +349,296 @@ class OgCommand {
                 }
             }
         }
-                
-            let command = "0A 13 LONG DATA PLACE FF F5".replace(" ", "").replace("LONG", Long)
-                .replace("DATA", data).replace("PLACE", place)
+        
+        let command = "0A 13 LONG DATA PLACE FF F5".replace(" ", "").replace("LONG", Long)
+            .replace("DATA", data).replace("PLACE", place)
         Command.sendData(command)
         Command.timer.zeroing()
-            let fal = 0
+        let fal = 0
+        while (true) {
+            if (Command.timer.stop() > 6 || Rx == GetCrcString("F51C000301000A") || Rx == GetCrcString("F51C000302000A") ) {
+                if (Command.timer.stop() > 6) {
+                    
+                    ReOpen()
+                }
+                return false
+            }
+            if (Rx.length >= 36) {
+                return true
+            }
+            usleep(100*1000)
+        }
+    }
+    func ProgramCheck(data: String)->Bool {
+        Command.sendData("0A 14 00 0E 00 00 00 00 00 00 00 00 00 00 00 00 ff f5".replace(" ", ""))
+        var fal = 0
+        Command.timer.zeroing()
+        while (true) {
+            if (Command.timer.stop() > 15 || Rx == GetCrcString("F51C000301000A") || Rx == GetCrcString("F51C000302000A") || fal == 10 ) {
+                if (Command.timer.stop() > 15) {
+                    ReOpen()
+                }
+                return false
+            }
+            if (Rx.length >= 36 && Rx.contains("F513000E00")) {
+                let check = Rx.substring(12, 20)
+                if (check == "7FFFFFFF" || check == "000007FF") {
+                    return true
+                } else {
+                    if (!RePr(getBit([UInt8](check.HexToByte()!)).substring(1), data)) {
+                        return false
+                    }
+                    Command.timer.zeroing()
+                    fal+=1
+                }
+            }
+            usleep(100*1000)
+        }
+    }
+    func RePr(_ b: String,_ data: String)->Bool {
+        var b :String = String(b.reversed())
+        print("DATA:: 失敗" + b)
+        var count:Int{
+            get{
+                if (data.length % 400 == 0){
+                    return data.length / 400
+                }else{
+                    return data.length / 400 + 1
+                }
+            }
+        }
+        for i in 0..<count {
+            Program_Progress!(i * 100 / count)
+            if (b.substring(i,i+1) != "1") {
+                if (i == count - 1) {
+                    if (!CheckData(data.substring(400 * i), (i + 1).toHexString())) {
+                        return false
+                    }
+                } else {
+                    if (!CheckData(
+                        data.substring(400 * i, 400 * i + 400),
+                        (i + 1).toHexString()
+                        )
+                        ) {
+                        return false
+                    }
+                }
+            }
+        }
+        Command.sendData("0A 14 00 0E 00 00 00 00 00 00 00 00 00 00 00 00 ff f5".replace(" ", ""))
+        return true
+    }
+    func reboot()-> Bool {
+        let data = "0A0D00030000F5"
+        Command.sendData(data)
+        Command.timer.zeroing()
+        while (true) {
+            if (Command.timer.stop() > 20 || Rx == GetCrcString("F51C000301000A") || Rx == GetCrcString("F51C000302000A")) {
+                if (Command.timer.stop() > 20) {
+                    ReOpen()
+                }
+                return false
+            }
+            if (Rx.length == 14) {
+                return true
+            }
+            usleep(1000*1000)
+        }
+        
+    }
+    func GetVerion(caller: (_ a:String,_ b:Bool)->Void) {
+        let data = "0A0A000EFFFFFFFFFFFFFFFFFFFFFFFF00F5"
+        Command.sendData(data)
+        Command.timer.zeroing()
+        while (true) {
+            if (Command.timer.stop() > 15 || Rx == GetCrcString("F51C000301000A") || Rx == GetCrcString("F51C000302000A")) {
+                if (Command.timer.stop() > 15) {
+                    ReOpen()
+                }
+                caller("", false)
+                return
+            }
+            if (Rx.length >= 36) {
+                caller(Rx.substring(8, 16), true)
+                return
+            }
+            usleep(100*1000)
+        }
+    }
+    func WriteBootloader(act: JzActivity, Ind: Int, filename: String, caller: (_ b:Int)->Void,finish:(_ b:Bool)->Void) {
+        let sb = PublicBeans.getX2()
+        var Long = 0
+        if (sb.length % Ind == 0) {
+            Long = sb.length / Ind
+        } else {
+            Long = sb.length / Ind + 1
+        }
+        for i in 0..<Long {
+            if (i == Long - 1) {
+                let data=bytesToHex([UInt8](sb.substring(i * Ind, sb.length).data(using: .utf8)!))
+                let length = Ind + 2
+                check(Convvvert(data, length.toHexString()))
+                caller(100)
+                finish(true)
+            } else {
+                 let data=bytesToHex([UInt8](sb.substring(i * Ind, i * Ind + Ind).data(using: .utf8)!))
+                let length = Ind + 2
+                caller(i * 100 / Long)
+                if (!check(Convvvert(data,length.toHexString()))) {
+                    finish(false)
+                }
+            }
+        }
+        finish(true)
+    }
+    func Convvvert(_ data: String,_ length: String)-> String {
+        var length = length
+        var command = "0A02LX00F5"
+        while (length.length < 4) {
+            length = "0\(length)"
+        }
+        command = command.replace("L", length).replace("X", data)
+        return command
+    }
+    
+    func check(_ data: String)->Bool {
+        var fal = 0
+        Command.sendData(data)
+        Command.timer.zeroing()
+        while (fal < 5) {
+            if (Command.timer.stop() > 2) {
+        Command.sendData(data)
+               Command.timer.zeroing()
+        fal += 1
+        }
+        if (Rx.length >= 14 && Rx == GetCrcString("F502000300F40A") || Rx == GetCrcString("F50B000301F70A")) {
+        return true
+        }
+        usleep(100*1000)
+        }
+        return false
+    }
+    func GetHard() {
+               let data = "0A0C000EFFFFFFFFFFFFFFFFFFFFFFFF00F5"
+        Command.sendData(data)
+               while (true) {
+                if (Command.timer.stop() > 15 || Rx == GetCrcString("F51C000301000A") || Rx == GetCrcString("F51C000302000A")) {
+                       if (Command.timer.stop() > 15) {
+                           ReOpen()
+                       }
+                       return
+                   }
+                   if (Rx.length >= 14) {
+                       //                    if(Rx.contains(GetCrcString("F500000302F40A"))){caller.result(2);}
+                       //                    if(Rx.contains(GetCrcString("F500000301F40A"))){caller.result(1);}
+                       return
+                   }
+                   usleep(1000*100)
+               }
+       }
+    func HandShake(caller: (_ a:Int)->Void) {
+            let data = "0A0000030000F5"
+        Command.sendData(data)
             while (true) {
-                if (Command.timer.stop() > 6 || Rx == GetCrcString("F51C000301000A") || Rx == GetCrcString("F51C000302000A") ) {
-                    if (Command.timer.stop() > 6) {
-                       
+                if (Command.timer.stop() > 15 || Rx == GetCrcString("F51C000301000A") || Rx == GetCrcString("F51C000302000A")) {
+                    if (Command.timer.stop() > 15) {
                         ReOpen()
                     }
-                    return false
+                    caller(-1)
+                    return
                 }
-                if (Rx.length >= 36) {
-                    return true
+                if (Rx.length >= 14) {
+                    if (Rx.contains(GetCrcString("F500000302F40A"))) {
+                        caller(2)
+                        return
+                    }
+                    if (Rx.contains(GetCrcString("F500000301F40A"))) {
+                        caller(1)
+                        return
+                    }
+                    if (Rx.contains(GetCrcString("F501000300F70A"))) {
+                        caller(1)
+                        return
+                    }
+                    caller(-1)
+                    return
                 }
                 usleep(100*1000)
             }
     }
-    func ProgramCheck(data: String)->Bool {
-        Command.sendData("0A 14 00 0E 00 00 00 00 00 00 00 00 00 00 00 00 ff f5".replace(" ", ""))
-              var fal = 0
-        Command.timer.zeroing()
-              while (true) {
-                if (Command.timer.stop() > 15 || Rx == GetCrcString("F51C000301000A") || Rx == GetCrcString("F51C000302000A") || fal == 10 ) {
-                    if (Command.timer.stop() > 15) {
-                          ReOpen()
-                      }
-                      return false
-                  }
-                  if (Rx.length >= 36 && Rx.contains("F513000E00")) {
-                      val check = Rx.substring(12, 20)
-                      if (check == "7FFFFFFF" || check == "000007FF") {
-                          return true
-                      } else {
-                          if (!RePr(getBit(check).substring(1), data)) {
-                              return false
-                          }
-                          past = sdf.parse(sdf.format(Date()))
-                          fal++
-                      }
-                  }
-                  usleep(100*1000)
-              }
-      }
+    
+//    func IdCopy(caller: (a:Bool)->Void, _long: Int,obd: ObdBeans) {
+//           var hex = PublicBeans.getHEX()
+//           try {
+//               while (hex.length < 2) {
+//                   hex = "0$hex"
+//               }
+//               for (i in 0 until obd.rowcount) {
+//                   if(!obd.readable[i]){continue}
+//                   var Original_ID = obd.OldSemsor[i]
+//                   while (Original_ID.length < 8) {
+//                       Original_ID = "0$Original_ID"
+//                   }
+//                   var New_ID = obd.NewSensor[i]
+//                   while (New_ID.length < 8) {
+//                       New_ID = "0$New_ID"
+//                   }
+//                   val data =
+//                       "0A 11 00 0E Original_ID Original_Long New_ID New_Long hex 00 ff f5".replace(
+//                           " ",
+//                           ""
+//                       ).replace(
+//                           "Original_Long",
+//                           "0$_long"
+//                       )
+//                           .replace("New_Long", "0$_long").replace("Original_ID", Original_ID)
+//                           .replace("New_ID", New_ID).replace("hex", hex)
+//                   Log.e("DATA:", "Prepare:$data")
+//                   Send(data)
+//                   val sdf = SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS")
+//                   val fal = 0
+//                   val past = sdf.parse(sdf.format(Date()))
+//                   while (true) {
+//                       val now = sdf.parse(sdf.format(Date()))
+//                       val time = getDatePoor(now, past)
+//                       if (time > 15 || Rx == GetCrcString("F51C000301000A") || Rx == GetCrcString("F51C000302000A") || cancel!!) {
+//                           if (time > 15) {
+//                               ReOpen()
+//                               caller.Copy_Finish(false)
+//                               return
+//                           }
+//                           if (SendTag == NowTag) {
+//                               caller.Copy_Next(false, i)
+//                           }
+//                           break
+//                       }
+//                       if (Rx.length >= 36) {
+//                           val idcount = Integer.parseInt(Rx.substring(17, 18))
+//                           if (Rx.contains(obd.OldSemsor[i].substring(8 - idcount))) {
+//                               if (SendTag == NowTag) {
+//                                   obd.state[i]=ObdBeans.PROGRAM_SUCCESS
+//                                   caller.Copy_Next(true, i)
+//                               }
+//                           } else {
+//                               if (SendTag == NowTag) {
+//                                   obd.state[i]=ObdBeans.PROGRAM_FALSE
+//                                   caller.Copy_Next(false, i)
+//                               }
+//                           }
+//                           break
+//                       }
+//                       Thread.sleep(100)
+//                   }
+//                   Thread.sleep(1000)
+//               }
+//               if (SendTag == NowTag) {
+//                   caller.Copy_Finish(true)
+//               }
+//           } catch (e: Exception) {
+//               e.printStackTrace()
+//               caller.Copy_Finish(false)
+//           }
+//
+//       }
 
 }

@@ -70,6 +70,14 @@ public class PublicBeans{
         }, {})
         return obd
     }
+    public static func getX2()->String{
+          var obd=""
+          PublicBeans.OBD資料庫.query("select data from obd where name='x2'", {
+              result in
+              obd=result.getString(0)
+          }, {})
+          return obd
+      }
     public static func getS19File()->String{
         var obd=""
         PublicBeans.OBD資料庫.query("select data from obd where name='\(gets19())'", {
