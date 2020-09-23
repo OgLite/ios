@@ -1,0 +1,28 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name JzOsSqlHelper
+import Foundation
+@_exported import JzOsSqlHelper
+import SQLite3
+import Swift
+public class SqlHelper {
+  public init(_ dbName: Swift.String)
+  public func autoCreat() -> Swift.Bool
+  public func initByBundleMain(_ filename: Swift.String, _ filetype: Swift.String) -> Swift.Bool
+  public func initByUrl(_ url: Swift.String, _ result: @escaping (Swift.Bool) -> Swift.Void)
+  public func initByUrl(_ url: Swift.String) -> Swift.Bool
+  public func closeDB()
+  public func exSql(_ sql: Swift.String)
+  public func query(_ sql: Swift.String, _ result: (JzOsSqlHelper.SqlBinary) -> Swift.Void, _ end: () -> Swift.Void)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class SqlBinary {
+  public func getString(_ index: Swift.Int) -> Swift.String
+  public func getInt(_ index: Swift.Int) -> Swift.Int
+  public func getBytes(_ index: Swift.Int) -> Swift.UInt32
+  public func getData(_ index: Swift.Int) -> Foundation.Data
+  @objc deinit
+}
+public protocol Sql_Result {
+  func resultBack(_ binary: JzOsSqlHelper.SqlBinary)
+}

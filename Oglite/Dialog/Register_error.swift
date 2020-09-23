@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import JzIos_Framework
+import JzOsFrameWork
 class Register_error: UIViewController {
 
     override func viewDidLoad() {

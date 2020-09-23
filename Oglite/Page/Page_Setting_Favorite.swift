@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import JzAdapter
-import JzIos_Framework
+import JzOsAdapter
+import JzOsFrameWork
 public class Page_Setting_Favorite: UIViewController {
     
     @IBOutlet weak var tb: UITableView!

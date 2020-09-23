@@ -8,13 +8,14 @@
 
 import UIKit
 import Lottie
-import JzIos_Framework
+import JzOsFrameWork
 class DataLoading: UIViewController {
-    var 沒有網路="nointer".Mt()
-    var 檢查更新="Check for updates".Mt()
-    var 傳送信件="Go_email".Mt()
+    var 沒有網路="jz.210".getFix()
+    var 檢查更新="jz.60".getFix()
+    var 傳送信件="jz.83".getFix()
     
     var label=""
+    var updateing=false
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var tit: UILabel!
     let animationView = AnimationView(name: "simple-loader2")
@@ -35,7 +36,10 @@ class DataLoading: UIViewController {
             view.addGestureRecognizer(pan)
         }
         tit.text=label
-        
+        if(updateing){
+            animationView.isHidden=false
+            img.image=UIImage(named: "img_data_upload_and_loading")
+        }
     }
     @objc func tap(){
           JzActivity.getControlInstance.closeDialLog()
@@ -44,6 +48,7 @@ class DataLoading: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         animationView.frame.size = CGSize(width: 200, height: 200)
         animationView.center = self.view.center
+        animationView.frame.origin.y = animationView.frame.origin.y+50
         animationView.contentMode = .scaleAspectFit
         animationView.loopMode=LottieLoopMode.loop
         view.addSubview(animationView)

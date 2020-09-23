@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 import UIKit
-import JzIos_Framework
+import JzOsFrameWork
 class Page_Scanner: UIViewController,AVCaptureMetadataOutputObjectsDelegate {
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
@@ -19,7 +19,7 @@ class Page_Scanner: UIViewController,AVCaptureMetadataOutputObjectsDelegate {
     @IBOutlet weak var Qrplace: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        tit.text="Please_scan_the_QR_Code_on_the_catalog_or_poster".Mt()
+        tit.text="jz.64".getFix()
                        captureSession = AVCaptureSession()
                         guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
                         let videoInput: AVCaptureDeviceInput

@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "12E5C0F9-6F5C-4233-9286-D26D107C9E51"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Oglite/Page/Page_Idcopy_obd.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "readsensor(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "3C577BE8-21CB-4A7B-9307-8F996E22D782"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -36,7 +20,7 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "3C577BE8-21CB-4A7B-9307-8F996E22D782 - ac8825fa07348278"
+                  uuid = "3C577BE8-21CB-4A7B-9307-8F996E22D782 - d85f40aa8ee41088"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -51,7 +35,7 @@
                   offsetFromSymbolStart = "144">
                </Location>
                <Location
-                  uuid = "3C577BE8-21CB-4A7B-9307-8F996E22D782 - 4739019f9a3e266c"
+                  uuid = "3C577BE8-21CB-4A7B-9307-8F996E22D782 - 33ee64cf13eeb49c"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -66,7 +50,7 @@
                   offsetFromSymbolStart = "196">
                </Location>
                <Location
-                  uuid = "3C577BE8-21CB-4A7B-9307-8F996E22D782 - 90128f5c662dcb7d"
+                  uuid = "3C577BE8-21CB-4A7B-9307-8F996E22D782 - e4c5ea0ceffd5a7d"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -81,7 +65,7 @@
                   offsetFromSymbolStart = "20">
                </Location>
                <Location
-                  uuid = "3C577BE8-21CB-4A7B-9307-8F996E22D782 - c47de15600d6ef6c"
+                  uuid = "3C577BE8-21CB-4A7B-9307-8F996E22D782 - b0aa840689067d9c"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -96,7 +80,7 @@
                   offsetFromSymbolStart = "16">
                </Location>
                <Location
-                  uuid = "3C577BE8-21CB-4A7B-9307-8F996E22D782 - ed5ae9a02b6e43fc"
+                  uuid = "3C577BE8-21CB-4A7B-9307-8F996E22D782 - 998d8cf0a2bed10c"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -111,7 +95,7 @@
                   offsetFromSymbolStart = "524">
                </Location>
                <Location
-                  uuid = "3C577BE8-21CB-4A7B-9307-8F996E22D782 - 3a672f5a3a9a94fa"
+                  uuid = "3C577BE8-21CB-4A7B-9307-8F996E22D782 - 4eb04a0ab34a060a"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -147,22 +131,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1E63A46A-FB11-4341-8B0F-C90302181A3B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Oglite/Page/Page_Idcopy_obd.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "64BE39A0-1BD2-4316-A9D0-588B0E3DEC7D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -170,8 +138,8 @@
             filePath = "Oglite/Page/Page_Program_Detail.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "adapter"
             landmarkType = "24">
          </BreakpointContent>
@@ -179,16 +147,344 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DADEFAD1-FF56-4803-AB98-2D1B52D585E1"
-            shouldBeEnabled = "Yes"
+            uuid = "3B073862-643F-4A92-9046-5F64E97E6110"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Oglite/Language/English.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "dic"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "3B073862-643F-4A92-9046-5F64E97E6110 - 2702d10a8906b5cb"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_C49F3C46939C9FB9A54868F6D512CCF9_func0"
+                  moduleName = "Oglite"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jianzhi.wang/Desktop/Orange_Electronic/Oglite/Oglite/Language/English.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "3B073862-643F-4A92-9046-5F64E97E6110 - 52dcaa08180764fe"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Oglite.English.dic.unsafeMutableAddressor : Swift.Dictionary&lt;Swift.String, Swift.String&gt;"
+                  moduleName = "Oglite"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jianzhi.wang/Desktop/Orange_Electronic/Oglite/Oglite/Language/English.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3DC56E4B-4625-4926-B0B7-4107F703FAE1"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Oglite/OgCommand.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "GetPrId()"
+            startingLineNumber = "634"
+            endingLineNumber = "634"
+            landmarkName = "IdCopy(_:_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B18B32D-9D88-4BDF-9DF9-46BD6F423D97"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Oglite/Command.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "getPrID(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0857C24B-DA19-40CA-9D4F-284F5835B56D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Oglite/Page/Page_Home.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "Page_Home"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "0857C24B-DA19-40CA-9D4F-284F5835B56D - 395e7606cf27b470"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Oglite.Page_Home.pageswitch.getter : Swift.Array&lt;__C.UIViewController&gt;"
+                  moduleName = "Oglite"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jianzhi.wang/Desktop/Orange_Electronic/Oglite/Oglite/Page/Page_Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "0857C24B-DA19-40CA-9D4F-284F5835B56D - d46f1281720aa364"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Oglite.Page_Home.pageswitch.setter : Swift.Array&lt;__C.UIViewController&gt;"
+                  moduleName = "Oglite"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jianzhi.wang/Desktop/Orange_Electronic/Oglite/Oglite/Page/Page_Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  uuid = "0857C24B-DA19-40CA-9D4F-284F5835B56D - 5602651265c39623"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Oglite.Page_Home.pageswitch.modify : Swift.Array&lt;__C.UIViewController&gt;"
+                  moduleName = "Oglite"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jianzhi.wang/Desktop/Orange_Electronic/Oglite/Oglite/Page/Page_Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "0857C24B-DA19-40CA-9D4F-284F5835B56D - 693b1dea4b11cea4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Oglite.Page_Home.pageswitch.modify : Swift.Array&lt;__C.UIViewController&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Oglite"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jianzhi.wang/Desktop/Orange_Electronic/Oglite/Oglite/Page/Page_Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "0857C24B-DA19-40CA-9D4F-284F5835B56D - c33a3b93b73cbe9a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Oglite.Page_Home.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Oglite.Page_Home"
+                  moduleName = "Oglite"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jianzhi.wang/Desktop/Orange_Electronic/Oglite/Oglite/Page/Page_Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "1156">
+               </Location>
+               <Location
+                  uuid = "0857C24B-DA19-40CA-9D4F-284F5835B56D - 1943db61b9662c05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Oglite.Page_Home.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Oglite.Page_Home&gt;"
+                  moduleName = "Oglite"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jianzhi.wang/Desktop/Orange_Electronic/Oglite/Oglite/Page/Page_Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "1104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "32D7B724-3EC6-4573-9A65-CFBA555798A6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Oglite/Page/Page_Home.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "16084C34-FE49-41DA-80B4-2C673FE4DB1B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Oglite/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9BA2D20D-49A3-46E0-8483-FC95024A21AE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Oglite/Page/Page_Unit.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "Page_Unit"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "9BA2D20D-49A3-46E0-8483-FC95024A21AE - a01c0c3282de4a70"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Oglite.Page_Unit.prebt.getter : Swift.Optional&lt;__C.UIButton&gt;"
+                  moduleName = "Oglite"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jianzhi.wang/Desktop/Orange_Electronic/all/Oglite/Oglite/Page/Page_Unit.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "9BA2D20D-49A3-46E0-8483-FC95024A21AE - a9baa9237744fa64"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Oglite.Page_Unit.prebt.setter : Swift.Optional&lt;__C.UIButton&gt;"
+                  moduleName = "Oglite"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jianzhi.wang/Desktop/Orange_Electronic/all/Oglite/Oglite/Page/Page_Unit.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "9BA2D20D-49A3-46E0-8483-FC95024A21AE - 1cdfa2105ce7e065"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Oglite.Page_Unit.prebt.modify : Swift.Optional&lt;__C.UIButton&gt;"
+                  moduleName = "Oglite"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jianzhi.wang/Desktop/Orange_Electronic/all/Oglite/Oglite/Page/Page_Unit.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "9BA2D20D-49A3-46E0-8483-FC95024A21AE - 12b2f84bcfe72c64"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Oglite.Page_Unit.prebt.modify : Swift.Optional&lt;__C.UIButton&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Oglite"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jianzhi.wang/Desktop/Orange_Electronic/all/Oglite/Oglite/Page/Page_Unit.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "9BA2D20D-49A3-46E0-8483-FC95024A21AE - 14c0994d0fb020a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Oglite.Page_Unit.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Oglite.Page_Unit"
+                  moduleName = "Oglite"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jianzhi.wang/Desktop/Orange_Electronic/all/Oglite/Oglite/Page/Page_Unit.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "284">
+               </Location>
+               <Location
+                  uuid = "9BA2D20D-49A3-46E0-8483-FC95024A21AE - 5b1d63eb1657b01a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Oglite.Page_Unit.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Oglite.Page_Unit&gt;"
+                  moduleName = "Oglite"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jianzhi.wang/Desktop/Orange_Electronic/all/Oglite/Oglite/Page/Page_Unit.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "264">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A421DF20-3DA4-4AC0-BA2E-30D8BE322B01"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Oglite/model/SensorData.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getC()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

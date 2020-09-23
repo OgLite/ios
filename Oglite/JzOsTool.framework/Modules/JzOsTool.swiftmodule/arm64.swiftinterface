@@ -1,0 +1,36 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name JzOsTool
+import Foundation
+import Swift
+import UIKit
+@_hasMissingDesignatedInitializers public class JzOSTool {
+  public static func http() -> JzOsTool.Http
+  public static func timer() -> JzOsTool.JzTimer
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class JzTextField : UIKit.UITextField, UIKit.UITextFieldDelegate {
+  open var textWillChange: ((Swift.String) -> Swift.Void)?
+  open var textDidEdit: (() -> Swift.Void)?
+  open var digits: Swift.String
+  open var textCount: Swift.Int
+  open var upcase: Swift.Bool
+  @objc override dynamic public func draw(_ rect: CoreGraphics.CGRect)
+  @objc override dynamic public func didChangeValue(forKey key: Swift.String)
+  @objc public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @objc public func textFieldDidEndEditing(_ textField: UIKit.UITextField, reason: UIKit.UITextField.DidEndEditingReason)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@_hasMissingDesignatedInitializers open class JzTimer {
+  open func GetTime(_ timeStamp: Swift.Double) -> Swift.Double
+  open func zeroing() -> JzOsTool.JzTimer
+  open func stop() -> Swift.Double
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Http {
+  open func listHttpFile(_ url: Swift.String, _ direct: Swift.String) -> [Swift.String]?
+  open func getFileText(_ url: Swift.String) -> Swift.String?
+  @objc deinit
+}

@@ -7,13 +7,20 @@
 //
 
 import UIKit
-import JzIos_Framework
+import JzOsFrameWork
 class Dia_Select_Way: UIViewController {
     var dismissback:(()->Void?)? = nil
     @IBOutlet var entersensorid: UILabel!
     @IBOutlet var keytit: UILabel!
     @IBOutlet var readtit: UILabel!
     @IBOutlet var scantit: UILabel!
+    
+    @IBOutlet var scanhint: UILabel!
+    @IBOutlet var keyint: UILabel!
+    @IBOutlet var readt: UILabel!
+    @IBOutlet var scanlabelt: UILabel!
+    @IBOutlet var scanlabel: UILabel!
+    @IBOutlet var tit: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,5 +44,12 @@ class Dia_Select_Way: UIViewController {
         PublicBeans.selectway=PublicBeans.KetIn
        JzActivity.getControlInstance.closeDialLog("Dia_Select_Way")
         
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        keyint.text="jz.26".getFix()
+        readt.text="jz.231".getFix()
+        scanlabel.text="jz.120".getFix()
+        entersensorid.text="jz.137".getFix()
+        scanhint.text="jz.314".getFix()
     }
 }

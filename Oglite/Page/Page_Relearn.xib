@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17124"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Page_Relearn" customModule="Oglite" customModuleProvider="target">
             <connections>
+                <outlet property="btnext" destination="dTJ-9k-cdv" id="Qhz-5E-gdy"/>
                 <outlet property="content" destination="R2q-dI-f3I" id="qfp-e8-125"/>
+                <outlet property="gomenub" destination="EZB-Ld-X48" id="fd6-Ye-ii0"/>
                 <outlet property="tit" destination="fbg-fp-CBz" id="e1O-9b-V7R"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,11 +23,49 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="W54-aA-hwc">
+                    <rect key="frame" x="0.0" y="806" width="414" height="56"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZB-Ld-X48">
+                            <rect key="frame" x="0.0" y="0.0" width="207" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="d5v-6e-er0"/>
+                            </constraints>
+                            <state key="normal" title="jz.9" backgroundImage="btn_letf">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localtext" value="app_menue"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="menu:" destination="-1" eventType="touchUpInside" id="wnE-b2-VMG"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTJ-9k-cdv">
+                            <rect key="frame" x="207" y="0.0" width="207" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="ccH-d8-ZiH"/>
+                            </constraints>
+                            <state key="normal" title="jz.145" backgroundImage="btn_right">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localtext" value="Next"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="readid:" destination="-1" eventType="touchUpInside" id="pVt-LE-lgJ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="7k8-MX-0vF"/>
+                    </constraints>
+                </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eE6-gC-DnI">
                     <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Model" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbg-fp-CBz">
-                            <rect key="frame" x="151.5" y="18.5" width="111.5" height="23"/>
+                            <rect key="frame" x="152" y="18.5" width="110.5" height="23"/>
                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -39,107 +80,45 @@
                 </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R2q-dI-f3I">
                     <rect key="frame" x="10" y="114" width="394" height="682"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <attributedString key="attributedText">
-                        <fragment content="Lorem ipsum dolor sit er elit lamet">
-                            <attributes>
-                                <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <font key="NSFont" size="20" name=".AppleSystemUIFont"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
-                            </attributes>
-                        </fragment>
-                        <fragment content=",">
-                            <attributes>
-                                <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <font key="NSFont" size="20" name=".PingFangTC-Regular"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
-                            </attributes>
-                        </fragment>
-                        <fragment content=" consectetaur cillium adipisicing pecu">
-                            <attributes>
-                                <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <font key="NSFont" size="20" name=".AppleSystemUIFont"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
-                            </attributes>
-                        </fragment>
-                        <fragment content=",">
-                            <attributes>
-                                <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <font key="NSFont" size="20" name=".PingFangTC-Regular"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
-                            </attributes>
-                        </fragment>
-                        <fragment content=" sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam">
-                            <attributes>
-                                <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <font key="NSFont" size="20" name=".AppleSystemUIFont"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
-                            </attributes>
-                        </fragment>
-                        <fragment content=",">
-                            <attributes>
-                                <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <font key="NSFont" size="20" name=".PingFangTC-Regular"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
-                            </attributes>
-                        </fragment>
                         <fragment>
-                            <string key="content"> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</string>
+                            <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                             <attributes>
-                                <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <font key="NSFont" size="20" name=".AppleSystemUIFont"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
-                            </attributes>
-                        </fragment>
-                        <fragment content=",">
-                            <attributes>
-                                <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <font key="NSFont" size="20" name=".PingFangTC-Regular"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
-                            </attributes>
-                        </fragment>
-                        <fragment>
-                            <string key="content"> sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                            <attributes>
-                                <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <font key="NSFont" size="20" name=".AppleSystemUIFont"/>
+                                <color key="NSColor" systemColor="labelColor"/>
+                                <font key="NSFont" metaFont="system" size="20"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>
                     </attributedString>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZB-Ld-X48">
-                    <rect key="frame" x="0.0" y="806" width="414" height="56"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="56" id="d5v-6e-er0"/>
-                    </constraints>
-                    <state key="normal" title="Read ID form Vehice" backgroundImage="btn_rectangle">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="readid:" destination="-1" eventType="touchUpInside" id="lM5-lG-42J"/>
-                    </connections>
-                </button>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="EZB-Ld-X48" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4Ou-uC-NNa"/>
+                <constraint firstItem="W54-aA-hwc" firstAttribute="top" secondItem="R2q-dI-f3I" secondAttribute="bottom" constant="10" id="8T6-kE-MvD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="R2q-dI-f3I" secondAttribute="trailing" constant="10" id="FVE-YE-rmS"/>
                 <constraint firstItem="R2q-dI-f3I" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="JVf-Rf-zw4"/>
+                <constraint firstAttribute="trailing" secondItem="W54-aA-hwc" secondAttribute="trailing" id="KEA-Jd-oF2"/>
                 <constraint firstItem="R2q-dI-f3I" firstAttribute="top" secondItem="eE6-gC-DnI" secondAttribute="bottom" constant="10" id="MCP-IF-Dhh"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EZB-Ld-X48" secondAttribute="bottom" id="S9S-og-X8L"/>
-                <constraint firstItem="EZB-Ld-X48" firstAttribute="top" secondItem="R2q-dI-f3I" secondAttribute="bottom" constant="10" id="SeT-nR-VmB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="W54-aA-hwc" secondAttribute="bottom" id="PiT-3W-mEq"/>
                 <constraint firstItem="eE6-gC-DnI" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Vv7-Hf-3Ye"/>
                 <constraint firstItem="eE6-gC-DnI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Zk1-RH-fHy"/>
+                <constraint firstItem="W54-aA-hwc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Zsq-gK-o1i"/>
                 <constraint firstItem="eE6-gC-DnI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="c5Z-wD-dCp"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EZB-Ld-X48" secondAttribute="trailing" id="nta-As-Mz3"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="147"/>
         </view>
     </objects>
     <resources>
-        <image name="btn_rectangle" width="1233" height="192"/>
+        <image name="btn_letf" width="858" height="267"/>
+        <image name="btn_right" width="858" height="267"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -8,9 +8,11 @@
 
 import UIKit
 import JzOsSqlHelper
-import JzAdapter
+import JzOsAdapter
+import JzOsFrameWork
 class Page_Select_Make: UIViewController {
     lazy var item=PublicBeans.getMake()
+    @IBOutlet var maketit: UILabel!
     @IBOutlet weak var tb: UITableView!
     lazy var adapter=GridAdapter(tb: tb, width: UIScreen.main.bounds.width/3, height: UIScreen.main.bounds.width/3, count: {return self.item.make.count}, spilt: 3, nib: "Cell_Make", getcell: {
         a,b,c in
@@ -25,4 +27,11 @@ class Page_Select_Make: UIViewController {
         tb.separatorStyle = .none
         adapter.notifyDataSetChange()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        maketit.text="jz.123".getFix()
+    }
+    @IBAction func goMenu(_ sender: Any) {
+        JzActivity.getControlInstance.goMenu()
+    }
+    
 }

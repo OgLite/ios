@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,7 +26,7 @@
                                     <constraint firstAttribute="width" constant="56" id="DaM-wE-r09"/>
                                     <constraint firstAttribute="height" constant="56" id="UzS-9O-luI"/>
                                 </constraints>
-                                <state key="normal" title="LF" backgroundImage="icon_tire_ok">
+                                <state key="normal" title="LF" backgroundImage="icon_tire_cancel">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -46,7 +46,7 @@
                                     <constraint firstAttribute="height" constant="56" id="3Tr-kH-cMg"/>
                                     <constraint firstAttribute="width" constant="56" id="n6P-dc-1GC"/>
                                 </constraints>
-                                <state key="normal" title="RR" backgroundImage="icon_tire_normal">
+                                <state key="normal" title="RR" backgroundImage="icon_tire_cancel">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -56,18 +56,10 @@
                                     <constraint firstAttribute="height" constant="56" id="VVf-NN-A2h"/>
                                     <constraint firstAttribute="width" constant="56" id="cKN-Qn-xep"/>
                                 </constraints>
-                                <state key="normal" title="LR" backgroundImage="icon_tire_normal">
+                                <state key="normal" title="LR" backgroundImage="icon_tire_cancel">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hF5-YE-nvD">
-                                <rect key="frame" x="147" y="50" width="238" height="38.5"/>
-                                <string key="text">Choose the tire position 
-and enter sensor ID number</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_car" translatesAutoresizingMaskIntoConstraints="NO" id="pt2-Nq-K2u">
                                 <rect key="frame" x="50" y="14" width="56" height="110"/>
                                 <constraints>
@@ -83,14 +75,11 @@ and enter sensor ID number</string>
                             <constraint firstItem="pt2-Nq-K2u" firstAttribute="leading" secondItem="CFw-S1-qDN" secondAttribute="leading" constant="50" id="Dns-q1-scz"/>
                             <constraint firstItem="QMr-MR-B9K" firstAttribute="top" secondItem="rt4-iR-qXJ" secondAttribute="bottom" constant="10" id="Glm-xv-lJ4"/>
                             <constraint firstItem="wcs-ne-IVh" firstAttribute="top" secondItem="CFw-S1-qDN" secondAttribute="top" constant="10" id="J0m-Cq-TcV"/>
-                            <constraint firstItem="hF5-YE-nvD" firstAttribute="centerY" secondItem="pt2-Nq-K2u" secondAttribute="centerY" id="cIs-Fh-qOy"/>
                             <constraint firstItem="pt2-Nq-K2u" firstAttribute="top" secondItem="CFw-S1-qDN" secondAttribute="top" constant="14" id="ka8-TD-kQz"/>
                             <constraint firstItem="rt4-iR-qXJ" firstAttribute="leading" secondItem="CFw-S1-qDN" secondAttribute="leading" constant="10" id="lCX-e3-gR4"/>
                             <constraint firstItem="wcs-ne-IVh" firstAttribute="leading" secondItem="rt4-iR-qXJ" secondAttribute="trailing" constant="25" id="miT-II-Lc9"/>
                             <constraint firstItem="rt4-iR-qXJ" firstAttribute="top" secondItem="CFw-S1-qDN" secondAttribute="top" constant="10" id="pWd-kv-7v5"/>
                             <constraint firstItem="ECT-zF-EEA" firstAttribute="top" secondItem="wcs-ne-IVh" secondAttribute="bottom" constant="10" id="wmN-eb-uSY"/>
-                            <constraint firstAttribute="trailing" secondItem="hF5-YE-nvD" secondAttribute="trailing" constant="10" id="yNy-du-U1x"/>
-                            <constraint firstItem="hF5-YE-nvD" firstAttribute="leading" secondItem="wcs-ne-IVh" secondAttribute="trailing" id="zAd-gV-kdC"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -115,7 +104,5 @@ and enter sensor ID number</string>
     <resources>
         <image name="icon_car" width="396" height="682"/>
         <image name="icon_tire_cancel" width="333" height="333"/>
-        <image name="icon_tire_normal" width="264" height="264"/>
-        <image name="icon_tire_ok" width="264" height="264"/>
     </resources>
 </document>

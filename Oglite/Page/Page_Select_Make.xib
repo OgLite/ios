@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17124"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Page_Select_Make" customModule="Oglite" customModuleProvider="target">
             <connections>
+                <outlet property="maketit" destination="Ek3-Qv-hqT" id="CaK-kM-vRN"/>
                 <outlet property="tb" destination="rex-p1-HSg" id="nzG-4x-KUZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,14 +22,26 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rex-p1-HSg">
-                    <rect key="frame" x="0.0" y="104" width="414" height="758"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <rect key="frame" x="0.0" y="104" width="414" height="696"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptC-Dl-3Td">
+                    <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="0by-eH-4QY"/>
+                    </constraints>
+                    <state key="normal" title="jz.9" backgroundImage="btn_rectangle">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="goMenu:" destination="-1" eventType="touchUpInside" id="VLl-Uj-l3n"/>
+                    </connections>
+                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fq2-ZZ-Cau">
                     <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Make" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ek3-Qv-hqT">
-                            <rect key="frame" x="155" y="18.5" width="104.5" height="23"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jz.123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ek3-Qv-hqT">
+                            <rect key="frame" x="182.5" y="18.5" width="49.5" height="23"/>
                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -41,18 +55,27 @@
                     </constraints>
                 </view>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="ptC-Dl-3Td" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="960-eD-z4n"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fq2-ZZ-Cau" secondAttribute="trailing" id="9R1-Yg-kEG"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="rex-p1-HSg" secondAttribute="bottom" id="CTh-Wi-YFs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="rex-p1-HSg" secondAttribute="bottom" constant="62" id="CTh-Wi-YFs"/>
                 <constraint firstItem="fq2-ZZ-Cau" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="EQx-kr-6L9"/>
                 <constraint firstItem="rex-p1-HSg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NRQ-hM-OZP"/>
                 <constraint firstItem="fq2-ZZ-Cau" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="W71-ea-mjQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rex-p1-HSg" secondAttribute="trailing" id="cFc-nv-fDO"/>
                 <constraint firstItem="rex-p1-HSg" firstAttribute="top" secondItem="fq2-ZZ-Cau" secondAttribute="bottom" id="gi4-3F-VEO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ptC-Dl-3Td" secondAttribute="trailing" id="wFW-ox-rNX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ptC-Dl-3Td" secondAttribute="bottom" id="wIP-Fi-m9f"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="147"/>
         </view>
     </objects>
+    <resources>
+        <image name="btn_rectangle" width="1233" height="192"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import JzIos_Framework
+import JzOsFrameWork
 class Cell_Model: UICollectionViewCell {
     var selectmodel=""
     @IBOutlet weak var tit: UILabel!

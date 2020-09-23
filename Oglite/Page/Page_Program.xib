@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Page_Program" customModule="Oglite" customModuleProvider="target">
             <connections>
+                <outlet property="nextbt" destination="wAh-ku-esj" id="aJc-Li-Dqc"/>
                 <outlet property="numbercount" destination="fYR-zn-XYa" id="vc4-jd-N4w"/>
+                <outlet property="quality" destination="eNB-Vm-NUK" id="eD8-NP-tmK"/>
                 <outlet property="tit" destination="RsE-8l-u5V" id="58P-jO-U4T"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -40,11 +42,11 @@
                     <viewLayoutGuide key="safeArea" id="MMG-qv-oCD"/>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNB-Vm-NUK">
-                    <rect key="frame" x="115" y="104" width="184" height="157"/>
+                    <rect key="frame" x="117.5" y="104" width="179" height="157"/>
                     <attributedString key="attributedText">
                         <fragment content="Sensor Quantity">
                             <attributes>
-                                <font key="NSFont" size="24" name="PingFangTC-Semibold"/>
+                                <font key="NSFont" size="24" name="PingFangTC-Regular"/>
                             </attributes>
                         </fragment>
                     </attributedString>
@@ -58,38 +60,60 @@
                     <fontDescription key="fontDescription" type="system" pointSize="250"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAh-ku-esj">
-                    <rect key="frame" x="0.0" y="812" width="414" height="50"/>
-                    <color key="backgroundColor" red="0.074509803920000006" green="0.21176470589999999" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8tg-HF-scp">
+                    <rect key="frame" x="0.0" y="806" width="414" height="56"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3C8-On-A9n">
+                            <rect key="frame" x="0.0" y="0.0" width="207" height="56"/>
+                            <state key="normal" title="jz.9" backgroundImage="btn_letf">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localtext" value="app_menue"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="goMenu:" destination="-1" eventType="touchUpInside" id="GoM-aW-B9Q"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAh-ku-esj">
+                            <rect key="frame" x="207" y="0.0" width="207" height="56"/>
+                            <state key="normal" title="Next" backgroundImage="btn_right">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localtext" value="Next"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="next:" destination="-1" eventType="touchUpInside" id="hzH-O9-AMF"/>
+                            </connections>
+                        </button>
+                    </subviews>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="yD2-Kc-4iT"/>
+                        <constraint firstAttribute="height" constant="56" id="xe5-HG-VXc"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <state key="normal" title="Next">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="next:" destination="-1" eventType="touchUpInside" id="16p-JM-3V3"/>
-                    </connections>
-                </button>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="wAh-ku-esj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3Fa-ZF-eQw"/>
                 <constraint firstItem="eNB-Vm-NUK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3Ky-dm-xxC"/>
                 <constraint firstItem="cih-9z-Phc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="AFI-NF-lmr"/>
+                <constraint firstAttribute="trailing" secondItem="8tg-HF-scp" secondAttribute="trailing" id="FRV-p0-xE2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fYR-zn-XYa" secondAttribute="trailing" constant="20" id="NS5-cU-wb6"/>
                 <constraint firstItem="fYR-zn-XYa" firstAttribute="top" secondItem="eNB-Vm-NUK" secondAttribute="bottom" id="P2C-OX-VHn"/>
                 <constraint firstItem="fYR-zn-XYa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="T2T-iS-6Ii"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8tg-HF-scp" secondAttribute="bottom" id="UII-Kp-DZn"/>
                 <constraint firstItem="cih-9z-Phc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Uy7-rb-JXC"/>
                 <constraint firstItem="eNB-Vm-NUK" firstAttribute="top" secondItem="cih-9z-Phc" secondAttribute="bottom" id="f1D-Pl-WdN"/>
                 <constraint firstItem="cih-9z-Phc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="h3V-Op-lYk"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wAh-ku-esj" secondAttribute="bottom" id="hEl-Ky-PiR"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wAh-ku-esj" secondAttribute="trailing" id="x36-hR-jkx"/>
+                <constraint firstItem="8tg-HF-scp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kij-oT-hPp"/>
                 <constraint firstItem="fYR-zn-XYa" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="zQc-uf-Jwv"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="147"/>
         </view>
     </objects>
+    <resources>
+        <image name="btn_letf" width="858" height="267"/>
+        <image name="btn_right" width="858" height="267"/>
+    </resources>
 </document>

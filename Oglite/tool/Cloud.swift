@@ -17,7 +17,7 @@ class Cloud{
         var request = URLRequest(url: url)
         request.setValue("application/soap+xml; charset=utf-8", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
-        var data="<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
+        let data="<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
             "<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n" +
             "  <soap12:Body>\n" +
             "    <ValidateUser xmlns=\"http://tempuri.org/\">\n" +

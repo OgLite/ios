@@ -8,7 +8,7 @@
 
 import UIKit
 import JzOsSqlHelper
-import JzIos_Framework
+import JzOsFrameWork
 public class Cell_Favorite: UICollectionViewCell {
     var index=0
     @IBOutlet weak var delbt: UIButton!
@@ -25,7 +25,7 @@ public class Cell_Favorite: UICollectionViewCell {
         PublicBeans.Make=make
         PublicBeans.Model=model
         PublicBeans.Year=year
-        JzActivity.getControlInstance.changePage(Page_Relearn(), "Page_Relearn", true)
+        PublicBeans.changeFunction()
     }
     
     @IBAction func delfavorite(_ sender: Any) {
@@ -40,7 +40,7 @@ public class Cell_Favorite: UICollectionViewCell {
         sql.autoCreat()
         sql.exSql("CREATE TABLE  IF NOT EXISTS `favorite` ( id INTEGER PRIMARY KEY AUTOINCREMENT, make VARCHAR NOT NULL, model VARCHAR NOT NULL,year VARCHAR NOT NULL);")
 //        sql.exSql("insert into `favorite` (make,model,year) values ('BMW','i3','2016')")
-        sql.query("select * from `favorite`", {
+        sql.query("select * from `favorite` order by id desc", {
             data in
             let fav=myfavorite()
             fav.make=data.getString(1)
@@ -48,6 +48,7 @@ public class Cell_Favorite: UICollectionViewCell {
             fav.year=data.getString(3)
             result.append(fav)
         }, {})
+        sql.closeDB()
         print("getfav\(result)")
         return result
     }

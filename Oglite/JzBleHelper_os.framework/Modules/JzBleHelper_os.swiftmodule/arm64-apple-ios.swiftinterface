@@ -1,0 +1,52 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name JzBleHelper_os
+import CoreBluetooth
+import Foundation
+@_exported import JzBleHelper_os
+import Swift
+@_hasMissingDesignatedInitializers public class BleBinary {
+  public func readUTF() -> Swift.String?
+  public func readBytes() -> [Swift.UInt8]
+  public func readHEX() -> Swift.String
+  @objc deinit
+}
+public protocol BleCallBack {
+  func onConnecting()
+  func onConnectFalse()
+  func onConnectSuccess()
+  func rx(_ a: JzBleHelper_os.BleBinary)
+  func tx(_ b: JzBleHelper_os.BleBinary)
+  func scanBack(_ device: CoreBluetooth.CBPeripheral)
+  func needOpen()
+}
+@objc public class BleHelper : ObjectiveC.NSObject, CoreBluetooth.CBCentralManagerDelegate, CoreBluetooth.CBPeripheralDelegate {
+  public init(_ callback: JzBleHelper_os.BleCallBack)
+  open var bles: [CoreBluetooth.CBPeripheral]
+  open var connectPeripheral: CoreBluetooth.CBPeripheral!
+  open var charDictionary: [Swift.String : CoreBluetooth.CBCharacteristic]
+  open func isPaired() -> Swift.Bool
+  open func isOpen() -> Swift.Bool
+  @objc open func centralManagerDidUpdateState(_ central: CoreBluetooth.CBCentralManager)
+  open func startScan()
+  open func stopScan()
+  open func connect(_ device: CoreBluetooth.CBPeripheral, _ second: Swift.Int)
+  open func disconnect()
+  @objc open func centralManager(_ central: CoreBluetooth.CBCentralManager, didDiscover peripheral: CoreBluetooth.CBPeripheral, advertisementData: [Swift.String : Any], rssi RSSI: Foundation.NSNumber)
+  @objc open func centralManager(_ central: CoreBluetooth.CBCentralManager, didConnect peripheral: CoreBluetooth.CBPeripheral)
+  @objc open func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: Swift.Error?)
+  @objc open func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: Swift.Error?)
+  open func sendData(_ data: Foundation.Data, _ txchannel: Swift.String, _ rxchannel: Swift.String)
+  open func writeUtf(_ data: Swift.String, _ txchannel: Swift.String, _ rxchannel: Swift.String)
+  open func writeHex(_ data: Swift.String, _ txchannel: Swift.String, _ rxchannel: Swift.String)
+  open func writeBytes(_ data: [Swift.UInt8], _ txchannel: Swift.String, _ rxchannel: Swift.String)
+  open func writeData(_ data: Foundation.Data, _ txchannel: Swift.String, _ rxchannel: Swift.String)
+  @objc open func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didWriteValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+  @objc open func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+  @objc open func centralManager(_ central: CoreBluetooth.CBCentralManager, didDisconnectPeripheral peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
+  open func unpair()
+  @objc open func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverDescriptorsFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+  @objc open func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didWriteValueFor descriptor: CoreBluetooth.CBDescriptor, error: Swift.Error?)
+  @objc deinit
+  @objc override dynamic public init()
+}

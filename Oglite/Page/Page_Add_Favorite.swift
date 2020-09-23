@@ -8,7 +8,7 @@
 
 import UIKit
 import JzSimplePicker
-import JzIos_Framework
+import JzOsFrameWork
 import JzOsSqlHelper
 class Page_Add_Favorite: UIViewController {
     @IBOutlet weak var b3: UIButton!
@@ -48,21 +48,21 @@ class Page_Add_Favorite: UIViewController {
     
     @IBAction func selectmake(_ sender: Any) {
         hidden()
-        make.visible(true)
+        make.open()
     }
     
     @IBAction func selectmodel(_ sender: Any) {
         hidden()
         modelitem=PublicBeans.getModel()
         model.resetitem(modelitem.model)
-        model.visible(true)
+        model.open()
     }
     
     @IBAction func selectyear(_ sender: Any) {
         hidden()
         yearitem=PublicBeans.getYear()
         year.resetitem(yearitem.year)
-        year.visible(true)
+        year.open()
     }
     
     @IBAction func back(_ sender: Any) {
@@ -74,12 +74,13 @@ class Page_Add_Favorite: UIViewController {
         sql.autoCreat()
         sql.exSql("delete from favorite where make='\(PublicBeans.Make)' and model='\(PublicBeans.Model)' and year='\(PublicBeans.Year)'")
         sql.exSql("insert into `favorite` (make,model,year) values ('\(PublicBeans.Make)','\(PublicBeans.Model)','\(PublicBeans.Year)')")
+        sql.closeDB()
          JzActivity.getControlInstance.goBack()
     }
     func hidden(){
-        make.visible(false)
-        model.visible(false)
-        year.visible(false)
+        make.close()
+        model.close()
+        year.close()
     }
     func getMmy(){
         PublicBeans.資料庫.query("select `Make`,`Model`,`Year` from `Summary table` limit 0,1", {a in

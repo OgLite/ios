@@ -1,0 +1,21 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name JzSimplePicker
+import Foundation
+@_exported import JzSimplePicker
+import Swift
+import UIKit
+@objc public class SimplePicker : ObjectiveC.NSObject, UIKit.UIPickerViewDelegate, UIKit.UIPickerViewDataSource {
+  public init(_ view: UIKit.UIView, _ item: [Swift.String], _ selectLinstener: @escaping (Swift.String) -> Swift.Void, _ donecolor: UIKit.UIColor = UIColor.black)
+  public init(_ view: UIKit.UIView, _ item: [Swift.String], _ selectLinstener: @escaping (Swift.String) -> Swift.Void, _ color: UIKit.UIColor, _ height: Swift.Int, _ donecolor: UIKit.UIColor = UIColor.black)
+  @objc public func numberOfComponents(in pickerView: UIKit.UIPickerView) -> Swift.Int
+  @objc public func pickerView(_ pickerView: UIKit.UIPickerView, numberOfRowsInComponent component: Swift.Int) -> Swift.Int
+  @objc public func pickerView(_ pickerView: UIKit.UIPickerView, titleForRow row: Swift.Int, forComponent component: Swift.Int) -> Swift.String?
+  @objc public func pickerView(_ pickerView: UIKit.UIPickerView, didSelectRow row: Swift.Int, inComponent component: Swift.Int)
+  public func notifyDataSetChange()
+  public func open()
+  public func close()
+  public func resetitem(_ item: [Swift.String])
+  @objc deinit
+  @objc override dynamic public init()
+}

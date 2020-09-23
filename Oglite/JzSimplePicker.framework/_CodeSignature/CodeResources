@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/JzSimplePicker-Swift.h</key>
 		<data>
-		yX/nATV4JKGDMHT3kSUPMuBecq4=
+		VB7uXSzI02Oa3kIa/qmX3t8D+bM=
 		</data>
 		<key>Headers/JzSimplePicker.h</key>
 		<data>
@@ -14,23 +14,39 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		MH5Zebsfp4R9jTvoYviRoxPq5vM=
+		tbf1Ebx2N5ZfTOEjgxjAPxaUNII=
+		</data>
+		<key>Modules/JzSimplePicker.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
+		<data>
+		UVeo1t0h/w3jz1lA6NlrOvhLQ3Y=
+		</data>
+		<key>Modules/JzSimplePicker.swiftmodule/Project/arm64.swiftsourceinfo</key>
+		<data>
+		UVeo1t0h/w3jz1lA6NlrOvhLQ3Y=
 		</data>
 		<key>Modules/JzSimplePicker.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		yXz/0VEw/mnovLdCgKXzrGOV7iw=
+		9itqoqNVVpRu+pNr5gF4WeX1X2Y=
+		</data>
+		<key>Modules/JzSimplePicker.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<data>
+		PRxydvrnTanhP8gm0cu6hj6EW9s=
 		</data>
 		<key>Modules/JzSimplePicker.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		h8EIm9/nRzVJ4avJNBB7bYrr6Bc=
+		RzIqBGckRYpQrLMufYbzbMr2GMQ=
 		</data>
 		<key>Modules/JzSimplePicker.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		yXz/0VEw/mnovLdCgKXzrGOV7iw=
+		9itqoqNVVpRu+pNr5gF4WeX1X2Y=
+		</data>
+		<key>Modules/JzSimplePicker.swiftmodule/arm64.swiftinterface</key>
+		<data>
+		PRxydvrnTanhP8gm0cu6hj6EW9s=
 		</data>
 		<key>Modules/JzSimplePicker.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		h8EIm9/nRzVJ4avJNBB7bYrr6Bc=
+		RzIqBGckRYpQrLMufYbzbMr2GMQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -43,7 +59,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7fT2wXxwAzUFq758U48TPNU80uOgppOpQSlce9GYtrs=
+			nJ1iNNFCFCl6faXCnWHLLYSILzp4+8GVdwnv3kC2DRI=
 			</data>
 		</dict>
 		<key>Headers/JzSimplePicker.h</key>
@@ -53,32 +69,60 @@
 			BaMpylSNLaF2AJUf/TmLa23PNKc8OrbSQx/lQntHd8s=
 			</data>
 		</dict>
+		<key>Modules/JzSimplePicker.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lB5+Fw0Q4Va92HGVP0Cs8uKnx7hbLjIWkrqSiUZQkAA=
+			</data>
+		</dict>
+		<key>Modules/JzSimplePicker.swiftmodule/Project/arm64.swiftsourceinfo</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lB5+Fw0Q4Va92HGVP0Cs8uKnx7hbLjIWkrqSiUZQkAA=
+			</data>
+		</dict>
 		<key>Modules/JzSimplePicker.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZBgL9TCjHUa95um4sIC6I/jAPIng9fhzD9dTZAQhL1c=
+			k3RH0YNzUlaKo/s103ebR+IR6X1E8pQcFPKN3YDiqn4=
+			</data>
+		</dict>
+		<key>Modules/JzSimplePicker.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			kzSX6xu1LAmhCVKViBqnqMlhLkSpMNl4TTMh9HtVGXQ=
 			</data>
 		</dict>
 		<key>Modules/JzSimplePicker.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KhjqdE9t+v21tjZlddy1DTLtVDc3NQJTEg7HjMYKCps=
+			4+8hDCNWFnNUVuH23c+pwHAjarECA3bxRw6XUae4a1M=
 			</data>
 		</dict>
 		<key>Modules/JzSimplePicker.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZBgL9TCjHUa95um4sIC6I/jAPIng9fhzD9dTZAQhL1c=
+			k3RH0YNzUlaKo/s103ebR+IR6X1E8pQcFPKN3YDiqn4=
+			</data>
+		</dict>
+		<key>Modules/JzSimplePicker.swiftmodule/arm64.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			kzSX6xu1LAmhCVKViBqnqMlhLkSpMNl4TTMh9HtVGXQ=
 			</data>
 		</dict>
 		<key>Modules/JzSimplePicker.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KhjqdE9t+v21tjZlddy1DTLtVDc3NQJTEg7HjMYKCps=
+			4+8hDCNWFnNUVuH23c+pwHAjarECA3bxRw6XUae4a1M=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

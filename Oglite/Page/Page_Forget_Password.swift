@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import JzIos_Framework
+import JzOsFrameWork
 class Page_Forget_Password: UIViewController {
     @IBOutlet var mail: UITextField!
     @IBOutlet var sub: UIButton!
@@ -16,12 +16,13 @@ class Page_Forget_Password: UIViewController {
     var run=false
     override func viewDidLoad() {
         super.viewDidLoad()
-        l1.text=("Og_email".Mt())
-        l2.text=("Go_email".Mt())
-        sub.setTitle(("Submit".Mt()), for: .normal)
+        l1.text=("jz.342".getFix())
+        l2.text=("jz.435".getFix())
+        sub.setTitle(("jz.82".getFix()), for: .normal)
     }
     
     @IBAction func submit(_ sender: Any) {
+        
         if(run){return}
         run=true
         let a=Progress()

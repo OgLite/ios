@@ -10,27 +10,43 @@
 		</data>
 		<key>Headers/JzOsTool-Swift.h</key>
 		<data>
-		C+AE89uuK5OMZVICd09aa/c18YA=
+		2xr0oK6h1+h+NALRJvEhWRZKxXM=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ddVpT+YrWi9jZe1TEq53OzSNqQA=
+		ycB2dez/x9fo6XDnvB2Akjt4ctQ=
+		</data>
+		<key>Modules/JzOsTool.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
+		<data>
+		nLHn6qnYi3SUWC5iV8VcmdkRQmY=
+		</data>
+		<key>Modules/JzOsTool.swiftmodule/Project/arm64.swiftsourceinfo</key>
+		<data>
+		nLHn6qnYi3SUWC5iV8VcmdkRQmY=
 		</data>
 		<key>Modules/JzOsTool.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		WywlBTrkUSlwjwwYTGUj6KnFR58=
+		5eHCMvlG3NgFxZ0Wxe2USOwdV0o=
+		</data>
+		<key>Modules/JzOsTool.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<data>
+		9M0BSYWlVI2UoTe3kvd0+ZQ2v9o=
 		</data>
 		<key>Modules/JzOsTool.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		KjTLeienTCpHH+FflrQHF4FTltI=
+		SWP9Z14TWSdj6gol8MnhbZK1Us4=
 		</data>
 		<key>Modules/JzOsTool.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		WywlBTrkUSlwjwwYTGUj6KnFR58=
+		5eHCMvlG3NgFxZ0Wxe2USOwdV0o=
+		</data>
+		<key>Modules/JzOsTool.swiftmodule/arm64.swiftinterface</key>
+		<data>
+		9M0BSYWlVI2UoTe3kvd0+ZQ2v9o=
 		</data>
 		<key>Modules/JzOsTool.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		KjTLeienTCpHH+FflrQHF4FTltI=
+		SWP9Z14TWSdj6gol8MnhbZK1Us4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -50,35 +66,63 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			v4riqQZkxYKu7iZFPD7YzgrsFMZu7TljIUCFOD1gv5w=
+			K5UjQBUogyMlEcDwPd0tEj8A+ksQjWT76cHPU4mZXUs=
+			</data>
+		</dict>
+		<key>Modules/JzOsTool.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pih8jGnzIklca8DQm/iEeM7uffl9DBatUxnOgrooC/Y=
+			</data>
+		</dict>
+		<key>Modules/JzOsTool.swiftmodule/Project/arm64.swiftsourceinfo</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pih8jGnzIklca8DQm/iEeM7uffl9DBatUxnOgrooC/Y=
 			</data>
 		</dict>
 		<key>Modules/JzOsTool.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eskXm/KCmewUCcV65nKwjfefasIHVlRHzDj00qxUaB8=
+			sfMLrb4WAH5vRasIbnMV6zQneJjaQKCLA5CU1yBptig=
+			</data>
+		</dict>
+		<key>Modules/JzOsTool.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qa9bJGE4XO+PndLJRA4pi+DFbBxxbBXAAQOIFxYzKk4=
 			</data>
 		</dict>
 		<key>Modules/JzOsTool.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D8JwjelXYkoniaHNTc1tfJpdqwSaVliEU1aJuXviP3A=
+			qbQgIBQiL1v4PvG8DpGfeH0Zi9Q+JOfSGjVtHjIpTyw=
 			</data>
 		</dict>
 		<key>Modules/JzOsTool.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eskXm/KCmewUCcV65nKwjfefasIHVlRHzDj00qxUaB8=
+			sfMLrb4WAH5vRasIbnMV6zQneJjaQKCLA5CU1yBptig=
+			</data>
+		</dict>
+		<key>Modules/JzOsTool.swiftmodule/arm64.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qa9bJGE4XO+PndLJRA4pi+DFbBxxbBXAAQOIFxYzKk4=
 			</data>
 		</dict>
 		<key>Modules/JzOsTool.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D8JwjelXYkoniaHNTc1tfJpdqwSaVliEU1aJuXviP3A=
+			qbQgIBQiL1v4PvG8DpGfeH0Zi9Q+JOfSGjVtHjIpTyw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

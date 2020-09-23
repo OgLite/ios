@@ -8,9 +8,11 @@
 
 import UIKit
 import JzOsTool
-import JzIos_Framework
+import JzOsFrameWork
 class Page_Program: UIViewController {
     
+    @IBOutlet var nextbt: UIButton!
+    @IBOutlet var quality: UILabel!
     @IBOutlet var tit: UILabel!
     @IBOutlet var numbercount: JzTextField!
     override func viewDidLoad() {
@@ -20,7 +22,10 @@ class Page_Program: UIViewController {
         tit.text="\(PublicBeans.Make)/\(PublicBeans.Model)/\(PublicBeans.Year)"
         
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        nextbt.setTitle("jz.145".getFix(), for: .normal)
+        quality.text="jz.249".getFix()
+    }
     
     @IBAction func next(_ sender: Any) {
         if(numbercount.text!.isEmpty){
@@ -31,4 +36,7 @@ class Page_Program: UIViewController {
         JzActivity.getControlInstance.changePage(Page_Program_Detail(), "Page_Program_Detail", true)
     }
     
+    @IBAction func goMenu(_ sender: Any) {
+    JzActivity.getControlInstance.goMenu()
+    }
 }

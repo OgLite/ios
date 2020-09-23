@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import JzIos_Framework
+import JzOsFrameWork
 class Page_Enroll: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     
     var run=false
@@ -82,24 +82,24 @@ class Page_Enroll: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource 
         super.viewDidLoad()
         picker.delegate=self
         picker.dataSource=self
-        StoreL.text=("Store_type").Mt()
-        l1.text=("Create_your_email_account").Mt()
-        l2.text=("E_mail").Mt()
-        l3.text=("Password").Mt()
-        l4.text=("Choose_a_password").Mt()
-        l5.text=("Repeat_password").Mt()
-        l6.text=("Product_serial_number").Mt()
-        l7.text=("personal_details").Mt()
-        l8.text=("First_Name").Mt()
-        l9.text=("Last_Name").Mt()
-        l10.text=("Company").Mt()
-        l11.text=("Contact_Phone_Number").Mt()
-        l12.text=("Physical_address_Mailing_address").Mt()
-        l13.text=("Country").Mt()
-        l14.text=("Street").Mt()
-        l15.text=("City").Mt()
-        l16.text=("State").Mt()
-        l17.text=("ZP_Code").Mt()
+        StoreL.text=("Store_type").getFix()
+        l1.text=("Create_your_email_account").getFix()
+        l2.text=("E_mail").getFix()
+        l3.text=("Password").getFix()
+        l4.text=("Choose_a_password").getFix()
+        l5.text=("Repeat_password").getFix()
+        l6.text=("Product_serial_number").getFix()
+        l7.text=("personal_details").getFix()
+        l8.text=("First_Name").getFix()
+        l9.text=("Last_Name").getFix()
+        l10.text=("Company").getFix()
+        l11.text=("Contact_Phone_Number").getFix()
+        l12.text=("Physical_address_Mailing_address").getFix()
+        l13.text=("Country").getFix()
+        l14.text=("Street").getFix()
+        l15.text=("City").getFix()
+        l16.text=("State").getFix()
+        l17.text=("ZP_Code").getFix()
         let pan = UITapGestureRecognizer(
             target:self,
             action:#selector(tap))
@@ -109,8 +109,8 @@ class Page_Enroll: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource 
         picker.isHidden=true
     }
     override func viewDidAppear(_ animated: Bool) {
-        can.setTitle(("cancel".Mt()), for: .normal)
-        sin.setTitle(("Sign_in".Mt()), for: .normal)
+        can.setTitle(("cancel".getFix()), for: .normal)
+        sin.setTitle(("Sign_in".getFix()), for: .normal)
     }
     
     @IBAction func selectcon(_ sender: Any) {
@@ -139,11 +139,11 @@ class Page_Enroll: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource 
             return
         }
         if(pass.count<8){
-            view.showToast(text: ("Password".Mt())+("At_least_8_characters").Mt())
+            view.showToast(text: ("Password".getFix())+("At_least_8_characters").getFix())
             return
         }
         if(pass != repeatpass){
-            view.showToast(text: "confirm_password".Mt())
+            view.showToast(text: "confirm_password".getFix())
             return
         }
         run=true
@@ -161,10 +161,10 @@ class Page_Enroll: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource 
                     JzActivity.getControlInstance.setHome(Page_Home(), "Page_Home")
                     break
                 case 1:
-                JzActivity.getControlInstance.toast("be_register".Mt())
+                JzActivity.getControlInstance.toast("be_register".getFix())
                     break
                 case -1:
-                    JzActivity.getControlInstance.toast("nointer".Mt())
+                    JzActivity.getControlInstance.toast("nointer".getFix())
                     break
                 default:
                     break
@@ -182,10 +182,10 @@ class Page_Enroll: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource 
                              JzActivity.getControlInstance.setHome(Page_Home(), "Page_Home")
                                  break
                              case 1:
-                             JzActivity.getControlInstance.toast("be_register".Mt())
+                             JzActivity.getControlInstance.toast("be_register".getFix())
                                  break
                              case -1:
-                             JzActivity.getControlInstance.toast("nointer".Mt())
+                             JzActivity.getControlInstance.toast("nointer".getFix())
                                  break
                              default:
                                  break

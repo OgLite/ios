@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import JzIos_Framework
+import JzOsFrameWork
 class Page_Policy: UIViewController {
     @IBOutlet weak var agr: UIButton!
     @IBOutlet weak var dis: UIButton!
@@ -15,9 +15,9 @@ class Page_Policy: UIViewController {
     var Setting=false
     override func viewDidLoad() {
         super.viewDidLoad()
-        policy.text="Welcome".Mt()
-        dis.setTitle("Disagree".Mt(), for: .normal)
-        agr.setTitle("Agree".Mt(), for: .normal)
+        policy.text="jz.72".getFix()
+        dis.setTitle("Disagree".getFix(), for: .normal)
+        agr.setTitle((Setting) ? "jz.9".getFix():"jz.145".getFix(), for: .normal)
     }
 
     @IBAction func disagree(_ sender: Any) {

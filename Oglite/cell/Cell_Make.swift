@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import JzIos_Framework
+import JzOsFrameWork
 public class Cell_Make: UICollectionViewCell {
     var selectmake=""
     @IBOutlet weak var carbt: UIButton!

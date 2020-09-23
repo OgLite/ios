@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/JzOsSqlHelper-Swift.h</key>
 		<data>
-		/odC8DRu3D/ucu1ZHrO9cacAo0Y=
+		HE6hdL8qiKpYMWjNiZ/jMdAd9dI=
 		</data>
 		<key>Headers/JzOsSqlHelper.h</key>
 		<data>
@@ -14,23 +14,39 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		vTM5J/eON1DrX8f0Dk1VkJIaoIE=
+		LLFG2p5hPUvmTwhca6motQnj+go=
+		</data>
+		<key>Modules/JzOsSqlHelper.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
+		<data>
+		tk/s2ePV+/ISuM4Ffz7Zcb15ixY=
+		</data>
+		<key>Modules/JzOsSqlHelper.swiftmodule/Project/arm64.swiftsourceinfo</key>
+		<data>
+		tk/s2ePV+/ISuM4Ffz7Zcb15ixY=
 		</data>
 		<key>Modules/JzOsSqlHelper.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		D+EPS7hRmt6bandpG5dufFCAGEo=
+		nX0gSxQRxz1AmZLL0fJQVzCT1+c=
+		</data>
+		<key>Modules/JzOsSqlHelper.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<data>
+		ydvOkGMcroWnwXgCUdzFvWSGYzI=
 		</data>
 		<key>Modules/JzOsSqlHelper.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		M48b0+sCRMMc7LCp9FE0jpAKMrw=
+		Y/cEof3AmnmGpNQ3VzZGCW+XsAs=
 		</data>
 		<key>Modules/JzOsSqlHelper.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		D+EPS7hRmt6bandpG5dufFCAGEo=
+		nX0gSxQRxz1AmZLL0fJQVzCT1+c=
+		</data>
+		<key>Modules/JzOsSqlHelper.swiftmodule/arm64.swiftinterface</key>
+		<data>
+		ydvOkGMcroWnwXgCUdzFvWSGYzI=
 		</data>
 		<key>Modules/JzOsSqlHelper.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		M48b0+sCRMMc7LCp9FE0jpAKMrw=
+		Y/cEof3AmnmGpNQ3VzZGCW+XsAs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,7 +63,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7xwcQUyASVZiJrsgeu8M2x+Q/R+gkdYwIuBNJQRqR0o=
+			veIZVGeoLsATnO02mMG2UVg/o1zO0UioGdTkzABGnoU=
 			</data>
 		</dict>
 		<key>Headers/JzOsSqlHelper.h</key>
@@ -57,32 +73,60 @@
 			ZdJ/PE4BFylQCahC7UBTJD3AmPnFvG+OqSW/9NCMfU8=
 			</data>
 		</dict>
+		<key>Modules/JzOsSqlHelper.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NBKlDkSE/uHofd2eug3wSYb73XwEe5JGQ8No59wRu1s=
+			</data>
+		</dict>
+		<key>Modules/JzOsSqlHelper.swiftmodule/Project/arm64.swiftsourceinfo</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NBKlDkSE/uHofd2eug3wSYb73XwEe5JGQ8No59wRu1s=
+			</data>
+		</dict>
 		<key>Modules/JzOsSqlHelper.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/5h/OEWVBgUilPHKxwMIAGcNzQotg3y3C3WpcB3fi3M=
+			rxxEwc53eeb5Z4iVjps/x68vLdpzl5Bj7HXkPqehl+Y=
+			</data>
+		</dict>
+		<key>Modules/JzOsSqlHelper.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0pF6fHE1E2lNN/mzXpBgD6W5UMwYWP53O2uCU21Z1ow=
 			</data>
 		</dict>
 		<key>Modules/JzOsSqlHelper.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CK10hYEFZUculKW4yAEmBRVaQCj8cCHn/u4jUNwOetg=
+			4ph6XrT4SPDlWoKDRjF5lg/mvJOYNdZp3wOQHpRsq0k=
 			</data>
 		</dict>
 		<key>Modules/JzOsSqlHelper.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/5h/OEWVBgUilPHKxwMIAGcNzQotg3y3C3WpcB3fi3M=
+			rxxEwc53eeb5Z4iVjps/x68vLdpzl5Bj7HXkPqehl+Y=
+			</data>
+		</dict>
+		<key>Modules/JzOsSqlHelper.swiftmodule/arm64.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0pF6fHE1E2lNN/mzXpBgD6W5UMwYWP53O2uCU21Z1ow=
 			</data>
 		</dict>
 		<key>Modules/JzOsSqlHelper.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CK10hYEFZUculKW4yAEmBRVaQCj8cCHn/u4jUNwOetg=
+			4ph6XrT4SPDlWoKDRjF5lg/mvJOYNdZp3wOQHpRsq0k=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

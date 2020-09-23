@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Page_Select_Wheel" customModule="Oglite" customModuleProvider="target">
+            <connections>
+                <outlet property="allb" destination="4Yf-PS-lQs" id="agH-df-bDx"/>
+                <outlet property="allsp" destination="kLX-sL-jkr" id="r6h-tA-GKu"/>
+                <outlet property="car" destination="wci-1I-8uN" id="III-U0-ugh"/>
+                <outlet property="lfb" destination="Doh-ud-Ixq" id="0eF-dT-6cZ"/>
+                <outlet property="lrb" destination="yDP-oo-RGp" id="khF-VS-5Pf"/>
+                <outlet property="rfb" destination="mY9-Fd-FLm" id="kEf-AM-tr8"/>
+                <outlet property="rrb" destination="2hy-Ut-A2T" id="dEQ-OD-o2S"/>
+                <outlet property="sp" destination="351-t6-A74" id="Hjh-3s-Pu3"/>
+                <outlet property="spareb" destination="S2s-e0-w52" id="21R-m0-Kjh"/>
+                <outlet property="spt" destination="t1x-vM-NtZ" id="znm-tn-mcH"/>
+                <outlet property="tit" destination="an3-Iv-yvH" id="l1G-wv-w3I"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="H9o-7W-dcE">
+                    <rect key="frame" x="0.0" y="846" width="414" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="il6-14-hF2">
+                            <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="VWt-Gj-wLo"/>
+                            </constraints>
+                            <state key="normal" title="jz.9" backgroundImage="btn_letf"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localtext" value="app_menue"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="gomenu:" destination="-1" eventType="touchUpInside" id="isM-PO-WUY"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qa-UI-V3B">
+                            <rect key="frame" x="207" y="0.0" width="207" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="nLY-oL-nJr"/>
+                            </constraints>
+                            <state key="normal" title="jz.231" backgroundImage="btn_right"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localtext" value="Next"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="next:" destination="-1" eventType="touchUpInside" id="FbY-Ph-Iaf"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sE9-X5-DTv">
+                    <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMW / 1(F20,F21)  / 2014~2015" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="an3-Iv-yvH">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.074509803920000006" green="0.21176470589999999" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="an3-Iv-yvH" firstAttribute="leading" secondItem="sE9-X5-DTv" secondAttribute="leading" id="C9P-6t-x2r"/>
+                        <constraint firstItem="an3-Iv-yvH" firstAttribute="top" secondItem="sE9-X5-DTv" secondAttribute="top" id="Wys-IM-HXr"/>
+                        <constraint firstAttribute="bottom" secondItem="an3-Iv-yvH" secondAttribute="bottom" id="bZq-RB-KKx"/>
+                        <constraint firstAttribute="height" constant="50" id="far-IA-0gW"/>
+                        <constraint firstAttribute="trailing" secondItem="an3-Iv-yvH" secondAttribute="trailing" id="vGx-7e-Kvb"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jz.413" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLC-co-VEC">
+                    <rect key="frame" x="0.0" y="122" width="414" height="25.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localtext" value="Select_tire"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_car+4 tire" translatesAutoresizingMaskIntoConstraints="NO" id="wci-1I-8uN">
+                    <rect key="frame" x="141" y="319" width="132" height="258"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="132" id="g09-4K-qP7"/>
+                        <constraint firstAttribute="height" constant="258" id="zGP-6o-KPy"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Doh-ud-Ixq">
+                    <rect key="frame" x="20" y="339" width="88" height="88"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="88" id="kSF-kl-onZ"/>
+                        <constraint firstAttribute="width" constant="88" id="kz9-9M-5ot"/>
+                    </constraints>
+                    <state key="normal" title="jz.312" backgroundImage="icon_tire_cancel">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="lfc:" destination="-1" eventType="touchUpInside" id="JKU-Pe-h5i"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hy-Ut-A2T">
+                    <rect key="frame" x="306" y="469" width="88" height="88"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="88" id="8s9-fN-eMd"/>
+                        <constraint firstAttribute="width" constant="88" id="ean-Xl-lvx"/>
+                    </constraints>
+                    <state key="normal" title="jz.310" backgroundImage="icon_tire_cancel">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="rrc:" destination="-1" eventType="touchUpInside" id="ezu-sg-0RA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDP-oo-RGp">
+                    <rect key="frame" x="20" y="469" width="88" height="88"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="88" id="CXO-ke-PUg"/>
+                        <constraint firstAttribute="height" constant="88" id="yuT-XK-rTr"/>
+                    </constraints>
+                    <state key="normal" title="jz.311" backgroundImage="icon_tire_cancel">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="lrc:" destination="-1" eventType="touchUpInside" id="0i0-HY-byZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mY9-Fd-FLm">
+                    <rect key="frame" x="306" y="339" width="88" height="88"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="88" id="eW3-Sq-HLB"/>
+                        <constraint firstAttribute="height" constant="88" id="gni-7C-leg"/>
+                    </constraints>
+                    <state key="normal" title="jz.309" backgroundImage="icon_tire_cancel">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="rfc:" destination="-1" eventType="touchUpInside" id="TwX-vh-Rt5"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kLX-sL-jkr">
+                    <rect key="frame" x="20" y="577" width="374" height="48"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2s-e0-w52">
+                            <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="1bw-S2-ef3"/>
+                                <constraint firstAttribute="width" constant="48" id="4yR-ag-DGI"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="icon_tire_cancel"/>
+                            <connections>
+                                <action selector="spc:" destination="-1" eventType="touchUpInside" id="qvM-FL-5Ge"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1x-vM-NtZ">
+                            <rect key="frame" x="58" y="0.0" width="124" height="48"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Spare tire">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="spc:" destination="-1" eventType="touchUpInside" id="RlM-02-bxF"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHA-ax-mZu">
+                            <rect key="frame" x="192" y="0.0" width="48" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="MCu-Jh-xPM"/>
+                                <constraint firstAttribute="width" constant="48" id="MoU-Iy-HxW"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="icon_tire_cancel"/>
+                            <connections>
+                                <action selector="selectall:" destination="-1" eventType="touchUpInside" id="g55-mN-LQk"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3v-Yh-J0X">
+                            <rect key="frame" x="250" y="0.0" width="124" height="48"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="jz.446">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="selectall:" destination="-1" eventType="touchUpInside" id="KOf-wu-lPX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="t1x-vM-NtZ" firstAttribute="width" secondItem="R3v-Yh-J0X" secondAttribute="width" id="2Bp-Ck-XaN"/>
+                        <constraint firstAttribute="height" constant="48" id="fN8-Cg-rXo"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="351-t6-A74">
+                    <rect key="frame" x="153.5" y="577" width="107" height="48"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yf-PS-lQs">
+                            <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="48" id="A87-Bz-gLc"/>
+                                <constraint firstAttribute="height" constant="48" id="dfA-Bs-hDc"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="icon_tire_cancel"/>
+                            <connections>
+                                <action selector="selectall:" destination="-1" eventType="touchUpInside" id="92G-Kz-L8a"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyx-0G-TiA">
+                            <rect key="frame" x="58" y="0.0" width="49" height="48"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="jz.446">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="selectall:" destination="-1" eventType="touchUpInside" id="vC6-A5-wNz"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="4Yf-PS-lQs" secondAttribute="bottom" id="5gW-XR-CjY"/>
+                        <constraint firstItem="lyx-0G-TiA" firstAttribute="leading" secondItem="4Yf-PS-lQs" secondAttribute="trailing" constant="10" id="Eo1-0H-FSb"/>
+                        <constraint firstAttribute="bottom" secondItem="lyx-0G-TiA" secondAttribute="bottom" id="I4h-Fr-kaj"/>
+                        <constraint firstItem="4Yf-PS-lQs" firstAttribute="top" secondItem="351-t6-A74" secondAttribute="top" id="lip-3j-spk"/>
+                        <constraint firstItem="lyx-0G-TiA" firstAttribute="top" secondItem="351-t6-A74" secondAttribute="top" id="maD-ph-EKA"/>
+                        <constraint firstItem="4Yf-PS-lQs" firstAttribute="leading" secondItem="351-t6-A74" secondAttribute="leading" id="qnc-fg-5q5"/>
+                        <constraint firstAttribute="trailing" secondItem="lyx-0G-TiA" secondAttribute="trailing" id="vi7-Cw-f7w"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="GLC-co-VEC" firstAttribute="top" secondItem="sE9-X5-DTv" secondAttribute="bottom" constant="28" id="3ad-o5-Yjf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sE9-X5-DTv" secondAttribute="trailing" id="80n-ZC-xCA"/>
+                <constraint firstItem="yDP-oo-RGp" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="65" id="DPF-PC-it9"/>
+                <constraint firstItem="351-t6-A74" firstAttribute="top" secondItem="wci-1I-8uN" secondAttribute="bottom" id="DnF-dg-ToY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mY9-Fd-FLm" secondAttribute="trailing" constant="20" id="F5b-SR-gEX"/>
+                <constraint firstItem="H9o-7W-dcE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Hcs-RW-lJk"/>
+                <constraint firstAttribute="bottom" secondItem="H9o-7W-dcE" secondAttribute="bottom" id="Lve-gp-k7l"/>
+                <constraint firstItem="kLX-sL-jkr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="MFd-j0-o4G"/>
+                <constraint firstItem="sE9-X5-DTv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="StV-aV-gc1"/>
+                <constraint firstItem="Doh-ud-Ixq" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-65" id="WWN-EC-Za0"/>
+                <constraint firstAttribute="trailing" secondItem="H9o-7W-dcE" secondAttribute="trailing" id="Wa0-QK-nP2"/>
+                <constraint firstItem="wci-1I-8uN" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Y9n-BT-kCK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kLX-sL-jkr" secondAttribute="trailing" constant="20" id="aAP-ZB-C2n"/>
+                <constraint firstItem="sE9-X5-DTv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aKB-Fe-bWC"/>
+                <constraint firstItem="Doh-ud-Ixq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="aRQ-9y-MhA"/>
+                <constraint firstItem="351-t6-A74" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aln-4O-vdV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2hy-Ut-A2T" secondAttribute="trailing" constant="20" id="cmU-lU-KQN"/>
+                <constraint firstItem="kLX-sL-jkr" firstAttribute="top" secondItem="wci-1I-8uN" secondAttribute="bottom" id="ebQ-Og-uwS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GLC-co-VEC" secondAttribute="trailing" id="kp1-cV-ZWD"/>
+                <constraint firstItem="mY9-Fd-FLm" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-65" id="lEO-1o-cuq"/>
+                <constraint firstItem="wci-1I-8uN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qtT-8A-bh3"/>
+                <constraint firstItem="yDP-oo-RGp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="tfd-vV-idx"/>
+                <constraint firstItem="GLC-co-VEC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="u0I-Y4-mDV"/>
+                <constraint firstItem="2hy-Ut-A2T" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="65" id="wuu-i7-iu7"/>
+                <constraint firstItem="GLC-co-VEC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="z63-w8-LNk"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_letf" width="858" height="267"/>
+        <image name="btn_right" width="858" height="267"/>
+        <image name="icon_tire_cancel" width="333" height="333"/>
+        <image name="img_car+4 tire" width="168" height="290"/>
+    </resources>
+</document>

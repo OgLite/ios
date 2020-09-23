@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import JzIos_Framework
+import JzOsFrameWork
 import JzOsTool
 class ObdCommand{
     static var TimeOut=false
@@ -51,17 +51,33 @@ class ObdCommand{
                 pastTime = Date().timeIntervalSince1970
                 fal+=1
                 if(fal==10){
-               return false
+                    return false
                 }
                 Command.sendData(ObdCommand.XoR(data))
             }
             if(Command.rx.count == 52){
                 beans.success=true
-                for i in 0..<model.count{
-                   model[i].vid=Command.rx.sub((i+1)*8..<(i+2)*8)
-                   model[i].newid=""
-                   model[i].condition=Md_Idcopy.尚未燒錄
+                let arraryPosition=["app_fl".getFix(),"app_fr".getFix(),"app_rr".getFix(),"app_rl".getFix(),"SP"]
+                for i in 0..<5{
+                    for md in model{
+                         if(md.wh==arraryPosition[i]){
+                            md.vid=Command.rx.sub((i+1)*8..<(i+2)*8)
+                            md.newid=""
+                            md.condition=Md_Idcopy.尚未燒錄
+                        }
+                    }
+                    
                 }
+                return true}
+        }
+    }
+    public static func goPrObd()->Bool{
+        let pastTime = Date().timeIntervalSince1970
+        Command.sendData(XoR("0A8D00030100F5"))
+        while(true){
+            let time=GetTime(pastTime)
+            if(time>3){return true}
+            if(Command.rx.count == 14){
                 return true}
         }
     }
@@ -140,7 +156,7 @@ class ObdCommand{
                 DispatchQueue.main.async {
                     JzActivity.getControlInstance.closeDialLog()
                     var a=Progress()
-                    a.label="\("Programming".Mt())...\(Int(iw/Lw*100))%"
+                    a.label="\("Programming".getFix())...\(Int(iw/Lw*100))%"
                     JzActivity.getControlInstance.openDiaLog(a, false, "Progress")
                 }
             }
@@ -160,7 +176,7 @@ class ObdCommand{
                 fal+=1
             }
             if(fal>20){return false}
-            if(Command.rx.count>=16){return true}
+            if(Command.rx.count>=14){return true}
         }
     }
     public static func sleepmill(_ t:Double){
@@ -179,14 +195,19 @@ class ObdCommand{
     }
     public static  func SetireId(_ model:[Md_Idcopy])->Bool{
         var i=0
+        for i in model{
+            if i.newid.isEmpty{
+                i.newid=i.vid
+            }
+        }
         Command.sendData("60A200FFFFFFFFC20A")
         sleepmill(0.05)
         var position=["4","1","2","3","5"]
         for  id in model{
             id.newid=AddEmpty(id.newid)
-Command.sendData(addcheckbyte("60A20XidFF0A".replace("id",id.newid).replace("X","\(position[i])")))
+            Command.sendData(addcheckbyte("60A20XidFF0A".replace("id",id.newid).replace("X","\(position[i])")))
             i+=1
-            sleepmill(0.05)
+            usleep(500*1000)
         }
         Command.sendData("60A2FFFFFFFFFF3D0A")
         sleepmill(0.05)
@@ -196,7 +217,7 @@ Command.sendData(addcheckbyte("60A20XidFF0A".replace("id",id.newid).replace("X",
             if(time>10){
                 for  id in model{
                     id.condition=Md_Idcopy.燒錄失敗
-                               }
+                }
                 return false}
             if(Command.rx=="60B201FFFFFFFFD30A"){
                 for  id in model{
@@ -222,7 +243,7 @@ Command.sendData(addcheckbyte("60A20XidFF0A".replace("id",id.newid).replace("X",
         }
         if(Line=="F5"){Line="00"}
         if(Line.count>2){Line="00"}
-        return addcheckbyte(command.replace("L", long).replace("X", data).replace("H", line))
+return addcheckbyte(command.replace("L", long).replace("X", data).replace("H", Line))
     }
     
     public static   func Int2strHex(_ int:Int)-> String
@@ -256,11 +277,11 @@ Command.sendData(addcheckbyte("60A20XidFF0A".replace("id",id.newid).replace("X",
     }
     public static  func GoBootloader()->Bool{
         let pastTime = Date().timeIntervalSince1970
-        Command.sendData(addcheckbyte("0ACD010100C7F5"))
+        Command.sendData(addcheckbyte("0ACD010100FFF5"))
         while(true){
             let time=GetTime(pastTime)
-            if(time>1){return false}
-            if(Command.rx=="F5CD010100CD0A"){
+            if(time>10){return false}
+            if(Command.rx.contains("F5CD010100380AF501000300F70A")){
                 print("進入Bootloader")
                 return true}
         }
@@ -275,19 +296,26 @@ Command.sendData(addcheckbyte("60A20XidFF0A".replace("id",id.newid).replace("X",
         return bytesToHex(bytes)
     }
     public static func laodingBootloader()->Bool{
-        if(!ObdCommand.HandShake()){ObdCommand.reboot()}
-        if(ObdCommand.AskVersion()&&ObdCommand.AppVersion == ObdCommand.bytesToHex([UInt8](PublicBeans.getObdVersion().data(using: .utf8)!))){
-                                       if(ObdCommand.GoApp()){
-                                           return true
-                                       }else{return false}
-                                   }
-        print("nowversion\(ObdCommand.AppVersion)")
-        print("interversion\(ObdCommand.bytesToHex([UInt8](PublicBeans.getObdVersion().data(using: .utf8)!)))")
-        if(!ObdCommand.WriteVersion() || !ObdCommand.GoBootloader()){
-            return false
+        Command.goState(BootloaderState.Bootloader)
+        ObdCommand.AskVersion()
+        usleep(1000*500)
+        if(ObdCommand.AppVersion == ObdCommand.bytesToHex([UInt8](PublicBeans.getObdVersion().data(using: .utf8)!))){
+            return Command.goState(BootloaderState.Obd_App)
+        }else{
+            print("nowversion\(ObdCommand.AppVersion)")
+print("interversion\(ObdCommand.bytesToHex([UInt8](PublicBeans.getObdVersion().data(using: .utf8)!)))")
+            if(ObdCommand.goPrObd()&&ObdCommand.GoBootloader()){
+                let a=writeflush(298)
+                if(a){
+                    sleep(1)
+                    let b = ObdCommand.WriteVersion()
+                    return a&&b
+                }else{
+                    return false
+                }
+            }else{
+                return false
+            }
         }
-        sleep(2)
-        let Pro=writeflush(296)
-       return Pro
     }
 }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import JzIos_Framework
+import JzOsFrameWork
 class Cell_DataSelect: UITableViewCell {
     @IBOutlet weak var cont: UIView!
     @IBOutlet weak var tit: UILabel!
@@ -25,17 +25,13 @@ class Cell_DataSelect: UITableViewCell {
     }
     
     @IBAction func change(_ sender: Any) {
-        if(act.helper.isPaired()||JzActivity.getControlInstance.getNowPageTag() != "Page_Vehicle_Select"){
-            JzActivity.getControlInstance.changePage(actionpage, String(describing: type(of: actionpage)), true)
-        }else{
-            if(act.helper.isOpen()){
-                act.helper.startScan()
-                           JzActivity.getControlInstance.openDiaLog(Select_Ble(), false, "Select_Ble")
+            if(actionpage is Dia_Reset){
+                JzActivity.getControlInstance.openDiaLog(Dia_Reset(), false, "Dia_Reset")
+            }else if(actionpage is Dia_Logout){
+                 JzActivity.getControlInstance.openDiaLog(Dia_Logout(), false, "Dia_Logout")
             }else{
-                JzActivity.getControlInstance.toast("openble".Mt())
+                JzActivity.getControlInstance.changePage(actionpage, String(describing: type(of: actionpage)), true)
             }
-           
-        }
 
     }
     

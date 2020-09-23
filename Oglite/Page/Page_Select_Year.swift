@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import JzAdapter
+import JzOsAdapter
+import JzOsFrameWork
 class Page_Select_Year: UIViewController {
 let item=PublicBeans.getYear()
     @IBOutlet weak var tit: UILabel!
@@ -26,5 +27,11 @@ let item=PublicBeans.getYear()
         tit.text="\(PublicBeans.Make)/\(PublicBeans.Model)"
         adapter.notifyDataSetChange()
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        tit.text="\(PublicBeans.Make)/\(PublicBeans.Model)"
+    }
+    @IBAction func goMenu(_ sender: Any) {
+        JzActivity.getControlInstance.goMenu()
+    }
+    
 }

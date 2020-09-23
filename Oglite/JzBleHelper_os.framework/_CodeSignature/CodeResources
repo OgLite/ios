@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/JzBleHelper_os-Swift.h</key>
 		<data>
-		TzRrKzM9yOfLv2lvLYZog1dXsLQ=
+		IAiysYP0eUNK8DUJle5KLMvx9Tk=
 		</data>
 		<key>Headers/JzBleHelper_os.h</key>
 		<data>
@@ -14,23 +14,39 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		NIkp/Sovthz8zk8qXQOcvqST27A=
+		Hl2lHTYz/up4b/TBYnz9Hvb5I58=
+		</data>
+		<key>Modules/JzBleHelper_os.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
+		<data>
+		sXPgryI5J3WhEgBRQLx08PVDhMY=
+		</data>
+		<key>Modules/JzBleHelper_os.swiftmodule/Project/arm64.swiftsourceinfo</key>
+		<data>
+		sXPgryI5J3WhEgBRQLx08PVDhMY=
 		</data>
 		<key>Modules/JzBleHelper_os.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		cNMMMVdUkX9iHRC1OgHOH5U2MUg=
+		ZP/+H94So6LuIohmo5sWY1MUzrY=
+		</data>
+		<key>Modules/JzBleHelper_os.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<data>
+		1F72T8/t9l5DB1kEbqv+tAY41As=
 		</data>
 		<key>Modules/JzBleHelper_os.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		iuBtHjy57toPVQcUegbqJdfpwOg=
+		bx0kKENvDGUDp5zzcSvqqSKbbeU=
 		</data>
 		<key>Modules/JzBleHelper_os.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		cNMMMVdUkX9iHRC1OgHOH5U2MUg=
+		ZP/+H94So6LuIohmo5sWY1MUzrY=
+		</data>
+		<key>Modules/JzBleHelper_os.swiftmodule/arm64.swiftinterface</key>
+		<data>
+		1F72T8/t9l5DB1kEbqv+tAY41As=
 		</data>
 		<key>Modules/JzBleHelper_os.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		iuBtHjy57toPVQcUegbqJdfpwOg=
+		bx0kKENvDGUDp5zzcSvqqSKbbeU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -43,11 +59,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TzRrKzM9yOfLv2lvLYZog1dXsLQ=
+			IAiysYP0eUNK8DUJle5KLMvx9Tk=
 			</data>
 			<key>hash2</key>
 			<data>
-			j7as6N1GIB+LcaBxoUr81U6DMolJcmFg+VqU8TbumY0=
+			tgmnuBdwPxy1jLPzQ9K8mo//D0/8G2Jcsx7p6mwwCRo=
 			</data>
 		</dict>
 		<key>Headers/JzBleHelper_os.h</key>
@@ -61,48 +77,92 @@
 			JCya8XT4hEqPRu0C3dsPiSQ2p/zf7LHpXY9PHL8uRfA=
 			</data>
 		</dict>
+		<key>Modules/JzBleHelper_os.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			sXPgryI5J3WhEgBRQLx08PVDhMY=
+			</data>
+			<key>hash2</key>
+			<data>
+			zSYwS92sMkswXaIoQ8WuT5MrQO5PRi/fwsJwnpt80bs=
+			</data>
+		</dict>
+		<key>Modules/JzBleHelper_os.swiftmodule/Project/arm64.swiftsourceinfo</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			sXPgryI5J3WhEgBRQLx08PVDhMY=
+			</data>
+			<key>hash2</key>
+			<data>
+			zSYwS92sMkswXaIoQ8WuT5MrQO5PRi/fwsJwnpt80bs=
+			</data>
+		</dict>
 		<key>Modules/JzBleHelper_os.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cNMMMVdUkX9iHRC1OgHOH5U2MUg=
+			ZP/+H94So6LuIohmo5sWY1MUzrY=
 			</data>
 			<key>hash2</key>
 			<data>
-			4QIYDgWppmCWGnh3HxzOLtH2dcL8+ZByIjDe6PbaO9s=
+			aKgFF8+3k2O0prT4YNiWGBRWCLRcxyVxnxgA2xdi7mo=
+			</data>
+		</dict>
+		<key>Modules/JzBleHelper_os.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1F72T8/t9l5DB1kEbqv+tAY41As=
+			</data>
+			<key>hash2</key>
+			<data>
+			F5kV83NIO47NcH73GcawaBtxNjQvWmyp4iFqPruN4aA=
 			</data>
 		</dict>
 		<key>Modules/JzBleHelper_os.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iuBtHjy57toPVQcUegbqJdfpwOg=
+			bx0kKENvDGUDp5zzcSvqqSKbbeU=
 			</data>
 			<key>hash2</key>
 			<data>
-			THmya4H3+L13F4BlUylD5aXBjze/imN2ScrqPjKI2yg=
+			FOvgnmjAXuxxDrRbi04EpyNMrbeeoQtzjz/f0iTEcGA=
 			</data>
 		</dict>
 		<key>Modules/JzBleHelper_os.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cNMMMVdUkX9iHRC1OgHOH5U2MUg=
+			ZP/+H94So6LuIohmo5sWY1MUzrY=
 			</data>
 			<key>hash2</key>
 			<data>
-			4QIYDgWppmCWGnh3HxzOLtH2dcL8+ZByIjDe6PbaO9s=
+			aKgFF8+3k2O0prT4YNiWGBRWCLRcxyVxnxgA2xdi7mo=
+			</data>
+		</dict>
+		<key>Modules/JzBleHelper_os.swiftmodule/arm64.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1F72T8/t9l5DB1kEbqv+tAY41As=
+			</data>
+			<key>hash2</key>
+			<data>
+			F5kV83NIO47NcH73GcawaBtxNjQvWmyp4iFqPruN4aA=
 			</data>
 		</dict>
 		<key>Modules/JzBleHelper_os.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iuBtHjy57toPVQcUegbqJdfpwOg=
+			bx0kKENvDGUDp5zzcSvqqSKbbeU=
 			</data>
 			<key>hash2</key>
 			<data>
-			THmya4H3+L13F4BlUylD5aXBjze/imN2ScrqPjKI2yg=
+			FOvgnmjAXuxxDrRbi04EpyNMrbeeoQtzjz/f0iTEcGA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

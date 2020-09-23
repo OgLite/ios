@@ -15,5 +15,6 @@ public class Md_Program{
     }
    public var result=switchcase.尚未燒錄
    public var id=""
-  public  var position=""
+   var sensordata=SensorData()
+   public var position=""
 }

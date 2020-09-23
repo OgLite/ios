@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import JzIos_Framework
+import JzOsFrameWork
 class SignOut: UIViewController {
 
     override func viewDidLoad() {

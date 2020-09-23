@@ -10,7 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Page_CheckSensor_Location" customModule="Oglite" customModuleProvider="target">
             <connections>
+                <outlet property="menub" destination="13M-te-mZ9" id="5tR-0e-6lA"/>
                 <outlet property="tb" destination="VMp-AX-YC5" id="oGR-lH-lMe"/>
+                <outlet property="tit" destination="WNw-T0-nlI" id="Sxz-nc-pSI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,11 +21,26 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4QJ-zT-6sA">
+                    <rect key="frame" x="0.0" y="806" width="414" height="56"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13M-te-mZ9">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="Nbr-BZ-RmA"/>
+                            </constraints>
+                            <state key="normal" title="Menu" backgroundImage="btn_rectangle"/>
+                            <connections>
+                                <action selector="gomenu:" destination="-1" eventType="touchUpInside" id="Vz5-19-zgr"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSq-7S-neW">
                     <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Methods of vehicle data selection " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNw-T0-nlI">
-                            <rect key="frame" x="52.5" y="17.5" width="309" height="25.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Methods of vehicle data selection " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNw-T0-nlI">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                             <fontDescription key="fontDescription" type="system" pointSize="21"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -31,23 +48,15 @@
                     </subviews>
                     <color key="backgroundColor" red="0.074509803920000006" green="0.21176470589999999" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="WNw-T0-nlI" firstAttribute="centerX" secondItem="ZSq-7S-neW" secondAttribute="centerX" id="8bC-S6-u9g"/>
                         <constraint firstAttribute="height" constant="60" id="EC6-E1-Flq"/>
-                        <constraint firstItem="WNw-T0-nlI" firstAttribute="centerY" secondItem="ZSq-7S-neW" secondAttribute="centerY" id="YGl-5W-Sbp"/>
+                        <constraint firstAttribute="bottom" secondItem="WNw-T0-nlI" secondAttribute="bottom" id="OhA-oO-CmI"/>
+                        <constraint firstItem="WNw-T0-nlI" firstAttribute="top" secondItem="ZSq-7S-neW" secondAttribute="top" id="eyJ-rh-1ae"/>
+                        <constraint firstAttribute="trailing" secondItem="WNw-T0-nlI" secondAttribute="trailing" id="fgS-UA-OdE"/>
+                        <constraint firstItem="WNw-T0-nlI" firstAttribute="leading" secondItem="ZSq-7S-neW" secondAttribute="leading" id="kLg-JV-GG3"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13M-te-mZ9">
-                    <rect key="frame" x="0.0" y="806" width="414" height="56"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="56" id="Nbr-BZ-RmA"/>
-                    </constraints>
-                    <state key="normal" title="Menu" backgroundImage="btn_rectangle"/>
-                    <connections>
-                        <action selector="gomenu:" destination="-1" eventType="touchUpInside" id="Vz5-19-zgr"/>
-                    </connections>
-                </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VMp-AX-YC5">
-                    <rect key="frame" x="0.0" y="104" width="414" height="702"/>
+                    <rect key="frame" x="0.0" y="104" width="414" height="692"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>
@@ -57,14 +66,13 @@
                 <constraint firstItem="ZSq-7S-neW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="7Bf-tg-1GT"/>
                 <constraint firstItem="ZSq-7S-neW" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="BEZ-FA-Cb3"/>
                 <constraint firstItem="VMp-AX-YC5" firstAttribute="top" secondItem="ZSq-7S-neW" secondAttribute="bottom" id="FSI-iB-DNa"/>
-                <constraint firstItem="13M-te-mZ9" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="GrP-xT-Wor"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="13M-te-mZ9" secondAttribute="bottom" id="ZkP-6f-6nu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4QJ-zT-6sA" secondAttribute="bottom" id="Hy1-cM-IyV"/>
                 <constraint firstItem="ZSq-7S-neW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dDS-MZ-pyb"/>
-                <constraint firstItem="13M-te-mZ9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="q07-ZG-hHM"/>
-                <constraint firstItem="13M-te-mZ9" firstAttribute="top" secondItem="VMp-AX-YC5" secondAttribute="bottom" id="tNs-9n-qaL"/>
+                <constraint firstItem="4QJ-zT-6sA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kQf-CR-2P1"/>
                 <constraint firstItem="VMp-AX-YC5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tfn-IT-a8g"/>
                 <constraint firstItem="VMp-AX-YC5" firstAttribute="top" secondItem="ZSq-7S-neW" secondAttribute="bottom" id="ufh-kr-zbt"/>
-                <constraint firstItem="13M-te-mZ9" firstAttribute="top" secondItem="VMp-AX-YC5" secondAttribute="bottom" id="zIA-W7-vqD"/>
+                <constraint firstItem="4QJ-zT-6sA" firstAttribute="top" secondItem="VMp-AX-YC5" secondAttribute="bottom" constant="10" id="vBO-Ab-YKs"/>
+                <constraint firstAttribute="trailing" secondItem="4QJ-zT-6sA" secondAttribute="trailing" id="x5p-Qh-s2y"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="147"/>

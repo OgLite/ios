@@ -9,7 +9,11 @@
 
 import Foundation
 import UIKit
-import JzIos_Framework
+import JzOsFrameWork
+import JzOsMultiLanugage
+extension JzLanguage{
+    
+}
 extension Numeric {
     var data: Data {
         var source = self
@@ -171,16 +175,10 @@ extension String {
         return String(self[idx1..<idx2])
     }
     func substring(_ start:Int,_ end:Int) -> String{
-        let range=start..<end
-        let idx1 = index(startIndex, offsetBy: max(0, range.lowerBound))
-               let idx2 = index(startIndex, offsetBy: min(self.count, range.upperBound))
-               return String(self[idx1..<idx2])
+        return sub(start..<end)
     }
     func substring(_ end:Int) -> String{
-        let range=end..<self.count
-          let idx1 = index(startIndex, offsetBy: max(0, range.lowerBound))
-                 let idx2 = index(startIndex, offsetBy: min(self.count, range.upperBound))
-                 return String(self[idx1..<idx2])
+        return sub(end..<self.count)
       }
     func replace(_ target: String, _ withString: String) -> String
     {
@@ -315,27 +313,7 @@ extension UIView{
     }
 }
 
-extension String{
-     func Mt()->String{
-        let a=JzActivity.getControlInstance.getPro("lan","English")
-           switch a {
-           case "English":
-               return English.dic[self] ?? ""
-           case "繁體中文":
-               return ChineseTr.dic[self] ?? ""
-           case "简体中文":
-               return ChineseSi.dic[self] ?? ""
-           case "Deutsch":
-               return De.dic[self] ?? ""
-           case "Italiano":
-               return it.dic[self] ?? ""
-           case "Dansk":
-               return Da.dic[self] ?? ""
-           default:
-               return ""
-           }
-       }
-}
+
 
 //extension UIImageView{
 //    func rectimage(_ ur:String) {

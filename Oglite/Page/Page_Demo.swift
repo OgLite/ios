@@ -8,7 +8,7 @@
 
 import UIKit
 import AVFoundation
-import JzIos_Framework
+import JzOsFrameWork
 class Page_Demo: UIViewController {
     
     @IBOutlet var container: UIView!

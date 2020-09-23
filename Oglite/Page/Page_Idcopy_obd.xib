@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Page_Idcopy_obd" customModule="Oglite" customModuleProvider="target">
             <connections>
+                <outlet property="mebt" destination="QiY-El-adu" id="vcz-pO-HTh"/>
+                <outlet property="prbt" destination="5HT-Mk-98E" id="52W-hq-kCa"/>
                 <outlet property="programbt" destination="5HT-Mk-98E" id="Zdw-R5-Ajd"/>
+                <outlet property="relearm" destination="eZd-if-iew" id="WxJ-9C-Cov"/>
+                <outlet property="reselect" destination="lBV-lo-A2x" id="bxe-om-R6P"/>
                 <outlet property="tb" destination="jt1-gJ-Utx" id="4dH-Tr-Yj8"/>
                 <outlet property="tit" destination="koj-en-OVM" id="JiT-LL-2ru"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -21,6 +25,72 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8d4-4n-Ihz">
+                    <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QiY-El-adu">
+                            <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="zZa-jo-A6o"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="jz.9" backgroundImage="btn_letf">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localtext" value="app_menue"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="gomenu:" destination="-1" eventType="touchUpInside" id="oHj-Sy-U0E"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5HT-Mk-98E">
+                            <rect key="frame" x="207" y="0.0" width="207" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="KWB-JK-7cC"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="Read sensor" backgroundImage="btn_right">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localtext" value="Read"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="readsensor:" destination="-1" eventType="touchUpInside" id="Uqy-7Y-qCo"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBV-lo-A2x">
+                            <rect key="frame" x="414" y="0.0" width="0.0" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="4pe-oK-KEX"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="Re-select" backgroundImage="btn_letf">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="goBack:" destination="-1" eventType="touchUpInside" id="Lfu-Tb-thg"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZd-if-iew">
+                            <rect key="frame" x="414" y="0.0" width="0.0" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="OXH-Nx-0gd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="Read sensor" backgroundImage="btn_right">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localtext" value="Relearn_Procedure"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="gorelearm:" destination="-1" eventType="touchUpInside" id="Eta-RJ-EE4"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvD-7e-Rjp">
                     <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                     <subviews>
@@ -39,19 +109,6 @@
                         <constraint firstItem="koj-en-OVM" firstAttribute="centerX" secondItem="dvD-7e-Rjp" secondAttribute="centerX" id="jz1-An-Xo0"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5HT-Mk-98E">
-                    <rect key="frame" x="0.0" y="812" width="414" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="KWB-JK-7cC"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <state key="normal" title="Read sensor" backgroundImage="btn_rectangle">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="readsensor:" destination="-1" eventType="touchUpInside" id="Uqy-7Y-qCo"/>
-                    </connections>
-                </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jt1-gJ-Utx">
                     <rect key="frame" x="0.0" y="94" width="414" height="708"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -59,14 +116,14 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="5HT-Mk-98E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6qh-Sr-XUG"/>
+                <constraint firstItem="8d4-4n-Ihz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="A6B-Op-dDm"/>
                 <constraint firstItem="jt1-gJ-Utx" firstAttribute="top" secondItem="dvD-7e-Rjp" secondAttribute="bottom" id="F02-EV-8lQ"/>
                 <constraint firstItem="dvD-7e-Rjp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="JOu-p6-JcJ"/>
-                <constraint firstItem="5HT-Mk-98E" firstAttribute="top" secondItem="jt1-gJ-Utx" secondAttribute="bottom" constant="10" id="Qea-HH-JUf"/>
+                <constraint firstItem="8d4-4n-Ihz" firstAttribute="top" secondItem="jt1-gJ-Utx" secondAttribute="bottom" constant="10" id="Jel-4g-AhW"/>
+                <constraint firstAttribute="trailing" secondItem="8d4-4n-Ihz" secondAttribute="trailing" id="Q0R-kl-P96"/>
                 <constraint firstItem="jt1-gJ-Utx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="R8p-Ii-kGR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jt1-gJ-Utx" secondAttribute="trailing" id="Uav-oy-Gnp"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5HT-Mk-98E" secondAttribute="bottom" id="WAV-Ns-QDE"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5HT-Mk-98E" secondAttribute="trailing" id="c6N-WD-XOT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8d4-4n-Ihz" secondAttribute="bottom" id="dTN-Ob-6cd"/>
                 <constraint firstItem="dvD-7e-Rjp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ftr-Kq-m2P"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dvD-7e-Rjp" secondAttribute="trailing" id="jsf-pd-OfP"/>
             </constraints>
@@ -75,6 +132,7 @@
         </view>
     </objects>
     <resources>
-        <image name="btn_rectangle" width="1233" height="192"/>
+        <image name="btn_letf" width="858" height="267"/>
+        <image name="btn_right" width="858" height="267"/>
     </resources>
 </document>

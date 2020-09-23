@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import JzAdapter
+import JzOsAdapter
+import JzOsFrameWork
 class Page_Select_Model: UIViewController {
 
     @IBOutlet weak var tit: UILabel!
@@ -27,7 +28,12 @@ class Page_Select_Model: UIViewController {
         adapter.notifyDataSetChange()
         tit.text=PublicBeans.Make
     }
+    override func viewWillAppear(_ animated: Bool) {
+        tit.text=PublicBeans.Make
+    }
 
-
+    @IBAction func goMenu(_ sender: Any) {
+        JzActivity.getControlInstance.goMenu()
+    }
     
 }

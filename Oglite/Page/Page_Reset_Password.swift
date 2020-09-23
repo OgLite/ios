@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import JzIos_Framework
+import JzOsFrameWork
 class Page_Reset_Password: UIViewController {
 
     @IBOutlet var username: UITextField!

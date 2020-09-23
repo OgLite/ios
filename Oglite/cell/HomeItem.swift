@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import JzIos_Framework
+import JzOsFrameWork
 class HomeItem: UICollectionViewCell {
   var pageswitch=[UIViewController]()
     var index=0

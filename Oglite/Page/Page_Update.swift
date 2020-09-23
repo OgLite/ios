@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import JzIos_Framework
+import JzOsFrameWork
 class Page_Update: UIViewController {
 
     @IBOutlet var versioncode: UILabel!
@@ -18,15 +18,6 @@ class Page_Update: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        DonloadFile.checkUpdate(caller: {a in
-            JzActivity.getControlInstance.closeDialLog()
-            if(a){
-                JzActivity.getControlInstance.toast("更新成功")
-                JzActivity.getControlInstance.setPro("update", "nodata")
-            }else{
-                JzActivity.getControlInstance.toast("更新失敗")
-            }
-        })
     }
    
 

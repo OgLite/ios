@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import JzIos_Framework
+import JzOsFrameWork
 class ErrorCode: UIViewController {
 
     @IBOutlet weak var lab: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-    lab.text="Please_scan_the_QR_Code_on_the_catalog_or_poster".Mt()
+    lab.text="jz.122".getFix()
         let tapa = UITapGestureRecognizer(target: self, action: #selector(tap))
                   view.addGestureRecognizer(tapa)
     }

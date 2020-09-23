@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import JzAdapter
+import JzOsAdapter
 class Page_Favroite: UIViewController {
     lazy var item=Cell_Favorite.getFavorite()
     lazy var adapter = GridAdapter(tb: tb , width: UIScreen.main.bounds.width, height: 80, count: {
@@ -29,7 +29,7 @@ class Page_Favroite: UIViewController {
         
     }
     override func viewDidAppear(_ animated: Bool) {
-       item=Cell_Favorite.getFavorite()
+        item=Cell_Favorite.getFavorite()
        adapter.notifyDataSetChange()
     }
 

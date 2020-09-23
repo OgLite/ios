@@ -7,15 +7,15 @@
 //
 
 import UIKit
-import JzIos_Framework
+import JzOsFrameWork
+import JzOsMultiLanugage
 class Page_Area: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
-    @IBOutlet var info: UILabel!
     @IBOutlet var lan: UILabel!
-    @IBOutlet  var togive: UILabel!
     @IBOutlet  var areabt: UIButton!
     @IBOutlet  var languagebt: UIButton!
     @IBOutlet  var area: UILabel!
     @IBOutlet  var setupbt: UIButton!
+    var lastArea = JzActivity.getControlInstance.getPro("Area","EU")
     var place=0
     var Setting=false
     var item=["EU","North America","台灣","中國大陸"]
@@ -35,12 +35,32 @@ class Page_Area: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
         print(pickerView.selectedRow(inComponent: 0))
         if(place==0){
             areabt.setTitle(item[pickerView.selectedRow(inComponent: 0)], for: .normal)
-            JzActivity.getControlInstance.setPro("Area",item[pickerView.selectedRow(inComponent: 0)])
+            let area=["EU","US","TW","TW"][pickerView.selectedRow(inComponent: 0)]
+            if(JzActivity.getControlInstance.getPro("Area", "nodata") != area){
+                SharePre.mmyVersion = "nodata"
+                JzActivity.getControlInstance.setPro("Area",area)
+            }
             viewDidLoad()
-            if(Setting){DonloadFile.dataloading()}
         }else{
             languagebt.setTitle(item[pickerView.selectedRow(inComponent: 0)], for: .normal)
-            JzActivity.getControlInstance.setPro("lan",item[pickerView.selectedRow(inComponent: 0)])
+            switch item[pickerView.selectedRow(inComponent: 0)] {
+            case "English":
+                SharePre.setLan="en"
+            case "繁體中文":
+                SharePre.setLan="tw"
+            case "简体中文":
+                SharePre.setLan="zh-rcn"
+            case "Deutsch":
+                SharePre.setLan="de"
+            case "Italiano":
+                SharePre.setLan="it"
+            case "Dansk":
+                SharePre.setLan="da"
+            case "Slovinčina":
+                SharePre.setLan="sk"
+            default:
+                break
+            }
             viewDidLoad()
         }
         picker.removeFromSuperview()
@@ -51,13 +71,28 @@ class Page_Area: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
         super.viewDidLoad()
         let pan = UITapGestureRecognizer(target:self,action:#selector(tap))
         view.addGestureRecognizer(pan)
-        area.text="Area".Mt()
-        togive.text="to_give".Mt()
-        lan.text="Languages".Mt()
-        info.text="Languages_info".Mt()
-        setupbt.setTitle("Set_up".Mt(), for: .normal)
-        languagebt.setTitle(JzActivity.getControlInstance.getPro("lan","English"), for: .normal)
+        area.text="jz.66".getFix()
+        lan.text="jz.69".getFix()
+        setupbt.setTitle("jz.192".getFix(), for: .normal)
         areabt.setTitle(JzActivity.getControlInstance.getPro("Area","EU"), for: .normal)
+        switch SharePre.setLan {
+        case "en":
+            languagebt.setTitle("English", for: .normal)
+        case "tw":
+            languagebt.setTitle("繁體中文", for: .normal)
+        case "zh-rcn":
+            languagebt.setTitle("简体中文", for: .normal)
+        case "de":
+            languagebt.setTitle("Deutsch", for: .normal)
+        case "it":
+            languagebt.setTitle("Italiano", for: .normal)
+        case "da":
+            languagebt.setTitle("Dansk", for: .normal)
+        case "sk":
+            languagebt.setTitle("Slovinčina", for: .normal)
+        default:
+            break
+        }
     }
     @objc func tap(){
         print("click")
@@ -75,8 +110,7 @@ class Page_Area: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
         picker.reloadAllComponents()
     }
     
-    @IBAction func selectlan(_ sender: Any) {
-        item=["繁體中文","简体中文","Deutsch","English","Italiano","Dansk"]
+    @IBAction func selectlan(_ sender: Any) {item=["繁體中文","简体中文","Deutsch","English","Italiano","Dansk","Slovinčina"]
         place=1
         picker.backgroundColor = UIColor(named: "gray")
         picker.frame=CGRect(x: 0,y: view.frame.maxY-200,width: view.frame.width,height: 200)
@@ -89,11 +123,14 @@ class Page_Area: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     
     @IBAction func next(_ sender: Any) {
         if(Setting){
+            if(JzActivity.getControlInstance.getPro("Area","EU") != lastArea){
+                FileJsonVersion().storeLocal()
+            }
             JzActivity.getControlInstance.goMenu()
         }else{
             let a=JzActivity.getControlInstance.getNewController("Main", "Page_Policy")
             JzActivity.getControlInstance.changePage(a, "Page_Policy", true)
         }
-       
+        
     }
 }

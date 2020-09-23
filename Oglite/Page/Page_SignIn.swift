@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import JzIos_Framework
+import JzOsFrameWork
 class Page_SignIn: UIViewController {
     @IBOutlet var forget: UILabel!
     @IBOutlet var sig: UIButton!
@@ -17,14 +17,14 @@ class Page_SignIn: UIViewController {
     @IBOutlet weak var admin: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        reg.setTitle("Registration".Mt(), for: .normal)
-        sig.setTitle("Sign_in".Mt(), for: .normal)
-        forget.text="Forgot_password".Mt()
+        reg.setTitle("jz.77".getFix(), for: .normal)
+        sig.setTitle("jz.5".getFix(), for: .normal)
+        forget.text="jz.79".getFix()
     }
     
     @IBAction func signin(_ sender: Any) {
         let a=Progress()
-        a.label="\("Sign_in".Mt())..."
+        a.label="\("jz.5".getFix())..."
         JzActivity.getControlInstance.openDiaLog(a,true,"Progress")
         Cloud.Signin(admin.text!
             , password.text!, {
@@ -38,10 +38,10 @@ class Page_SignIn: UIViewController {
                     JzActivity.getControlInstance.setHome(Page_Home(), "Page_Home")
                     break
                 case 1:
-                    JzActivity.getControlInstance.toast("errorpass".Mt())
+                    JzActivity.getControlInstance.toast("jz.211".getFix())
                     break
                 case -1:
-                    JzActivity.getControlInstance.toast("nointer".Mt())
+                    JzActivity.getControlInstance.toast("jz.210".getFix())
                     break
                 default:
                     break

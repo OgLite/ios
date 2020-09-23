@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17124"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,15 +21,27 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFv-Xb-fp9">
+                    <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="VlJ-KF-f6O"/>
+                    </constraints>
+                    <state key="normal" title="jz.9" backgroundImage="btn_rectangle">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="goMenu:" destination="-1" eventType="touchUpInside" id="XNM-e0-Rvn"/>
+                    </connections>
+                </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0ln-k4-cxN">
-                    <rect key="frame" x="0.0" y="104" width="414" height="758"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <rect key="frame" x="0.0" y="104" width="414" height="696"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohO-ha-brx">
                     <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Model" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3i-rn-bP9">
-                            <rect key="frame" x="151.5" y="18.5" width="111.5" height="23"/>
+                            <rect key="frame" x="152" y="18.5" width="110.5" height="23"/>
                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -42,18 +55,27 @@
                     </constraints>
                 </view>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="LFv-Xb-fp9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ej2-F0-6N3"/>
                 <constraint firstItem="ohO-ha-brx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="P3A-cc-9Uc"/>
                 <constraint firstItem="0ln-k4-cxN" firstAttribute="trailing" secondItem="ohO-ha-brx" secondAttribute="trailing" id="QRB-P5-QR7"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0ln-k4-cxN" secondAttribute="bottom" id="YYu-cb-l9h"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0ln-k4-cxN" secondAttribute="bottom" constant="62" id="YYu-cb-l9h"/>
                 <constraint firstItem="ohO-ha-brx" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="b92-Vh-Z1y"/>
                 <constraint firstItem="0ln-k4-cxN" firstAttribute="leading" secondItem="ohO-ha-brx" secondAttribute="leading" id="kCH-Rm-NIp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="LFv-Xb-fp9" secondAttribute="bottom" id="kao-KF-PPh"/>
                 <constraint firstItem="ohO-ha-brx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="oXO-Kb-MTZ"/>
                 <constraint firstItem="0ln-k4-cxN" firstAttribute="top" secondItem="ohO-ha-brx" secondAttribute="bottom" id="udb-Su-OF1"/>
+                <constraint firstItem="LFv-Xb-fp9" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="wfZ-Ey-tMX"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="147"/>
         </view>
     </objects>
+    <resources>
+        <image name="btn_rectangle" width="1233" height="192"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

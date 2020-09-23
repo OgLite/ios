@@ -7,15 +7,13 @@
 //
 
 import UIKit
-import JzIos_Framework
+import JzOsFrameWork
 class Dia_Update: UIViewController {
-
-    @IBOutlet var intext: UILabel!
+    
     @IBOutlet var content: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        intext.text=JzActivity.getControlInstance.getPro("update", "已有新版本!!")
     }
     
     @IBAction func cancel(_ sender: Any) {
@@ -23,9 +21,25 @@ class Dia_Update: UIViewController {
     }
     
     @IBAction func ok(_ sender: Any) {
-        JzActivity.getControlInstance.closeDialLog()
-      JzActivity.getControlInstance.setPro("dataloading", "false")
-               DonloadFile.dataloading()
+        Command.cangetBattery=false
+        let a=DataLoading()
+        a.label=a.檢查更新
+        JzActivity.getControlInstance.openDiaLog(a, false, "DataLoading")
+        DonloadFile().dataloading({
+            a in
+            Command.cangetBattery=true
+            DispatchQueue.main.async {
+                if(a){
+                    JzActivity.getControlInstance.closeDialLog()
+                    PublicBeans.資料庫.autoCreat()
+                }else{
+                     JzActivity.getControlInstance.closeDialLog()
+                    var fa=Dia_NoSensor()
+                    fa.labeltext="jz.386".getFix()
+                JzActivity.getControlInstance.openDiaLog(fa, false, "Dia_NoSensor")
+                }
+            }
+        })
     }
     
 }

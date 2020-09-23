@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import JzIos_Framework
-import JzAdapter
+import JzOsFrameWork
+import JzOsAdapter
 class Select_Ble: UIViewController {
     @IBOutlet var tb: UITableView!
     
@@ -39,8 +39,8 @@ class Select_Ble: UIViewController {
         act.scanback={
             self.adapter.notifyDataSetChange()
         }
-        tit.text="Select Device".Mt()
-        cancelbt.setTitle("cancel".Mt(), for: .normal)
+        tit.text="jz.198".getFix()
+        cancelbt.setTitle("jz.114".getFix(), for: .normal)
     }
 
     @IBAction func cancel(_ sender: Any) {

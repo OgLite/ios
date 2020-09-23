@@ -8,8 +8,14 @@
 
 import UIKit
 import JzOsTool
-class Cell_Vehicle_Detail: UITableViewCell {
-    
+class Cell_Vehicle_Detail: UITableViewCell,UITextFieldDelegate{
+    var scan1={}
+    var scan2={}
+    var thisPosition = -1
+    var pa=Page_Idcopy_obd()
+    public static var lastClick:UITextField?=nil
+    @IBOutlet var scanb2: UIButton!
+    @IBOutlet var scanb: UIButton!
     @IBOutlet var nonewid: UIImageView!
     @IBOutlet var novid: UIImageView!
     @IBOutlet var im: UIImageView!
@@ -24,18 +30,31 @@ class Cell_Vehicle_Detail: UITableViewCell {
     @IBOutlet var v1: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        
     }
-    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        print("textFieldDidChangeSelection")
+    }
+     func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("textFieldDidBeginEditing")
+        if(textField == t2){
+            pa.clickPosition=thisPosition
+        }else{
+            pa.clickPosition=thisPosition+1
+        }
+        if(Cell_Vehicle_Detail.lastClick != textField){pa.adapter.notifyDataSetChange()
+             }
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         
     }
     
     public static func loadtit(_ table:UITableView)->Cell_Vehicle_Detail{
         let cell=table.dequeueReusableCell(withIdentifier: "Cell_Vehicle_Detail") as! Cell_Vehicle_Detail
-        cell.t1.text="WH"
-        cell.t2.text="Vehice ID"
-        cell.t3.text="New ID"
-        cell.t4.text="Check"
+        cell.t1.text=""
+        cell.t2.text="jz.417".getFix()
+        cell.t3.text="jz.418".getFix()
+        cell.t4.text="jz.303".getFix()
         cell.v1.backgroundColor=UIColor(named: "vhcolor")
         cell.v2.backgroundColor=UIColor(named: "vhcolor")
         cell.v3.backgroundColor=UIColor(named: "vhcolor")
@@ -48,18 +67,65 @@ class Cell_Vehicle_Detail: UITableViewCell {
         cell.t2.isUserInteractionEnabled=false
         return cell
     }
-    public static func obd(_ table:UITableView,_ model:[Md_Idcopy],_ c:Int,_ needposition:Bool)->Cell_Vehicle_Detail{
+    public static func obd(_ table:UITableView,_ model:[Md_Idcopy],_ c:Int,_ pa:Page_Idcopy_obd)->Cell_Vehicle_Detail{
         let cell=table.dequeueReusableCell(withIdentifier: "Cell_Vehicle_Detail") as! Cell_Vehicle_Detail
-        cell.t3.isEnabled=model[c-2].readable && !needposition
-        cell.t2.isEnabled=model[c-2].readable && !needposition
-        if(!needposition && !model[c-2].readable && PublicBeans.選擇按鈕==Page_Home.tit[1]){
-            model[c-2].newid=model[c-2].vid
+        cell.pa=pa
+        cell.thisPosition=(c-2)*2
+        cell.t2.textColor=UIColor.black
+        cell.t3.textColor=UIColor.black
+        cell.t2.backgroundColor=UIColor.white
+        cell.t3.backgroundColor=UIColor.white
+        cell.t2.delegate=cell
+        cell.t3.delegate=cell
+        if(PublicBeans.selectway==PublicBeans.Scan&&c>=2){
+            cell.scanb.isHidden=false
+            cell.scanb2.isHidden=false
+            cell.scan1={
+                PublicBeans.getId({
+                    a in
+                    model[c-2].vid=a
+                    table.reloadData()
+                })
+            }
+            cell.scan2={
+                PublicBeans.getId({
+                    a in
+                    model[c-2].vid=a
+                    table.reloadData()
+                })
+            }
+            
+        }else if(PublicBeans.selectway==PublicBeans.Trigger&&c>=2){
+            cell.scanb.isHidden=false
+            cell.scanb2.isHidden=false
+            cell.scan1={
+                if(pa.clickPosition==(c-2)*2){
+                    pa.clickPosition = -1
+                    pa.adapter.notifyDataSetChange()
+                    return
+                }
+                pa.clickPosition=(c-2)*2
+                pa.adapter.notifyDataSetChange()
+            }
+            cell.scan2={
+                if(pa.clickPosition==(c-2)*2+1){
+                    pa.clickPosition = -1
+                    pa.adapter.notifyDataSetChange()
+                    return
+                }
+                pa.clickPosition=(c-2)*2+1
+                pa.adapter.notifyDataSetChange()
+            }
+        }else{
+            cell.scanb.isHidden=true
+            cell.scanb2.isHidden=true
+            
         }
         if(model[c-2].condition==Md_Idcopy.燒錄成功){
             cell.t3.textColor = .black
             cell.t2.textColor = .black
         }else{
-            if(PublicBeans.選擇按鈕==Page_Home.tit[1]){
+            if(PublicBeans.選擇按鈕 == "jz.15".getFix()){
                 cell.t2.textColor = .orange
                 cell.t3.textColor = .black
             }else{
@@ -81,27 +147,27 @@ class Cell_Vehicle_Detail: UITableViewCell {
         cell.t2.textCount=8
         cell.t2.digits="abcdefABCDEF0123456789"
         
-        if(!needposition && !model[c-2].readable && PublicBeans.選擇按鈕==Page_Home.tit[0]){
-            cell.nonewid.isHidden=false
-            if(PublicBeans.選擇按鈕==Page_Home.tit[3]){cell.novid.isHidden=false}
+        if( !model[c-2].readable){
+            if(model[c-2].newid.isEmpty){cell.nonewid.isHidden=false}else{
+                cell.nonewid.isHidden=true
+            }
+            if(model[c-2].vid.isEmpty){cell.novid.isHidden=false}else{
+                cell.novid.isHidden=true
+            }
         }else{
-            if(model[c-2].readable&&model[c-2].newid.isEmpty){
-                cell.v3.backgroundColor = UIColor(named: "boldgreen")
-            }else{
-                cell.v3.backgroundColor = .white
-            }
+            cell.nonewid.isHidden=true
+            cell.novid.isHidden=true
+            cell.v3.backgroundColor = .white
         }
-        if(PublicBeans.選擇按鈕==Page_Home.tit[3]){
-            if(model[c-2].readable&&model[c-2].vid.isEmpty){
-                cell.v2.backgroundColor = UIColor(named: "boldgreen")
-            }else{cell.v2.backgroundColor = .white}
-            if(!model[c-2].readable && !needposition){
+        if(PublicBeans.選擇按鈕 == "jz.15".getFix()){
+            if(model[c-2].vid.isEmpty){
                 cell.novid.isHidden=false
-                cell.nonewid.isHidden=false
-            }
+            }else{
+                cell.novid.isHidden=true
+            }  
         }
         cell.v4.backgroundColor = .white
-        if(PublicBeans.selectway==PublicBeans.KetIn){
+        if(PublicBeans.selectway==PublicBeans.KetIn||PublicBeans.selectway==PublicBeans.Trigger){
             cell.t3.isUserInteractionEnabled=true
             cell.t2.isUserInteractionEnabled=true
         }else{
@@ -124,7 +190,29 @@ class Cell_Vehicle_Detail: UITableViewCell {
         default:
             break
         }
-        
+        if(!model[c-2].readable){
+            cell.im.isHidden=true
+        }
+        if(PublicBeans.選擇按鈕 == "jz.15".getFix() && !model[c-2].readable){
+            cell.nonewid.isHidden=false
+            cell.t3.text=""
+        }
+        if(pa.clickPosition==(c-2)*2){
+            cell.t2.textColor=UIColor.white
+            cell.t2.backgroundColor=UIColor(named: "boldgreen")
+        }
+        if(pa.clickPosition==(c-2)*2+1){
+            cell.t3.textColor=UIColor.white
+            cell.t3.backgroundColor=UIColor(named: "boldgreen")
+        }
         return cell
+    }
+    
+    @IBAction func scan1(_ sender: Any) {
+        scan1()
+    }
+    
+    @IBAction func scan2(_ sender: Any) {
+        scan2()
     }
 }

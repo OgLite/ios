@@ -6,7 +6,9 @@ target 'Oglite' do
   use_frameworks!
 
   # Pods for Oglite
+pod 'lottie-ios'
 pod 'Firebase/Core'
 pod 'Firebase/Messaging'
+pod 'Alamofire', '~> 5.2'
 pod 'IQKeyboardManagerSwift'
 end

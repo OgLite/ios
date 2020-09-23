@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,17 +11,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeItem" customModule="Oglite" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="151" height="164"/>
+            <rect key="frame" x="0.0" y="0.0" width="507" height="446"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="151" height="164"/>
+                <rect key="frame" x="0.0" y="0.0" width="507" height="446"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2w7-RR-Vlt">
-                        <rect key="frame" x="0.0" y="0.0" width="151" height="164"/>
+                        <rect key="frame" x="0.0" y="0.0" width="507" height="446"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAZ-Ou-HFJ">
-                                <rect key="frame" x="5.5" y="-3" width="140" height="140"/>
+                                <rect key="frame" x="183.5" y="153" width="140" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="A5L-FN-3je"/>
                                     <constraint firstAttribute="width" constant="140" id="fs9-Or-FXP"/>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID Copy by OBD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwi-F2-Wgc">
-                                <rect key="frame" x="10.5" y="142" width="130.5" height="21.5"/>
+                                <rect key="frame" x="188.5" y="298" width="130.5" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -42,27 +42,37 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Zwi-F2-Wgc" firstAttribute="centerX" secondItem="2w7-RR-Vlt" secondAttribute="centerX" id="6nt-z2-0ni"/>
-                            <constraint firstItem="rAZ-Ou-HFJ" firstAttribute="centerY" secondItem="2w7-RR-Vlt" secondAttribute="centerY" constant="-15" id="AkJ-uJ-DTq"/>
-                            <constraint firstItem="Zwi-F2-Wgc" firstAttribute="top" secondItem="rAZ-Ou-HFJ" secondAttribute="bottom" constant="5" id="E8z-59-6h0"/>
-                            <constraint firstItem="rAZ-Ou-HFJ" firstAttribute="centerX" secondItem="2w7-RR-Vlt" secondAttribute="centerX" id="kPM-ri-E1J"/>
+                            <constraint firstItem="rAZ-Ou-HFJ" firstAttribute="centerY" secondItem="2w7-RR-Vlt" secondAttribute="centerY" id="7SV-4w-Za0"/>
+                            <constraint firstItem="Zwi-F2-Wgc" firstAttribute="centerX" secondItem="2w7-RR-Vlt" secondAttribute="centerX" id="K3C-9R-ebJ"/>
+                            <constraint firstItem="Zwi-F2-Wgc" firstAttribute="top" secondItem="rAZ-Ou-HFJ" secondAttribute="bottom" constant="5" id="gnB-fw-y08"/>
+                            <constraint firstItem="rAZ-Ou-HFJ" firstAttribute="centerX" secondItem="2w7-RR-Vlt" secondAttribute="centerX" id="tOs-pY-dBJ"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRk-oT-aiC">
+                        <rect key="frame" x="0.0" y="0.0" width="507" height="446"/>
+                        <connections>
+                            <action selector="swit:" destination="gTV-IL-0wX" eventType="touchUpInside" id="3vC-eV-WJr"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="2w7-RR-Vlt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5O7-a8-j9u"/>
                 <constraint firstAttribute="bottom" secondItem="2w7-RR-Vlt" secondAttribute="bottom" id="86K-6x-KuU"/>
+                <constraint firstItem="hRk-oT-aiC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="RYf-X1-Xpb"/>
+                <constraint firstItem="hRk-oT-aiC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="TDn-OT-mvy"/>
                 <constraint firstAttribute="trailing" secondItem="2w7-RR-Vlt" secondAttribute="trailing" id="VKj-9y-8S4"/>
+                <constraint firstAttribute="trailing" secondItem="hRk-oT-aiC" secondAttribute="trailing" id="nWE-UR-GyS"/>
+                <constraint firstAttribute="bottom" secondItem="hRk-oT-aiC" secondAttribute="bottom" id="vg4-sB-jtK"/>
                 <constraint firstItem="2w7-RR-Vlt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zby-pQ-qNk"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="151" height="164"/>
+            <size key="customSize" width="507" height="446"/>
             <connections>
                 <outlet property="ima" destination="rAZ-Ou-HFJ" id="iit-3V-047"/>
                 <outlet property="tit" destination="Zwi-F2-Wgc" id="N8K-Zr-XiR"/>
             </connections>
-            <point key="canvasLocation" x="113.768115942029" y="150"/>
+            <point key="canvasLocation" x="371.73913043478262" y="244.41964285714283"/>
         </collectionViewCell>
     </objects>
     <resources>
